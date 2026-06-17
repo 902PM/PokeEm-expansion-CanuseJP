@@ -76,8 +76,8 @@ static const u8 sDownArrowYCoords[] = { 0, 1, 2, 1 };
 
 static bool32 IsJapaneseGlyph(u16 glyphId)
 {
-    return glyphId != CHAR_SPACE
-        && glyphId <= JAPANESE_CHAR_END;
+    return (glyphId >= 0x01 && glyphId <= 0x53)
+        || (glyphId >= 0x55 && glyphId <= 0xA0);
 }
 
 static const struct GlyphWidthFunc sGlyphWidthFuncs[] =
