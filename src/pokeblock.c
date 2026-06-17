@@ -202,20 +202,20 @@ static const struct BgTemplate sBgTemplatesForPokeblockMenu[] =
 const u8 *const gPokeblockNames[] =
 {
     [PBLOCK_CLR_NONE]      = NULL,
-    [PBLOCK_CLR_RED]       = COMPOUND_STRING("RED {POKEBLOCK}"),
-    [PBLOCK_CLR_BLUE]      = COMPOUND_STRING("BLUE {POKEBLOCK}"),
-    [PBLOCK_CLR_PINK]      = COMPOUND_STRING("PINK {POKEBLOCK}"),
-    [PBLOCK_CLR_GREEN]     = COMPOUND_STRING("GREEN {POKEBLOCK}"),
-    [PBLOCK_CLR_YELLOW]    = COMPOUND_STRING("YELLOW {POKEBLOCK}"),
-    [PBLOCK_CLR_PURPLE]    = COMPOUND_STRING("PURPLE {POKEBLOCK}"),
-    [PBLOCK_CLR_INDIGO]    = COMPOUND_STRING("INDIGO {POKEBLOCK}"),
-    [PBLOCK_CLR_BROWN]     = COMPOUND_STRING("BROWN {POKEBLOCK}"),
-    [PBLOCK_CLR_LITE_BLUE] = COMPOUND_STRING("LITEBLUE {POKEBLOCK}"),
-    [PBLOCK_CLR_OLIVE]     = COMPOUND_STRING("OLIVE {POKEBLOCK}"),
-    [PBLOCK_CLR_GRAY]      = COMPOUND_STRING("GRAY {POKEBLOCK}"),
-    [PBLOCK_CLR_BLACK]     = COMPOUND_STRING("BLACK {POKEBLOCK}"),
-    [PBLOCK_CLR_WHITE]     = COMPOUND_STRING("WHITE {POKEBLOCK}"),
-    [PBLOCK_CLR_GOLD]      = COMPOUND_STRING("GOLD {POKEBLOCK}")
+    [PBLOCK_CLR_RED]       = COMPOUND_STRING("RED ポロック"),
+    [PBLOCK_CLR_BLUE]      = COMPOUND_STRING("BLUE ポロック"),
+    [PBLOCK_CLR_PINK]      = COMPOUND_STRING("PINK ポロック"),
+    [PBLOCK_CLR_GREEN]     = COMPOUND_STRING("GREEN ポロック"),
+    [PBLOCK_CLR_YELLOW]    = COMPOUND_STRING("YELLOW ポロック"),
+    [PBLOCK_CLR_PURPLE]    = COMPOUND_STRING("PURPLE ポロック"),
+    [PBLOCK_CLR_INDIGO]    = COMPOUND_STRING("INDIGO ポロック"),
+    [PBLOCK_CLR_BROWN]     = COMPOUND_STRING("BROWN ポロック"),
+    [PBLOCK_CLR_LITE_BLUE] = COMPOUND_STRING("LITEBLUE ポロック"),
+    [PBLOCK_CLR_OLIVE]     = COMPOUND_STRING("OLIVE ポロック"),
+    [PBLOCK_CLR_GRAY]      = COMPOUND_STRING("GRAY ポロック"),
+    [PBLOCK_CLR_BLACK]     = COMPOUND_STRING("BLACK ポロック"),
+    [PBLOCK_CLR_WHITE]     = COMPOUND_STRING("WHITE ポロック"),
+    [PBLOCK_CLR_GOLD]      = COMPOUND_STRING("GOLD ポロック")
 };
 
 static const struct MenuAction sPokeblockMenuActions[] =
@@ -778,20 +778,20 @@ static void DrawPokeblockInfo(s32 pkblId)
         {
             if (GetPokeblockData(pokeblock, PBLOCK_SPICY + i) > 0)
             {
-                // Pokéblock has this flavor, draw Pokéblock icon next to it
+                // Pokeblock has this flavor, draw Pokeblock icon next to it
                 rectTilemapSrc[0] = (i << 12) + 0x17;
                 rectTilemapSrc[1] = (i << 12) + 0x18;
             }
             else
             {
-                // Pokéblock doesn't have this flavor, draw regular tiles
+                // Pokeblock doesn't have this flavor, draw regular tiles
                 rectTilemapSrc[0] = 0xF;
                 rectTilemapSrc[1] = 0xF;
             }
             CopyToBgTilemapBufferRect(2, rectTilemapSrc, (i / 3 * 6) + 1, (i % 3 * 2) + 13, 1, 2);
         }
 
-        // Print the Pokéblock's feel
+        // Print the Pokeblock's feel
         ConvertIntToDecimalStringN(gStringVar1, GetPokeblocksFeel(pokeblock), STR_CONV_MODE_RIGHT_ALIGN, 2);
         PrintOnPokeblockWindow(WIN_FEEL, gStringVar1, 4);
     }
@@ -1045,7 +1045,7 @@ static void Task_HandlePokeblockMenuInput(u8 taskId)
                 FadePaletteAndSetTaskToClosePokeblockCase(taskId);
                 break;
             default:
-                // Selected Pokéblock
+                // Selected Pokeblock
                 PlaySE(SE_SELECT);
                 gSpecialVar_ItemId = input;
                 ShowPokeblockActionsWindow(taskId);

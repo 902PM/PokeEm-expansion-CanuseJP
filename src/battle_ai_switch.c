@@ -438,7 +438,7 @@ static u32 FindMonWithMoveOfEffectiveness(struct SwitchAiContext *switchContext,
     enum Move move;
     u32 superEffectiveIds = 0;
 
-    // Find a Pokémon in the party that has a super effective move.
+    // Find a Pokemon in the party that has a super effective move.
     for (u32 monIndex = 0; monIndex < switchContext->lastId; monIndex++)
     {
         if(!(switchContext->eligiblePartyMons & (1u << monIndex)))
@@ -457,7 +457,7 @@ static u32 FindMonWithMoveOfEffectiveness(struct SwitchAiContext *switchContext,
     if (superEffectiveIds != 0)
         return SetSwitchinAndSwitch(switchContext->battler, GetSwitchinCandidate(superEffectiveIds, switchContext->battler, switchContext->lastId, SWITCH_MID_BATTLE_OPTIONAL));
 
-    return FALSE; // There is not a single Pokémon in the party that has a move with this effectiveness threshold
+    return FALSE; // There is not a single Pokemon in the party that has a move with this effectiveness threshold
 }
 
 static bool32 CanMoveAffectTarget(struct DamageContext *ctx, u32 moveIndex)
@@ -543,7 +543,7 @@ static bool32 ShouldSwitchIfWonderGuard(struct SwitchAiContext *switchContext)
     if (gAiLogicData->abilities[switchContext->opposingBattler] != ABILITY_WONDER_GUARD)
         return FALSE;
 
-    // Check if Pokémon has a super effective move.
+    // Check if Pokemon has a super effective move.
     if (CanUseSuperEffectiveMoveAgainstOpponent(switchContext->battler, switchContext->opposingBattler))
         return FALSE;
 

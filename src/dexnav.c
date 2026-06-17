@@ -184,7 +184,7 @@ static const u8 sText_DexNav_NoInfo[] = _("--------");
 static const u8 sText_DexNav_CaptureToSee[] = _("Capture first!");
 static const u8 sText_DexNav_PressRToRegister[] = _("R TO REGISTER!");
 static const u8 sText_DexNav_SearchForRegisteredSpecies[] = _("Search {STR_VAR_1}");
-static const u8 sText_DexNav_NotFoundHere[] = _("This Pokémon cannot be found here!");
+static const u8 sText_DexNav_NotFoundHere[] = _("This Pokemon cannot be found here!");
 static const u8 sText_ThreeQmarks[] = _("???");
 static const u8 sText_SearchLevel[] = _("SEARCH {LV}. {STR_VAR_1}");
 static const u8 sText_MonLevel[] = _("{LV}. {STR_VAR_1}");
@@ -1111,7 +1111,7 @@ bool32 OnStep_DexNavSearch(void)
         return FALSE;
     }
 
-    //Caves and water the Pokémon moves around
+    //Caves and water the Pokemon moves around
     if ((sDexNavSearchDataPtr->environment == ENCOUNTER_TYPE_WATER || GetCurrentMapType() == MAP_TYPE_UNDERGROUND)
         && sDexNavSearchDataPtr->proximity < GetMovementProximityBySearchLevel() && sDexNavSearchDataPtr->movementCount < 2
         && !sDexNavSearchDataPtr->hiddenSearch)
@@ -1479,7 +1479,7 @@ static u8 GetEncounterLevelFromMapData(enum Species species, enum EncounterType 
         const struct WildPokemonInfo *landMonsInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo;
 
         if (landMonsInfo == NULL)
-            return MON_LEVEL_NONEXISTENT; //Hidden Pokémon should only appear on walkable tiles or surf tiles
+            return MON_LEVEL_NONEXISTENT; //Hidden Pokemon should only appear on walkable tiles or surf tiles
 
         for (i = 0; i < LAND_WILD_COUNT; i++)
         {
@@ -1495,7 +1495,7 @@ static u8 GetEncounterLevelFromMapData(enum Species species, enum EncounterType 
         const struct WildPokemonInfo *waterMonsInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].waterMonsInfo;
 
         if (waterMonsInfo == NULL)
-            return MON_LEVEL_NONEXISTENT; //Hidden Pokémon should only appear on walkable tiles or surf tiles
+            return MON_LEVEL_NONEXISTENT; //Hidden Pokemon should only appear on walkable tiles or surf tiles
 
         for (i = 0; i < WATER_WILD_COUNT; i++)
         {
@@ -1522,7 +1522,7 @@ static u8 GetEncounterLevelFromMapData(enum Species species, enum EncounterType 
             }
         }
 
-        // use encounter rate to signify is hidden Pokémon are on land or in water
+        // use encounter rate to signify is hidden Pokemon are on land or in water
         if (hiddenMonsInfo->encounterRate == 1)
             sDexNavSearchDataPtr->environment = ENCOUNTER_TYPE_WATER;
         else
@@ -2484,7 +2484,7 @@ bool32 TryFindHiddenPokemon(void)
     (*stepPtr) %= HIDDEN_MON_STEP_COUNT;
     if ((*stepPtr) == 0 && (Random() % 100 < HIDDEN_MON_SEARCH_RATE))
     {
-        // hidden Pokémon
+        // hidden Pokemon
         u32 headerId = GetCurrentMapWildMonHeaderId();
         u8 index;
         enum Species species;
@@ -2497,8 +2497,8 @@ bool32 TryFindHiddenPokemon(void)
         const struct WildPokemonInfo *hiddenMonsInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].hiddenMonsInfo;
         bool8 isHiddenMon = FALSE;
 
-        // while you can still technically find hidden Pokémon if there are not hidden-only Pokémon on a map,
-        // this prevents any potential lagging on maps you dont want hidden Pokémon to appear on
+        // while you can still technically find hidden Pokemon if there are not hidden-only Pokemon on a map,
+        // this prevents any potential lagging on maps you dont want hidden Pokemon to appear on
         if (hiddenMonsInfo == NULL)
             return FALSE;
 
@@ -2609,7 +2609,7 @@ static void DrawSearchIcon(void)
 
 // the initial hidden icon window ONLY shows search icon, ??? instead of name, and the search level (and pokeball icon if owned)
 // if the player presses R or moves close enough, the full search window will be created
-// this way, if the player is not interested in hidden Pokémon it will not be too intrusive
+// this way, if the player is not interested in hidden Pokemon it will not be too intrusive
 static void DrawHiddenSearchWindow(u8 width)
 {
     AddSearchWindow(width);
@@ -2659,7 +2659,7 @@ void TryIncrementSpeciesSearchLevel()
 void ResetDexNavSearch(void)
 {
     gSaveBlock3Ptr->dexNavChain = 0;    //reset dex nav chaining on new map
-    VarSet(DN_VAR_STEP_COUNTER, 0); //reset hidden Pokémon step counter
+    VarSet(DN_VAR_STEP_COUNTER, 0); //reset hidden Pokemon step counter
     if (FlagGet(DN_FLAG_SEARCHING))
         EndDexNavSearch();   //moving to new map ends dexnav search
 }

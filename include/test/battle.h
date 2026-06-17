@@ -62,14 +62,14 @@
  * with:
  *     make check TESTS="Stun Spore"
  *
- * GIVEN initializes the parties, PLAYER and OPPONENT add a Pokémon to
+ * GIVEN initializes the parties, PLAYER and OPPONENT add a Pokemon to
  * their respective parties. They can both accept a block which further
- * customizes the Pokémon's stats, moves, item, ability, etc.
+ * customizes the Pokemon's stats, moves, item, ability, etc.
  *
  * WHEN describes the turns, and TURN describes the choices made in a
  * single turn. MOVE causes the player to use Stun Spore and adds the
- * move to the Pokémon's moveset if an explicit Moves was not specified.
- * Pokémon that are not mentioned in a TURN use Celebrate.
+ * move to the Pokemon's moveset if an explicit Moves was not specified.
+ * Pokemon that are not mentioned in a TURN use Celebrate.
  * The test runner rigs the RNG so that unless otherwise specified,
  * moves always hit, never critical hit, always activate their secondary
  * effects, and always roll the same damage modifier.
@@ -178,7 +178,7 @@
  * ASSUME(cond)
  * Causes the test to be skipped if cond is false. Used to document any
  * prerequisites of the test, e.g. to test Burn reducing the Attack of a
- * Pokémon we can observe the damage of a physical attack with and
+ * Pokemon we can observe the damage of a physical attack with and
  * without the burn. To document that this test assumes the attack is
  * physical we can use:
  *     ASSUME(GetMoveCategory(MOVE_WHATEVER) == DAMAGE_CATEGORY_PHYSICAL);
@@ -261,7 +261,7 @@
  * Checks that the test passes successes/trials. If tag is provided, the
  * test is run for each value that the tag can produce. For example, to
  * check that Paralysis causes the turn to be skipped 25/100 times, we
- * can write the following test that passes only if the Pokémon is fully
+ * can write the following test that passes only if the Pokemon is fully
  * paralyzed and specify that we expect it to pass 25/100 times when
  * RNG_PARALYSIS varies:
  *     SINGLE_BATTLE_TEST("Paralysis has a 25% chance of skipping the turn")
@@ -316,7 +316,7 @@
  *
  * PLAYER(species) and OPPONENT(species)
  * Adds the species to the player's or opponent's party respectively.
- * The Pokémon can be further customized with the following functions:
+ * The Pokemon can be further customized with the following functions:
  * - Gender(MON_MALE | MON_FEMALE)
  * - Nature(nature)
  * - Ability(ability)
@@ -329,8 +329,8 @@
  * - Status1(status1)
  * For example to create a Wobbuffet that is poisoned:
  *     PLAYER(SPECIES_WOBBUFFET) { Status1(STATUS1_POISON); }
- * Note if Speed is specified for any Pokémon then it must be specified
- * for all Pokémon.
+ * Note if Speed is specified for any Pokemon then it must be specified
+ * for all Pokemon.
  * Note if Moves is specified then MOVE will not automatically add moves
  * to the moveset.
  *
@@ -341,11 +341,11 @@
  * OPPONENT_B(species) Adds the species to the player's (B_TRAINER_PLAYER), player partner's (B_TRAINER_PARTNER),
  * opponent A's (B_TRAINER_OPPONENT_A), or opponent B's (B_TRAINER_OPPONENT_B) party, respectively.
  * Pokemon can be customised as per the guidance for PLAYER(species) and OPPONENT(species).
- * The functions assign the Pokémon to the party of the trainer at B_POSITION_PLAYER_LEFT,
+ * The functions assign the Pokemon to the party of the trainer at B_POSITION_PLAYER_LEFT,
  * B_POSITION_PLAYER_RIGHT, B_POSITION_OPPONENT_LEFT, and B_POSITION_OPPONENT_RIGHT, respectively.
- * For ONE_VS_TWO tests, PLAYER(species) must be used for all player-side Pokémon,
+ * For ONE_VS_TWO tests, PLAYER(species) must be used for all player-side Pokemon,
  * and for TWO_VS_ONE tests, OPPONENT_A(species) or OPPONENT(species) must be used for all opponent-side
- * Pokémon.
+ * Pokemon.
  *
  * AI_FLAGS
  * Specifies which AI flags are run for all battlers during the test. Has use only for AI tests.
@@ -364,7 +364,7 @@
  * TURN
  * Groups the choices made by the battlers on a single turn. If Speeds
  * have not been explicitly specified then the order of the MOVEs in the
- * TURN will be used to infer the Speeds of the Pokémon, e.g.:
+ * TURN will be used to infer the Speeds of the Pokemon, e.g.:
  *     // player's speed will be greater than opponent's speed.
  *     TURN { MOVE(player, MOVE_SPLASH); MOVE(opponent, MOVE_SPLASH); }
  *     // opponent's speed will be greater than player's speed.
@@ -399,7 +399,7 @@
  *     SKIP_TURN(player);
  *
  * SEND_OUT(battler, partyIndex)
- * Used when the battler chooses to switch to another Pokémon but not
+ * Used when the battler chooses to switch to another Pokemon but not
  * via Switch, e.g. after fainting or due to a U-turn.
  *     SEND_OUT(player, 1);
  *
@@ -862,9 +862,9 @@ bool32 IsAITest(void);
 #define APPEND_COMMA_TRUE(a) , a, TRUE
 #define R_APPEND_TRUE(...) __VA_OPT__(FIRST(__VA_ARGS__), TRUE RECURSIVELY(R_FOR_EACH(APPEND_COMMA_TRUE, EXCEPT_1(__VA_ARGS__))))
 
-#define AI_TRAINER_NAME "{PKMN} TRAINER LEAF"
-#define AI_TRAINER_2_NAME "{PKMN} TRAINER RED"
-#define AI_PARTNER_NAME "{PKMN} TRAINER 1"
+#define AI_TRAINER_NAME "ポケモン TRAINER LEAF"
+#define AI_TRAINER_2_NAME "ポケモン TRAINER RED"
+#define AI_PARTNER_NAME "ポケモン TRAINER 1"
 
 /* Test */
 

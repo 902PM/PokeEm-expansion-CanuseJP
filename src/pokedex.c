@@ -115,7 +115,7 @@ enum {
 #define POKEBALL_ROTATION_TOP    64
 #define POKEBALL_ROTATION_BOTTOM (POKEBALL_ROTATION_TOP - 16)
 
-// Coordinates of the Pokémon sprite on its page (info/cry screens)
+// Coordinates of the Pokemon sprite on its page (info/cry screens)
 #define MON_PAGE_X 48
 #define MON_PAGE_Y 56
 
@@ -1761,7 +1761,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
                 CreateMonSpritesAtPos(sPokedexView->selectedPokemon, 0xE);
                 gMain.newKeys |= START_BUTTON;  //Exit menu
                 break;
-            case 3: //CLOSE POKéDEX
+            case 3: //CLOSE POKeDEX
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ClosePokedex;
                 PlaySE(SE_PC_OFF);
@@ -1789,7 +1789,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
     }
 }
 
-// Opening the info screen from list view. Pokémon sprite is moving to its new position, wait for it to arrive
+// Opening the info screen from list view. Pokemon sprite is moving to its new position, wait for it to arrive
 static void Task_OpenInfoScreenAfterMonMovement(u8 taskId)
 {
     if (gSprites[sPokedexView->selectedMonSpriteId].x == MON_PAGE_X && gSprites[sPokedexView->selectedMonSpriteId].y == MON_PAGE_Y)
@@ -1961,12 +1961,12 @@ static void Task_HandleSearchResultsStartMenuInput(u8 taskId)
                 CreateMonSpritesAtPos(sPokedexView->selectedPokemon, 0xE);
                 gMain.newKeys |= START_BUTTON;
                 break;
-            case 3: //BACK TO POKéDEX
+            case 3: //BACK TO POKeDEX
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ReturnToPokedexFromSearchResults;
                 PlaySE(SE_TRUCK_DOOR);
                 break;
-            case 4: //CLOSE POKéDEX
+            case 4: //CLOSE POKeDEX
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ClosePokedexFromSearchResultsStartMenu;
                 PlaySE(SE_PC_OFF);
@@ -2052,7 +2052,7 @@ static void Task_ClosePokedexFromSearchResultsStartMenu(u8 taskId)
 
 #undef tLoadScreenTaskId
 
-// For loading main pokedex page or Pokédex search results
+// For loading main pokedex page or Pokedex search results
 static bool8 LoadPokedexListPage(u8 page)
 {
     switch (gMain.state)
@@ -4898,7 +4898,7 @@ static u32 GetPokedexMonPersonality(enum Species species)
     }
     else
     {
-        return 0xFF; //Changed from 0 to make it so the Pokédex shows the default mon pics instead of the female versions.
+        return 0xFF; //Changed from 0 to make it so the Pokedex shows the default mon pics instead of the female versions.
     }
 }
 

@@ -2396,7 +2396,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Earthquake"),
         .description = COMPOUND_STRING(
             "A powerful quake that\n"
-            "hits all other POKéMON."),
+            "hits all other POKeMON."),
         .effect = EFFECT_EARTHQUAKE,
         .power = 100,
         .type = TYPE_GROUND,
@@ -2692,7 +2692,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #if B_TELEPORT_BEHAVIOR >= GEN_8
         .description = COMPOUND_STRING(
             "Switches the user out last.\n"
-            "Flees when used by wild {PKMN}."),
+            "Flees when used by wild ポケモン."),
         #else
         .description = COMPOUND_STRING(
             "A psychic move for fleeing\n"
@@ -3211,7 +3211,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Metronome"),
         .description = COMPOUND_STRING(
             "Waggles a finger to use any\n"
-            "Pokémon move at random."),
+            "Pokemon move at random."),
         .effect = EFFECT_METRONOME,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -5342,7 +5342,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Perish Song"),
         .description = COMPOUND_STRING(
-            "Any Pokémon hearing this\n"
+            "Any Pokemon hearing this\n"
             "song faints in 3 turns."),
         .effect = EFFECT_PERISH_SONG,
         .power = 0,
@@ -6871,7 +6871,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Beat Up"),
         .description = COMPOUND_STRING(
-            "Summons party Pokémon to\n"
+            "Summons party Pokemon to\n"
             "join in the attack."),
         .effect = EFFECT_BEAT_UP,
         .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 1 : 10,
@@ -8005,7 +8005,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Camouflage"),
         .description = COMPOUND_STRING(
-            "Alters the Pokémon's type\n"
+            "Alters the Pokemon's type\n"
             "depending on the location."),
         .effect = EFFECT_CAMOUFLAGE,
         .power = 0,
@@ -8149,7 +8149,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Teeter Dance"),
         .description = COMPOUND_STRING(
-            "Confuses all Pokémon on\n"
+            "Confuses all Pokemon on\n"
             "the scene."),
         .effect = EFFECT_CONFUSE,
         .power = 0,
@@ -11642,7 +11642,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Trick Room"),
         .description = COMPOUND_STRING(
-            "Slower Pokémon get to move\n"
+            "Slower Pokemon get to move\n"
             "first for 5 turns."),
         .effect = EFFECT_TRICK_ROOM,
         .power = 0,
@@ -11691,7 +11691,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Discharge"),
         .description = COMPOUND_STRING(
-            "Zaps all other {PKMN} with\n"
+            "Zaps all other ポケモン with\n"
             "electricity. May paralyze."),
         .effect = EFFECT_HIT,
         .power = 80,
@@ -12962,7 +12962,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Synchronoise"),
         .description = COMPOUND_STRING(
             "An odd shock wave that only\n"
-            "damages same-type {PKMN}."),
+            "damages same-type ポケモン."),
         .effect = EFFECT_SYNCHRONOISE,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 120 : 70,
         .type = TYPE_PSYCHIC,
@@ -14955,7 +14955,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Rototiller"),
         .description = COMPOUND_STRING(
             "Ups the Attack and Sp. Atk\n"
-            "of Grass-type Pokémon."),
+            "of Grass-type Pokemon."),
         .effect = EFFECT_ROTOTILLER,
         .power = 0,
         .type = TYPE_GROUND,
@@ -15142,7 +15142,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Parabolic Charge"),
         .description = COMPOUND_STRING(
-            "Damages adjacent Pokémon\n"
+            "Damages adjacent Pokemon\n"
             "and heals up by half of it."),
         .effect = EFFECT_ABSORB,
         .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 65 : 50,
@@ -15368,7 +15368,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Flower Shield"),
         .description = COMPOUND_STRING(
             "Raises the Defense of\n"
-            "Grass-type Pokémon."),
+            "Grass-type Pokemon."),
         .effect = EFFECT_FLOWER_SHIELD,
         .power = 0,
         .type = TYPE_FAIRY,
@@ -15847,7 +15847,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Aromatic Mist"),
         .description = COMPOUND_STRING(
             "Raises the Sp. Def of a\n"
-            "partner Pokémon."),
+            "partner Pokemon."),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_FAIRY,
@@ -16811,7 +16811,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Spotlight"),
         .description = COMPOUND_STRING(
             "Makes the foe attack the\n"
-            "spotlighted Pokémon."),
+            "spotlighted Pokemon."),
         .effect = EFFECT_FOLLOW_ME,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -18424,7 +18424,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Teatime"),
         .description = COMPOUND_STRING(
-            "All Pokémon have teatime\n"
+            "All Pokemon have teatime\n"
             "and eat their Berries."),
         .effect = EFFECT_TEATIME,
         .power = 0,
@@ -19449,7 +19449,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Corrosive Gas"),
         .description = COMPOUND_STRING(
             "Highly acidic gas melts items\n"
-            "held by surrounding Pokémon."),
+            "held by surrounding Pokemon."),
         .effect = EFFECT_CORROSIVE_GAS,
         .power = 0,
         .type = TYPE_POISON,
@@ -19500,7 +19500,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Flip Turn"),
         .description = COMPOUND_STRING(
             "Attacks and rushes back to\n"
-            "switch with a party Pokémon."),
+            "switch with a party Pokemon."),
         .effect = EFFECT_HIT_ESCAPE,
         .power = 60,
         .type = TYPE_WATER,
@@ -20696,7 +20696,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Revival Blessing"),
         .description = COMPOUND_STRING(
-            "Revives a fainted party {PKMN}\n"
+            "Revives a fainted party ポケモン\n"
             "and restores half of its HP."),
         .effect = EFFECT_REVIVAL_BLESSING,
         .power = 0,
@@ -22501,7 +22501,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Guardian of Alola"),
         .description = COMPOUND_STRING(
-            "The Land Spirit Pokémon\n"
+            "The Land Spirit Pokemon\n"
             "greatly reduces the foe's HP."),
         .effect = EFFECT_FIXED_PERCENT_DAMAGE,
         .power = 1,

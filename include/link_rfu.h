@@ -21,7 +21,7 @@
 #define RFUCMD_DISCONNECT          0xED00
 #define RFUCMD_DISCONNECT_PARENT   0xEE00
 
-#define RFU_SERIAL_GAME                0x0002 // Serial number for Pokémon game (FRLG or Emerald)
+#define RFU_SERIAL_GAME                0x0002 // Serial number for Pokemon game (FRLG or Emerald)
 #define RFU_SERIAL_WONDER_DISTRIBUTOR  0x7F7D // Serial number for distributing Wonder Cards / News
 #define RFU_SERIAL_UNKNOWN             0x0000 // Unreferenced acceptable serial number. Gamecube?
 #define RFU_SERIAL_END                 0xFFFF
@@ -95,7 +95,7 @@ struct RfuGameCompatibilityData
 // This struct is sent via the Wireless Adapter as the game name or "gname" data.
 // Gname is only applicable during Wireless Single Game Pak Multiplay, when the
 // adapter needs this data for connection. Per the RFU manual, during "normal"
-// wireless play (the kind the Pokémon games use) the gname data can be used for
+// wireless play (the kind the Pokemon games use) the gname data can be used for
 // anything the developers want. This struct is what GF decided to use it for.
 // It can be up to 13 bytes in size (RFU_GAME_NAME_LENGTH).
 // The player's name is sent separately as the username ("uname"), and does not

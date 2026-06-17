@@ -600,7 +600,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_PCBag_Fill[] =
     { COMPOUND_STRING("Fill PC Boxes Slow (LAG!)"), DebugAction_PCBag_Fill_PCBoxes_Slow },
     { COMPOUND_STRING("Fill PC Items") ,            DebugAction_PCBag_Fill_PCItemStorage },
     { COMPOUND_STRING("Fill Pocket Items"),         DebugAction_PCBag_Fill_PocketItems },
-    { COMPOUND_STRING("Fill Pocket Poké Balls"),    DebugAction_PCBag_Fill_PocketPokeBalls },
+    { COMPOUND_STRING("Fill Pocket Poke Balls"),    DebugAction_PCBag_Fill_PocketPokeBalls },
     { COMPOUND_STRING("Fill Pocket TMHM"),          DebugAction_PCBag_Fill_PocketTMHM },
     { COMPOUND_STRING("Fill Pocket Berries"),       DebugAction_PCBag_Fill_PocketBerries },
     { COMPOUND_STRING("Fill Pocket Key Items"),     DebugAction_PCBag_Fill_PocketKeyItems },
@@ -645,8 +645,8 @@ static const struct DebugMenuOption sDebugMenu_Actions_Party[] =
 static const struct DebugMenuOption sDebugMenu_Actions_Give[] =
 {
     { COMPOUND_STRING("Give item XYZ…"),    DebugAction_Give_Item },
-    { COMPOUND_STRING("Pokémon (Basic)"),   DebugAction_Give_PokemonSimple },
-    { COMPOUND_STRING("Pokémon (Complex)"), DebugAction_Give_PokemonComplex },
+    { COMPOUND_STRING("Pokemon (Basic)"),   DebugAction_Give_PokemonSimple },
+    { COMPOUND_STRING("Pokemon (Complex)"), DebugAction_Give_PokemonComplex },
     { COMPOUND_STRING("Give Egg"),          DebugAction_Give_NewEgg },
     { COMPOUND_STRING("Give Decoration…"),  DebugAction_Give_Decoration },
     { COMPOUND_STRING("Max Money"),         DebugAction_Give_MaxMoney },
@@ -710,11 +710,11 @@ static const struct DebugMenuOption sDebugMenu_Actions_Flags[] =
 {
     [DEBUG_FLAGVAR_MENU_ITEM_FLAGS]                = { COMPOUND_STRING("Set Flag XYZ…"),                     DebugAction_FlagsVars_Flags },
     [DEBUG_FLAGVAR_MENU_ITEM_VARS]                 = { COMPOUND_STRING("Set Var XYZ…"),                      DebugAction_FlagsVars_Vars },
-    [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_ALL]         = { COMPOUND_STRING("Pokédex Flags All"),                 DebugAction_FlagsVars_PokedexFlags_All },
-    [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_RESET]       = { COMPOUND_STRING("Pokédex Flags Reset"),               DebugAction_FlagsVars_PokedexFlags_Reset },
-    [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_POKEDEX]       = { COMPOUND_STRING("Toggle {STR_VAR_1}Pokédex"),         DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchDex },
+    [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_ALL]         = { COMPOUND_STRING("Pokedex Flags All"),                 DebugAction_FlagsVars_PokedexFlags_All },
+    [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_RESET]       = { COMPOUND_STRING("Pokedex Flags Reset"),               DebugAction_FlagsVars_PokedexFlags_Reset },
+    [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_POKEDEX]       = { COMPOUND_STRING("Toggle {STR_VAR_1}Pokedex"),         DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchDex },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_NATDEX]        = { COMPOUND_STRING("Toggle {STR_VAR_1}National Dex"),    DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchNatDex },
-    [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_POKENAV]       = { COMPOUND_STRING("Toggle {STR_VAR_1}PokéNav"),         DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchPokeNav },
+    [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_POKENAV]       = { COMPOUND_STRING("Toggle {STR_VAR_1}PokeNav"),         DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchPokeNav },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_MATCH_CALL]    = { COMPOUND_STRING("Toggle {STR_VAR_1}Match Call"),      DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchMatchCall },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_RUN_SHOES]     = { COMPOUND_STRING("Toggle {STR_VAR_1}Running Shoes"),   DebugAction_ToggleFlag, DebugAction_FlagsVars_RunningShoes },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_LOCATIONS]     = { COMPOUND_STRING("Toggle {STR_VAR_1}Fly Flags"),       DebugAction_ToggleFlag, DebugAction_FlagsVars_ToggleFlyFlags },
@@ -2806,7 +2806,7 @@ static void DebugAction_Give_PokemonSimple(u8 taskId)
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
 
-    // Display initial Pokémon
+    // Display initial Pokemon
     u32 species;
     if (!IsSpeciesEnabled(sDebugMonData->species))
         species = SPECIES_NONE;
@@ -2848,7 +2848,7 @@ static void DebugAction_Give_PokemonComplex(u8 taskId)
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
 
-    // Display initial Pokémon
+    // Display initial Pokemon
     u32 species;
     if (!IsSpeciesEnabled(sDebugMonData->species))
         species = SPECIES_NONE;
@@ -2890,7 +2890,7 @@ static void DebugAction_Give_NewEgg(u8 taskId)
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
 
-    // Display initial Pokémon
+    // Display initial Pokemon
     u32 species;
     if (!IsSpeciesEnabled(gTasks[taskId].tInput))
         species = SPECIES_NONE;
@@ -3678,7 +3678,7 @@ static void DebugAction_Give_DayCareEgg(u8 taskId)
         Debug_DestroyMenu_Full_Script(taskId, DebugScript_OneDaycareMons);
     else if (GetDaycareCompatibilityScore(&gSaveBlock1Ptr->daycare) == PARENTS_INCOMPATIBLE) // not compatible parents
         Debug_DestroyMenu_Full_Script(taskId, DebugScript_DaycareMonsNotCompatible);
-    else // 2 Pokémon which can have a Pokémon baby together
+    else // 2 Pokemon which can have a Pokemon baby together
         TriggerPendingDaycareEgg();
 }
 

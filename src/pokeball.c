@@ -486,7 +486,7 @@ static inline void *GetOpponentMonSendOutCallback(void)
 }
 
 // This sequence of functions is very similar to those that get run when
-// a Pokéball gets thrown at a wild Pokémon, starting at SpriteCB_Ball_Arc.
+// a Pokeball gets thrown at a wild Pokemon, starting at SpriteCB_Ball_Arc.
 // These do not seem to get run.
 static void SpriteCB_BallThrow(struct Sprite *sprite)
 {
@@ -1104,10 +1104,10 @@ static u8 LaunchBallFadeMonTaskForPokeball(bool8 unFadeLater, u8 spritePalNum, u
     return LaunchBallFadeMonTask(unFadeLater, spritePalNum, selectedPalettes, BALL_POKE);
 }
 
-// Sprite data for the Pokémon
+// Sprite data for the Pokemon
 #define sSpecies data[7]
 
-// Sprite data for the Poké Ball
+// Sprite data for the Poke Ball
 #define sMonSpriteId data[0]
 #define sDelay       data[1]
 #define sMonPalNum   data[2]
@@ -1117,7 +1117,7 @@ static u8 LaunchBallFadeMonTaskForPokeball(bool8 unFadeLater, u8 spritePalNum, u
 #define sFinalMonY   data[6]
 #define sTrigIdx     data[7]
 
-// Poké Ball in Birch intro, and when receiving via trade
+// Poke Ball in Birch intro, and when receiving via trade
 void CreatePokeballSpriteToReleaseMon(u8 monSpriteId, u8 monPalNum, u8 x, u8 y, u8 oamPriority, u8 subpriority, u8 delay, u32 fadePalettes, enum Species species)
 {
     u8 spriteId;

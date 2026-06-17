@@ -534,7 +534,7 @@ bool32 AI_CanMoveBeBlockedByTarget(struct DamageContext *ctx)
 }
 
 // This function checks if all physical/special moves are either unusable or unreasonable to use.
-// Consider a Pokémon boosting their attack against a ghost Pokémon having only normal-type physical attacks.
+// Consider a Pokemon boosting their attack against a ghost Pokemon having only normal-type physical attacks.
 bool32 MovesWithCategoryUnusable(u32 attacker, u32 target, enum DamageCategory category)
 {
     u32 usable = 0;
@@ -5305,7 +5305,7 @@ enum AIConsiderGimmick ShouldTeraFromCalcs(enum BattlerId battler, enum BattlerI
 {
     struct Pokemon *party = GetBattlerParty(battler);
 
-    // Check how many Pokémon we have that could tera
+    // Check how many Pokemon we have that could tera
     int numPossibleTera = 0;
     for (u32 monIndex = 0; monIndex < PARTY_SIZE; monIndex++)
     {

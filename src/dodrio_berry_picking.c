@@ -209,7 +209,7 @@ struct DodrioGame_Player
 
 // Because Dodrio is required for this minigame,
 // the only relevant information about the selected
-// Pokémon is whether or not it's shiny
+// Pokemon is whether or not it's shiny
 struct DodrioGame_MonInfo
 {
     bool8 isShiny;

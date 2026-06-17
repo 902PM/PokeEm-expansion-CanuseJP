@@ -1332,7 +1332,7 @@ static bool32 CheckCanLoadOWE_Tiles(enum Species speciesId, bool32 isFemale, boo
         if (IndexOfSpriteTileTag(tag) != 0xFF)
             return TRUE;
         
-        // Custom Pokémon Object Anims will need to be accounted for.
+        // Custom Pokemon Object Anims will need to be accounted for.
         frames = graphicsInfo->anims == sAnimTable_Following_Asym ? 8 : 6;
         frames++; // Add an extra frame to equate offset of TILE_SIZE_4BPP << sheetSpan
         tileCount *= frames;

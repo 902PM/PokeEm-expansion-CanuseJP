@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_POKEDEX_H
 #define GUARD_CONSTANTS_POKEDEX_H
 
-// National Pokédex order
+// National Pokedex order
 // These constants are NOT disabled by P_GEN_X_POKEMON to keep pokedex_orders.h clean.
 enum NationalDexOrder
 {
@@ -1306,7 +1306,7 @@ enum NationalDexOrder
     F(JIRACHI) \
     F(DEOXYS)
 
-// Hoenn Pokédex order
+// Hoenn Pokedex order
 enum HoennDexOrder
 {
     HOENN_DEX_NONE,

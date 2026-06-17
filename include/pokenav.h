@@ -65,8 +65,8 @@ struct PokenavMonList
 enum
 {
     POKENAV_MODE_NORMAL,           // Chosen from Start menu.
-    POKENAV_MODE_FORCE_CALL_READY, // PokéNav tutorial before calling Mr. Stone
-    POKENAV_MODE_FORCE_CALL_EXIT,  // PokéNav tutorial after calling Mr. Stone
+    POKENAV_MODE_FORCE_CALL_READY, // PokeNav tutorial before calling Mr. Stone
+    POKENAV_MODE_FORCE_CALL_EXIT,  // PokeNav tutorial after calling Mr. Stone
 };
 
 enum
@@ -128,8 +128,8 @@ enum
     POKENAV_CONDITION_GRAPH_SEARCH,             // The Condition graph screen when a search result has been selected
     POKENAV_RETURN_CONDITION_SEARCH,            // Exited the graph screen back to the list of Condition search results
     POKENAV_MATCH_CALL,
-    POKENAV_RIBBONS_MON_LIST,                   // The list of Pokémon with ribbons
-    POKENAV_RIBBONS_SUMMARY_SCREEN,             // The ribbon summary screen shown when a Pokémon has been selected
+    POKENAV_RIBBONS_MON_LIST,                   // The list of Pokemon with ribbons
+    POKENAV_RIBBONS_SUMMARY_SCREEN,             // The ribbon summary screen shown when a Pokemon has been selected
     POKENAV_RIBBONS_RETURN_TO_MON_LIST,         // Exited the summary screen back to the ribbon list
 };
 
@@ -234,8 +234,8 @@ enum
                         [CHECK_PAGE_INTRO_2]  = gText_MatchCall##name##_Intro2}
 
 
-// PokéNav Function IDs
-// Indices into the LoopedTask tables for each of the main PokéNav features
+// PokeNav Function IDs
+// Indices into the LoopedTask tables for each of the main PokeNav features
 
 enum RegionMapFuncIds
 {

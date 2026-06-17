@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_POKEMON_H
 #define GUARD_CONSTANTS_POKEMON_H
 
-// Pokémon types
+// Pokemon types
 enum __attribute__((packed)) Type
 {
     TYPE_NONE = 0,
@@ -28,7 +28,7 @@ enum __attribute__((packed)) Type
     NUMBER_OF_MON_TYPES
 };
 
-// Pokémon egg groups
+// Pokemon egg groups
 #define EGG_GROUP_NONE                0
 #define EGG_GROUP_MONSTER             1
 #define EGG_GROUP_WATER_1             2
@@ -48,7 +48,7 @@ enum __attribute__((packed)) Type
 
 #define EGG_GROUPS_PER_MON            2
 
-// Pokémon natures
+// Pokemon natures
 #define NATURE_HARDY    0 // Neutral
 #define NATURE_LONELY   1 // +Atk -Def
 #define NATURE_BRAVE    2 // +Atk -Speed
@@ -79,7 +79,7 @@ enum __attribute__((packed)) Type
 #define NATURE_RANDOM            NUM_NATURES
 #define NATURE_MAY_SYNCHRONIZE   NUM_NATURES + 1
 
-// Pokémon Stats
+// Pokemon Stats
 enum __attribute__((packed)) Stat
 {
     STAT_HP,
@@ -103,7 +103,7 @@ enum __attribute__((packed)) Stat
 // Shiny odds
 #define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
 
-// Ribbon IDs used by TV and Pokénav
+// Ribbon IDs used by TV and Pokenav
 #define CHAMPION_RIBBON       0
 #define COOL_RIBBON_NORMAL    1
 #define COOL_RIBBON_SUPER     2
@@ -143,7 +143,7 @@ enum __attribute__((packed)) Stat
 
 // The above gift ribbons (Marine - World) are
 // special distribution ribbons that correspond to
-// 1 bit each in the Pokémon struct. Gen 4 hard-codes
+// 1 bit each in the Pokemon struct. Gen 4 hard-codes
 // each of these to the given name. In Gen 3 they're
 // used to get an index into giftRibbons in the save block,
 // which can have a value 0-64 (0 is 'no ribbon') that
@@ -250,7 +250,7 @@ enum GrowthRate
     GROWTH_SLOW,
 };
 
-// Body colors for Pokédex search
+// Body colors for Pokedex search
 enum BodyColor
 {
     BODY_COLOR_RED,
@@ -271,48 +271,48 @@ enum BodyColor
 
 enum EvolutionConditions {
     // Gen 2
-    IF_GENDER,                          // The Pokémon is of specific gender.
+    IF_GENDER,                          // The Pokemon is of specific gender.
     IF_TIME,                            // It is currently the specific time of day.
     IF_NOT_TIME,                        // It is NOT currently the specific time of day.
-    IF_MIN_FRIENDSHIP,                  // The Pokémon has the defined amount of Friendship.
-    IF_ATK_GT_DEF,                      // The Pokémon's Attack is greater than its Defense stat.
-    IF_ATK_EQ_DEF,                      // The Pokémon's Attack is equal to its Defense stat.
-    IF_ATK_LT_DEF,                      // The Pokémon's Attack is lower than its Defense stat.
-    IF_HOLD_ITEM,                       // The Pokémon is holding a specific item.
+    IF_MIN_FRIENDSHIP,                  // The Pokemon has the defined amount of Friendship.
+    IF_ATK_GT_DEF,                      // The Pokemon's Attack is greater than its Defense stat.
+    IF_ATK_EQ_DEF,                      // The Pokemon's Attack is equal to its Defense stat.
+    IF_ATK_LT_DEF,                      // The Pokemon's Attack is lower than its Defense stat.
+    IF_HOLD_ITEM,                       // The Pokemon is holding a specific item.
     // Gen 3
-    IF_PID_UPPER_MODULO_10_GT,          // The Pokémon's upper personality value's modulo by 10 is greater than the defined value.
-    IF_PID_UPPER_MODULO_10_EQ,          // The Pokémon's upper personality value's modulo by 10 is equal to the defined value.
-    IF_PID_UPPER_MODULO_10_LT,          // The Pokémon's upper personality value's modulo by 10 is lower or equal than the defined value.
-    IF_MIN_BEAUTY,                      // The Pokémon has the defined amount of Beauty.
-    IF_MIN_COOLNESS,                    // The Pokémon has the defined amount of Coolness.
-    IF_MIN_SMARTNESS,                   // The Pokémon has the defined amount of Smartness. (aka Cleverness in Gen6+)
-    IF_MIN_TOUGHNESS,                   // The Pokémon has the defined amount of Toughness.
-    IF_MIN_CUTENESS,                    // The Pokémon has the defined amount of Cuteness.
+    IF_PID_UPPER_MODULO_10_GT,          // The Pokemon's upper personality value's modulo by 10 is greater than the defined value.
+    IF_PID_UPPER_MODULO_10_EQ,          // The Pokemon's upper personality value's modulo by 10 is equal to the defined value.
+    IF_PID_UPPER_MODULO_10_LT,          // The Pokemon's upper personality value's modulo by 10 is lower or equal than the defined value.
+    IF_MIN_BEAUTY,                      // The Pokemon has the defined amount of Beauty.
+    IF_MIN_COOLNESS,                    // The Pokemon has the defined amount of Coolness.
+    IF_MIN_SMARTNESS,                   // The Pokemon has the defined amount of Smartness. (aka Cleverness in Gen6+)
+    IF_MIN_TOUGHNESS,                   // The Pokemon has the defined amount of Toughness.
+    IF_MIN_CUTENESS,                    // The Pokemon has the defined amount of Cuteness.
     // Gen 4
-    IF_SPECIES_IN_PARTY,                // The party contains a Pokémon of the specified species.
+    IF_SPECIES_IN_PARTY,                // The party contains a Pokemon of the specified species.
     IF_IN_MAP,                          // The player is currently in the specific map.
     IF_IN_MAPSEC,                       // The player is currently in the specific map sector.
-    IF_KNOWS_MOVE,                      // The Pokémon knows specific move.
+    IF_KNOWS_MOVE,                      // The Pokemon knows specific move.
     // Gen 5
-    IF_TRADE_PARTNER_SPECIES,           // The Pokémon is traded for a specific species.
+    IF_TRADE_PARTNER_SPECIES,           // The Pokemon is traded for a specific species.
     // Gen 6
-    IF_TYPE_IN_PARTY,                   // The party contains a Pokémon of the specified type.
+    IF_TYPE_IN_PARTY,                   // The party contains a Pokemon of the specified type.
     IF_WEATHER,                         // It is currently the specific weather in the current map.
-    IF_KNOWS_MOVE_TYPE,                 // The Pokémon knows a move with a specific type.
+    IF_KNOWS_MOVE_TYPE,                 // The Pokemon knows a move with a specific type.
     // Gen 8
-    IF_NATURE,                          // The Pokémon has a specific nature.
-    IF_AMPED_NATURE,                    // The Pokémon has one of the following natures: Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky.
-    IF_LOW_KEY_NATURE,                  // The Pokémon has one of the following natures: Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful.
-    IF_RECOIL_DAMAGE_GE,                // The Pokémon suffered at least certain amount of non-fainting recoil damage.
-    IF_CURRENT_DAMAGE_GE,               // The Pokémon has the specified difference of HP from its Max HP.
-    IF_CRITICAL_HITS_GE,                // The Pokémon performed the specified number of critical hits in one battle at least.
-    IF_USED_MOVE_X_TIMES,               // The Pokémon has used a move for at least X amount of times.
+    IF_NATURE,                          // The Pokemon has a specific nature.
+    IF_AMPED_NATURE,                    // The Pokemon has one of the following natures: Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky.
+    IF_LOW_KEY_NATURE,                  // The Pokemon has one of the following natures: Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful.
+    IF_RECOIL_DAMAGE_GE,                // The Pokemon suffered at least certain amount of non-fainting recoil damage.
+    IF_CURRENT_DAMAGE_GE,               // The Pokemon has the specified difference of HP from its Max HP.
+    IF_CRITICAL_HITS_GE,                // The Pokemon performed the specified number of critical hits in one battle at least.
+    IF_USED_MOVE_X_TIMES,               // The Pokemon has used a move for at least X amount of times.
     // Gen 9
-    IF_DEFEAT_X_WITH_ITEMS,             // The Pokémon defeated X amount of Pokémon of the specified species that are holding the specified item.
-    IF_PID_MODULO_100_GT,               // The Pokémon's personality value's modulo by 100 is greater than the defined value.
-    IF_PID_MODULO_100_EQ,               // The Pokémon's personality value's modulo by 100 is equal than the defined value.
-    IF_PID_MODULO_100_LT,               // The Pokémon's personality value's modulo by 100 is lower than the defined value.
-    IF_MIN_OVERWORLD_STEPS,             // The Player has taken a specific amount of steps in the overworld with the Pokémon following them or in the first slot of the party.
+    IF_DEFEAT_X_WITH_ITEMS,             // The Pokemon defeated X amount of Pokemon of the specified species that are holding the specified item.
+    IF_PID_MODULO_100_GT,               // The Pokemon's personality value's modulo by 100 is greater than the defined value.
+    IF_PID_MODULO_100_EQ,               // The Pokemon's personality value's modulo by 100 is equal than the defined value.
+    IF_PID_MODULO_100_LT,               // The Pokemon's personality value's modulo by 100 is lower than the defined value.
+    IF_MIN_OVERWORLD_STEPS,             // The Player has taken a specific amount of steps in the overworld with the Pokemon following them or in the first slot of the party.
     IF_BAG_ITEM_COUNT,                  // The Player has the specific amount of an item in the bag. It then removes those items.
     IF_REGION,                          // The Player is in the specific region.
     IF_NOT_REGION,                      // The Player is NOT in the specific region.
@@ -321,12 +321,12 @@ enum EvolutionConditions {
 
 enum EvolutionMethods {
     EVO_NONE,                   // Not an actual evolution, used to generate offspring that can't evolve into the specified species, like regional forms.
-    EVO_LEVEL,                  // Pokémon reaches the specified level
-    EVO_TRADE,                  // Pokémon is traded
-    EVO_ITEM,                   // specified item is used on Pokémon
+    EVO_LEVEL,                  // Pokemon reaches the specified level
+    EVO_TRADE,                  // Pokemon is traded
+    EVO_ITEM,                   // specified item is used on Pokemon
     EVO_SPLIT_FROM_EVO,         // A clone is generated and evolved when another evolution happens
     EVO_SCRIPT_TRIGGER,         // Player interacts with an overworld trigger
-    EVO_LEVEL_BATTLE_ONLY,      // Pokémon reaches the specified level, in battle only
+    EVO_LEVEL_BATTLE_ONLY,      // Pokemon reaches the specified level, in battle only
     EVO_BATTLE_END,             // Battle ends, doesn't need to level up
     EVO_SPIN                    // The player spins in the overworld
 };
@@ -335,7 +335,7 @@ enum EvolutionMode {
     EVO_MODE_NORMAL,
     EVO_MODE_TRADE,
     EVO_MODE_ITEM_USE,
-    EVO_MODE_ITEM_CHECK,         // If an Everstone is being held, still want to show that the stone *could* be used on that Pokémon to evolve
+    EVO_MODE_ITEM_CHECK,         // If an Everstone is being held, still want to show that the stone *could* be used on that Pokemon to evolve
     EVO_MODE_BATTLE_SPECIAL,
     EVO_MODE_OVERWORLD_SPECIAL,
     EVO_MODE_SCRIPT_TRIGGER,
@@ -361,7 +361,7 @@ enum EvoState {
 };
 
 enum PokemonJumpType {
-    PKMN_JUMP_TYPE_NONE,        // Not allowed in Pokémon Jump
+    PKMN_JUMP_TYPE_NONE,        // Not allowed in Pokemon Jump
     PKMN_JUMP_TYPE_NORMAL,
     PKMN_JUMP_TYPE_FAST,
     PKMN_JUMP_TYPE_SLOW,
@@ -385,7 +385,7 @@ enum ShinyMode {
 #define MON_PIC_HEIGHT 64
 #define MON_PIC_SIZE (MON_PIC_WIDTH * MON_PIC_HEIGHT / 2)
 
-// Most Pokémon have 2 frames (a default and an alternate for their animation).
+// Most Pokemon have 2 frames (a default and an alternate for their animation).
 // There are 4 exceptions:
 // - Deoxys has 2 frames, 1 for each form
 // - Spinda has 1 frame, presumably to avoid the work of animating its spots

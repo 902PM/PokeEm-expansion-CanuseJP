@@ -20,7 +20,7 @@
 #include "graphics.h"
 #include "constants/rgb.h"
 
-// Bead and Dream mail feature an icon of the Pokémon holding it.
+// Bead and Dream mail feature an icon of the Pokemon holding it.
 enum {
     ICON_TYPE_NONE,
     ICON_TYPE_BEAD,

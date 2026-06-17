@@ -1775,7 +1775,7 @@ void SetPokemonAnglerSpecies(enum Species species)
 }
 
 // World of Masters is initialized in the last slot by InitWorldOfMastersShowAttempt
-// If enough Pokémon were caught during the day the show can be put on air (and will
+// If enough Pokemon were caught during the day the show can be put on air (and will
 // be moved out of the last slot).
 // Either way the temporary version of the show in the last slot is deleted.
 static void ResolveWorldOfMastersShow(u16 days)
@@ -2039,7 +2039,7 @@ static void SecretBaseVisit_CalculatePartyData(TVShow *show)
             secretBaseVisitMonsTemp[numPokemon].level = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_LEVEL);
             secretBaseVisitMonsTemp[numPokemon].species = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES);
 
-            // Check all the Pokémon's moves, then randomly select one to save
+            // Check all the Pokemon's moves, then randomly select one to save
             for (u32 moveIndex = 0; moveIndex < MAX_MON_MOVES; moveIndex++)
             {
                 enum Move move = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_MOVE1 + moveIndex);
@@ -3061,7 +3061,7 @@ static enum Species GetRandomDifferentSpeciesSeenByPlayer(enum Species excludedS
 
         if (species == initSpecies)
         {
-            // Looped back to initial species (only Pokémon seen), must choose excluded species
+            // Looped back to initial species (only Pokemon seen), must choose excluded species
             species = excludedSpecies;
             return species;
         }
@@ -6195,7 +6195,7 @@ static void DoTVShowSpotTheCuties(void)
         TVShowConvertInternationalString(gStringVar1, show->cuties.playerName, show->cuties.language);
         TVShowConvertInternationalString(gStringVar2, show->cuties.nickname, show->cuties.pokemonNameLanguage);
 
-        // Comments following the intro depend on how many ribbons the Pokémon has
+        // Comments following the intro depend on how many ribbons the Pokemon has
         if (show->cuties.nRibbons < 10)
             sTVShowState = SPOTCUTIES_STATE_RIBBONS_LOW;
         else if (show->cuties.nRibbons < 20)

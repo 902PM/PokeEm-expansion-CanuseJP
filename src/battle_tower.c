@@ -1353,8 +1353,8 @@ static void GetPotentialPartnerMoveAndSpecies(u16 trainerId, u16 monId)
 // These partners can be an NPC or a former/record-mixed Apprentice
 // When talked to, their response consists of:
 // PARTNER_MSGID_INTRO - A greeting
-// PARTNER_MSGID_MON1 - Naming one Pokémon on their team, and a move it has
-// PARTNER_MSGID_MON2_ASK - Naming a second Pokémon on their team, a move it has, and asking if they'd like to be their partner
+// PARTNER_MSGID_MON1 - Naming one Pokemon on their team, and a move it has
+// PARTNER_MSGID_MON2_ASK - Naming a second Pokemon on their team, a move it has, and asking if they'd like to be their partner
 // PARTNER_MSGID_ACCEPT - If the player agrees to be their partner
 // PARTNER_MSGID_REJECT - If the player declines to be their partner
 static void ShowPartnerCandidateMessage(void)
@@ -1672,7 +1672,7 @@ static void AwardBattleTowerRibbons(void)
 #ifdef BUGFIX
     struct RibbonCounter ribbons[MAX_FRONTIER_PARTY_SIZE];
 #else
-    struct RibbonCounter ribbons[3]; // BUG: 4 Pokémon can receive ribbons in a double battle mode.
+    struct RibbonCounter ribbons[3]; // BUG: 4 Pokemon can receive ribbons in a double battle mode.
 #endif
     u8 ribbonType = 0;
     enum FrontierLevelMode lvlMode = gSaveBlock2Ptr->frontier.lvlMode;
@@ -1993,7 +1993,7 @@ static void FillTentTrainerParty_(u16 trainerId, u8 firstMonId, u8 monCount)
     {
         u16 monId = monSet[Random() % bfMonCount];
 
-        // Ensure this Pokémon species isn't a duplicate.
+        // Ensure this Pokemon species isn't a duplicate.
         for (j = 0; j < i + firstMonId; j++)
         {
             if (GetMonData(&gParties[B_TRAINER_OPPONENT_A][j], MON_DATA_SPECIES) == gFacilityTrainerMons[monId].species)
@@ -2012,7 +2012,7 @@ static void FillTentTrainerParty_(u16 trainerId, u8 firstMonId, u8 monCount)
         if (j != i + firstMonId)
             continue;
 
-        // Ensure this exact Pokémon index isn't a duplicate. This check doesn't seem necessary
+        // Ensure this exact Pokemon index isn't a duplicate. This check doesn't seem necessary
         // because the species and held items were already checked directly above.
         for (j = 0; j < i; j++)
         {
@@ -2027,7 +2027,7 @@ static void FillTentTrainerParty_(u16 trainerId, u8 firstMonId, u8 monCount)
                 level, fixedIV, otID, 0,
                 &gParties[B_TRAINER_OPPONENT_A][i + firstMonId]);
 
-        // The Pokémon was successfully added to the trainer's party, so it's safe to move on to
+        // The Pokemon was successfully added to the trainer's party, so it's safe to move on to
         // the next party slot.
         i++;
     }

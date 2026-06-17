@@ -607,7 +607,7 @@ struct SaveBlock2
     /*0x90*/ u8 filler_90[0x8];
     /*0x98*/ struct Time localTimeOffset;
     /*0xA0*/ struct Time lastBerryTreeUpdate;
-    /*0xA8*/ u32 gcnLinkFlags; // Read by Pokémon Colosseum/XD
+    /*0xA8*/ u32 gcnLinkFlags; // Read by Pokemon Colosseum/XD
     /*0xAC*/ u32 encryptionKey;
     /*0xB0*/ struct PlayersApprentice playerApprentice;
     /*0xDC*/ struct Apprentice apprentices[APPRENTICE_COUNT];
@@ -1042,13 +1042,13 @@ struct ExternalEventData
 {
     u8 unknownExternalDataFields1[7]; // if actually used, may be broken up into different fields.
     u32 unknownExternalDataFields2:8;
-    u32 currentPokeCoupons:24; // PokéCoupons stored by Pokémon Colosseum and XD from Mt. Battle runs. Earned PokéCoupons are also added to totalEarnedPokeCoupons. Colosseum/XD caps this at 9,999,999, but will read up to 16,777,215.
+    u32 currentPokeCoupons:24; // PokeCoupons stored by Pokemon Colosseum and XD from Mt. Battle runs. Earned PokeCoupons are also added to totalEarnedPokeCoupons. Colosseum/XD caps this at 9,999,999, but will read up to 16,777,215.
     u32 gotGoldPokeCouponTitleReward:1; // Master Ball from JP Colosseum Bonus Disc; for reaching 30,000 totalEarnedPokeCoupons
     u32 gotSilverPokeCouponTitleReward:1; // Light Ball Pikachu from JP Colosseum Bonus Disc; for reaching 5000 totalEarnedPokeCoupons
     u32 gotBronzePokeCouponTitleReward:1; // PP Max from JP Colosseum Bonus Disc; for reaching 2500 totalEarnedPokeCoupons
     u32 receivedAgetoCelebi:1; // from JP Colosseum Bonus Disc
     u32 unknownExternalDataFields3:4;
-    u32 totalEarnedPokeCoupons:24; // Used by the JP Colosseum bonus disc. Determines PokéCoupon rank to distribute rewards. Unread in International games. Colosseum/XD caps this at 9,999,999.
+    u32 totalEarnedPokeCoupons:24; // Used by the JP Colosseum bonus disc. Determines PokeCoupon rank to distribute rewards. Unread in International games. Colosseum/XD caps this at 9,999,999.
     u8 unknownExternalDataFields4[5]; // if actually used, may be broken up into different fields.
 } __attribute__((packed)); /*size = 0x14*/
 
@@ -1056,11 +1056,11 @@ struct ExternalEventData
 // In Emerald, Jirachi cannot normally be received, but hacking the distribution discs allows Emerald to receive Jirachi and set the flag
 struct ExternalEventFlags
 {
-    u8 usedBoxRS:1; // Set by Pokémon Box: Ruby & Sapphire; denotes whether this save has connected to it and triggered the free False Swipe Swablu Egg giveaway.
-    u8 boxRSEggsUnlocked:2; // Set by Pokémon Box: Ruby & Sapphire; denotes the number of Eggs unlocked from deposits; 1 for ExtremeSpeed Zigzagoon (at 100 deposited), 2 for Pay Day Skitty (at 500 deposited), 3 for Surf Pichu (at 1499 deposited)
+    u8 usedBoxRS:1; // Set by Pokemon Box: Ruby & Sapphire; denotes whether this save has connected to it and triggered the free False Swipe Swablu Egg giveaway.
+    u8 boxRSEggsUnlocked:2; // Set by Pokemon Box: Ruby & Sapphire; denotes the number of Eggs unlocked from deposits; 1 for ExtremeSpeed Zigzagoon (at 100 deposited), 2 for Pay Day Skitty (at 500 deposited), 3 for Surf Pichu (at 1499 deposited)
     //u8 padding:5;
     u8 unknownFlag1;
-    u8 receivedGCNJirachi; // Both the US Colosseum Bonus Disc and PAL/AUS Pokémon Channel use this field. One cannot receive a WISHMKR Jirachi and CHANNEL Jirachi with the same savefile.
+    u8 receivedGCNJirachi; // Both the US Colosseum Bonus Disc and PAL/AUS Pokemon Channel use this field. One cannot receive a WISHMKR Jirachi and CHANNEL Jirachi with the same savefile.
     u8 unknownFlag3;
     u8 unknownFlag4;
     u8 unknownFlag5;

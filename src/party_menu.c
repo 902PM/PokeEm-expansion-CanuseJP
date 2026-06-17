@@ -161,7 +161,7 @@ enum {
 #define MENU_DIR_LEFT    -2
 
 enum {
-    // Window ids 0-5 are implicitly assigned to each party Pokémon in InitPartyMenuBoxes
+    // Window ids 0-5 are implicitly assigned to each party Pokemon in InitPartyMenuBoxes
     WIN_MSG = PARTY_SIZE,
 };
 
@@ -4206,7 +4206,7 @@ bool8 FieldCallback_PrepareFadeInFromMenu(void)
     return TRUE;
 }
 
-// Same as above, but removes follower Pokémon
+// Same as above, but removes follower Pokemon
 bool8 FieldCallback_PrepareFadeInForTeleport(void)
 {
     RemoveFollowingPokemon();
@@ -7479,7 +7479,7 @@ static u8 GetPartyLayoutFromBattleType(void)
         return PARTY_LAYOUT_MULTI;
     if (IsMultiBattle() == TRUE && AreMultiPartiesFullTeams())
         return PARTY_LAYOUT_MULTI_FULL;
-    if (!IsDoubleBattle() || gPartiesCount[B_TRAINER_PLAYER] == 1) // Draw the single layout in a double battle where the player has only one Pokémon.
+    if (!IsDoubleBattle() || gPartiesCount[B_TRAINER_PLAYER] == 1) // Draw the single layout in a double battle where the player has only one Pokemon.
         return PARTY_LAYOUT_SINGLE;
     return PARTY_LAYOUT_DOUBLE;
 }
@@ -7534,7 +7534,7 @@ static bool8 TrySwitchInPokemon(void)
     GetPartyAndSlotFromPartyMenuId(slot, &party, &partySlot);
     battlePartyId = GetPartyIdFromBattleSlot(slot);
 
-    // In a 6v6 multi battle, slots 1, 4, and 5 are the partner's Pokémon
+    // In a 6v6 multi battle, slots 1, 4, and 5 are the partner's Pokemon
     if (IsMultiBattle() == TRUE && (slot == 1 || slot == 4 || slot == 5) && !AreMultiPartiesFullTeams())
     {
         StringCopy(gStringVar1, GetTrainerPartnerName());

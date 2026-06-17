@@ -325,7 +325,7 @@ extern const u8 gText_Speed[];
 extern const u8 gText_Dash[];
 extern const u8 gText_Plus[];
 
-//Pokédex text
+//Pokedex text
 extern const u8 gText_CryOf[];
 extern const u8 gText_SizeComparedTo[];
 extern const u8 gText_PokedexRegistration[];
@@ -684,7 +684,7 @@ extern const u8 gText_Information[];
 extern const u8 gText_Yes[];
 extern const u8 gText_No[];
 
-// Pokédex strings
+// Pokedex strings
 extern const u8 gText_SearchForPkmnBasedOnParameters[];
 extern const u8 gText_SwitchPokedexListings[];
 extern const u8 gText_ReturnToPokedex[];
@@ -2039,7 +2039,7 @@ extern const u8 gText_WantToPlayAgain[];
 extern const u8 gText_CommunicationStandby3[];
 extern const u8 gText_SomeoneDroppedOut[];
 
-// Pokémon Jump
+// Pokemon Jump
 extern const u8 gText_WantToPlayAgain2[];
 extern const u8 gText_SomeoneDroppedOut2[];
 extern const u8 gText_CommunicationStandby4[];

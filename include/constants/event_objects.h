@@ -422,7 +422,7 @@ enum
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
-// is 65519, but even considering follower Pokémon, this should be more than enough :)
+// is 65519, but even considering follower Pokemon, this should be more than enough :)
 
 
 // These are dynamic object gfx ids.
@@ -462,7 +462,7 @@ enum
 #define OW_SHINY(x) ((x)->graphicsId & OBJ_EVENT_MON_SHINY)
 #define OW_FEMALE(x) ((x)->graphicsId & OBJ_EVENT_MON_FEMALE)
 
-// Whether Object Event is an OW Pokémon
+// Whether Object Event is an OW Pokemon
 #define IS_OW_MON_OBJ(obj) ((obj)->graphicsId & OBJ_EVENT_MON)
 
 #define SHADOW_SIZE_S       0

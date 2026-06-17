@@ -694,7 +694,7 @@ enum BattleEnvironments
 // Window Ids for sStandardBattleWindowTemplates / sBattleArenaWindowTemplates
 #define B_WIN_MSG                 0
 #define B_WIN_ACTION_PROMPT       1 // "What will {x} do?"
-#define B_WIN_ACTION_MENU         2 // "Fight/Pokémon/Bag/Run" menu
+#define B_WIN_ACTION_MENU         2 // "Fight/Pokemon/Bag/Run" menu
 #define B_WIN_MOVE_NAME_1         3 // Top left
 #define B_WIN_MOVE_NAME_2         4 // Top right
 #define B_WIN_MOVE_NAME_3         5 // Bottom left

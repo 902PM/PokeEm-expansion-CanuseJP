@@ -14,11 +14,11 @@ u32 GetDaysLeftBasedOnStrain(u32 strain)
 
 static u32 GetRandomPokerusStrain(void)
 {
-    if (P_POKERUS_STRAIN_DISTRIBUTION < GEN_3) // Gen 1 - 2 (Gen 1 had no Pokérus but we default it with gen 2)
+    if (P_POKERUS_STRAIN_DISTRIBUTION < GEN_3) // Gen 1 - 2 (Gen 1 had no Pokerus but we default it with gen 2)
         return RandomWeighted(RNG_POKERUS_STRAIN_DISTRIBUTION, 15, 30, 30, 30, 30, 30, 30, 30, 30, 1, 1, 1, 1, 1, 1, 1);
     else if (P_POKERUS_STRAIN_DISTRIBUTION < GEN_4) //Gen 3 (Ruby/Sapphire only)
         return RandomWeighted(RNG_POKERUS_STRAIN_DISTRIBUTION, 30, 31, 31, 31, 31, 31, 31, 31, 1, 1, 1, 1, 1, 1, 1, 1);
-    else // Gen 4+ (Pokérus was disabled in gen 9 but we default it here)
+    else // Gen 4+ (Pokerus was disabled in gen 9 but we default it here)
         return RandomWeighted(RNG_POKERUS_STRAIN_DISTRIBUTION, 0, 31, 31, 31, 31, 31, 31, 31, 0, 1, 1, 1, 1, 1, 1, 1);
 }
 
@@ -151,8 +151,8 @@ void UpdatePartyPokerusTime(u32 days)
             else
                 daysLeft -= days;
 
-            //If the strain was 0, we changed it to 1 when the Pokérus disappear to remember the Pokémon was infected by Pokérus
-            // (otherwise its data would look the same as unaffected Pokémon)
+            //If the strain was 0, we changed it to 1 when the Pokerus disappear to remember the Pokemon was infected by Pokerus
+            // (otherwise its data would look the same as unaffected Pokemon)
             if (daysLeft == 0 && strain == 0)
             {
                 strain = 1;

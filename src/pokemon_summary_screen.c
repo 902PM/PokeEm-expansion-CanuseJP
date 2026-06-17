@@ -79,19 +79,19 @@
 #define PSS_LABEL_WINDOW_MOVES_APPEAL_JAM 15
 #define PSS_LABEL_WINDOW_PROMPT_RELEARN 16
 
-// Above/below the Pokémon's portrait (left)
+// Above/below the Pokemon's portrait (left)
 #define PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER 17
 #define PSS_LABEL_WINDOW_PORTRAIT_NICKNAME 18 // The upper name
 #define PSS_LABEL_WINDOW_PORTRAIT_SPECIES 19 // The lower name
 #define PSS_LABEL_WINDOW_END 20
 
-// Dynamic fields for the Pokémon Info page
+// Dynamic fields for the Pokemon Info page
 #define PSS_DATA_WINDOW_INFO_ORIGINAL_TRAINER 0
 #define PSS_DATA_WINDOW_INFO_ID 1
 #define PSS_DATA_WINDOW_INFO_ABILITY 2
 #define PSS_DATA_WINDOW_INFO_MEMO 3
 
-// Dynamic fields for the Pokémon Skills page
+// Dynamic fields for the Pokemon Skills page
 #define PSS_DATA_WINDOW_SKILLS_HELD_ITEM 0
 #define PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT 1
 #define PSS_DATA_WINDOW_SKILLS_STATS_LEFT 2 // HP, Attack, Defense
@@ -176,7 +176,7 @@ static EWRAM_DATA struct PokemonSummaryScreenData
     u8 currPageIndex;
     u8 minPageIndex;
     u8 maxPageIndex;
-    bool8 lockMonFlag; // This is used to prevent the player from changing Pokémon in the move deleter select, etc, but it is not needed because the input is handled differently there
+    bool8 lockMonFlag; // This is used to prevent the player from changing Pokemon in the move deleter select, etc, but it is not needed because the input is handled differently there
     u16 newMove;
     u8 firstMoveIndex;
     u8 secondMoveIndex;
@@ -185,7 +185,7 @@ static EWRAM_DATA struct PokemonSummaryScreenData
     bool8 hasRelearnableMoves;
     u8 windowIds[8];
     u8 spriteIds[SPRITE_ARR_ID_COUNT];
-    s16 switchCounter; // Used for various switch statement cases that decompress/load graphics or Pokémon data
+    s16 switchCounter; // Used for various switch statement cases that decompress/load graphics or Pokemon data
     u8 unk_filler4[6];
     u8 categoryIconSpriteId;
 } *sMonSummaryScreen = NULL;
@@ -3149,7 +3149,7 @@ static void DrawContestMoveHearts(enum Move move)
     }
 }
 
-static void LimitEggSummaryPageDisplay(void) // If the Pokémon is an egg, limit the number of pages displayed to 1
+static void LimitEggSummaryPageDisplay(void) // If the Pokemon is an egg, limit the number of pages displayed to 1
 {
     if (sMonSummaryScreen->summary.isEgg)
         ChangeBgX(3, 0x10000, BG_COORD_SET);
@@ -4299,7 +4299,7 @@ static void SetSpriteInvisibility(u8 spriteArrayId, bool8 invisible)
 
 static void HidePageSpecificSprites(void)
 {
-    // Keeps Pokémon, caught ball and status sprites visible.
+    // Keeps Pokemon, caught ball and status sprites visible.
     u8 i;
 
     for (i = SPRITE_ARR_ID_TYPE; i < ARRAY_COUNT(sMonSummaryScreen->spriteIds); i++)
@@ -4601,7 +4601,7 @@ static bool32 UNUSED IsMonAnimationFinished(void)
         return TRUE;
 }
 
-static void StopPokemonAnimations(void)  // A subtle effect, this function stops Pokémon animations when leaving the PSS
+static void StopPokemonAnimations(void)  // A subtle effect, this function stops Pokemon animations when leaving the PSS
 {
     u16 i;
     u16 paletteIndex;

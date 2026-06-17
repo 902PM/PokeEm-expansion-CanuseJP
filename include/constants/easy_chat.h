@@ -1109,7 +1109,7 @@
 
 #define EC_MAX_WORDS_IN_GROUP 270 // The closest is words by letter S, at 262
 
-// If the Pokémon or Move group tables have an ID higher than 511, the word will be seen as
+// If the Pokemon or Move group tables have an ID higher than 511, the word will be seen as
 // invalid due to the index looping back to the beginning and not matching the proper value.
 // To allow for higher values on those tables, increase the value of EC_MASK_BITS and the max value
 // will increase to (2 ^ EC_MASK_BITS). Keep in mind that existing saved words will be shifted.

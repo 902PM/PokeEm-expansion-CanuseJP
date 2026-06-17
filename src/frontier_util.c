@@ -159,7 +159,7 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Your POKéMON are wimpy because\n"
+                "Your POKeMON are wimpy because\n"
                 "you're wimpy as a TRAINER!"),           //Silver
             COMPOUND_STRING(
                 "Gwahahaha!\n"
@@ -488,7 +488,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
     },
     [FRONTIER_FACILITY_FACTORY] =
     {
-        // Because Factory's Pokémon are random, this facility's Brain also uses random Pokémon.
+        // Because Factory's Pokemon are random, this facility's Brain also uses random Pokemon.
         // What is interesting, this team is actually the one Steven uses in the multi tag battle alongside the player.
         {
             {
@@ -2074,7 +2074,7 @@ static void AppendIfValid(enum Species species, u16 heldItem, u16 hp, enum Front
 
 // gSpecialVar_Result is the level mode before and after calls to this function
 // gSpecialVar_0x8004 is used to store the return value instead (TRUE if there are insufficient eligible mons)
-// The names of ineligible Pokémon that have been caught are also buffered to print
+// The names of ineligible Pokemon that have been caught are also buffered to print
 static void CheckPartyIneligibility(void)
 {
     u16 speciesArray[PARTY_SIZE];
@@ -3228,7 +3228,7 @@ u16 GetRandomFrontierMonFromSet(u16 trainerId)
 
     do
     {
-        // "High tier" Pokémon are only allowed on open level mode
+        // "High tier" Pokemon are only allowed on open level mode
         // 20 is not a possible value for level here
         monId = monSet[Random() % numMons];
     } while ((level == FRONTIER_MAX_LEVEL_50 || level == 20) && monId > FRONTIER_MONS_HIGH_TIER);

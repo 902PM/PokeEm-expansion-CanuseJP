@@ -42,8 +42,8 @@ enum {
 
 #define MAX_CONDITION_SPARKLES 10
 
-// The number of extra sparkles shown on a Pokémon's condition screen.
-// All Pokémon start with 1, so the max here is MAX_CONDITION_SPARKLES - 1
+// The number of extra sparkles shown on a Pokemon's condition screen.
+// All Pokemon start with 1, so the max here is MAX_CONDITION_SPARKLES - 1
 #define GET_NUM_CONDITION_SPARKLES(sheen) ((sheen) != MAX_SHEEN) ? (sheen) / ((u32)MAX_SHEEN / (MAX_CONDITION_SPARKLES - 1) + 1) : MAX_CONDITION_SPARKLES - 1;
 
 #define CONDITION_GRAPH_TOP_Y  56

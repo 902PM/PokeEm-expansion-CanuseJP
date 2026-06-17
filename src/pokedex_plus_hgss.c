@@ -282,7 +282,7 @@ static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCGFX_U32("g
 // for evolution method listings
 #define MAX_EVO_METHOD_LINES 10
 
-// Coordinates of the Pokémon sprite on its page (info/cry screens)
+// Coordinates of the Pokemon sprite on its page (info/cry screens)
 #define MON_PAGE_X 48
 #define MON_PAGE_Y 56
 
@@ -2262,7 +2262,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
     }
 }
 
-// Opening the info screen from list view. Pokémon sprite is moving to its new position, wait for it to arrive
+// Opening the info screen from list view. Pokemon sprite is moving to its new position, wait for it to arrive
 static void Task_OpenInfoScreenAfterMonMovement(u8 taskId)
 {
     if (gSprites[sPokedexView->selectedMonSpriteId].x == MON_PAGE_X && gSprites[sPokedexView->selectedMonSpriteId].y == MON_PAGE_Y)
@@ -3645,7 +3645,7 @@ static void CreateStatBarsBg(void) //stat bars background text
     LoadSpriteSheet(&sheetStatBarsBg);
     sPokedexView->statBarsBgSpriteId = CreateSprite(&sStatBarBgSpriteTemplate, 36+offset_x, 107+offset_y, 0);
 }
-// Hack to destroy sprites when a Pokémon data is being loaded in
+// Hack to destroy sprites when a Pokemon data is being loaded in
 static bool32 IsMonInfoBeingLoaded(void)
 {
     return (gSprites[sPokedexView->selectedMonSpriteId].callback == SpriteCB_MoveMonForInfoScreen);
@@ -4872,7 +4872,7 @@ static void Task_LoadStatsScreen(u8 taskId)
             u32 personality = GetPokedexMonPersonality(species);
             FreeMonIconPalettes(); //Free space for new pallete
             LoadMonIconPalettePersonality(species, personality); //Loads pallete for current mon
-            gTasks[taskId].data[6] = CreateMonIcon(species, SpriteCB_MonIcon, 18, 31, 4, personality); //Create Pokémon sprite
+            gTasks[taskId].data[6] = CreateMonIcon(species, SpriteCB_MonIcon, 18, 31, 4, personality); //Create Pokemon sprite
             gSprites[gTasks[taskId].data[4]].oam.priority = 0;
         }
         gMain.state++;
@@ -5059,7 +5059,7 @@ static bool8 CalculateMoves(void)
     u32 numTeachableMoves = 0;
     u32 i;
 
-    // Mega and Gmax Pokémon don't have distinct learnsets from their base form; so use base species for calculation
+    // Mega and Gmax Pokemon don't have distinct learnsets from their base form; so use base species for calculation
     if (gSpeciesInfo[species].isMegaEvolution || gSpeciesInfo[species].isGigantamax)
         species = GetFormSpeciesId(species, 0);
 
@@ -5837,8 +5837,8 @@ static void Task_SwitchScreensFromStatsScreen(u8 taskId)
         FreeSpritePaletteByTag(ITEM_TAG);                       //Destroy item icon
         FreeSpriteOamMatrix(&gSprites[gTasks[taskId].data[3]]); //Destroy item icon
         DestroySprite(&gSprites[gTasks[taskId].data[3]]);       //Destroy item icon
-        FreeMonIconPalettes();                                          //Destroy Pokémon icon sprite
-        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokémon icon sprite
+        FreeMonIconPalettes();                                          //Destroy Pokemon icon sprite
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokemon icon sprite
 
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
         switch (sPokedexView->screenSwitchState)
@@ -5871,8 +5871,8 @@ static void Task_ExitStatsScreen(u8 taskId)
         FreeSpritePaletteByTag(ITEM_TAG);                       //Destroy item icon
         FreeSpriteOamMatrix(&gSprites[gTasks[taskId].data[3]]); //Destroy item icon
         DestroySprite(&gSprites[gTasks[taskId].data[3]]);       //Destroy item icon
-        FreeMonIconPalettes();                                          //Destroy Pokémon icon sprite
-        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokémon icon sprite
+        FreeMonIconPalettes();                                          //Destroy Pokemon icon sprite
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokemon icon sprite
 
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
         FreeInfoScreenWindowAndBgBuffers();
@@ -6005,7 +6005,7 @@ static void Task_LoadEvolutionScreen(u8 taskId)
             FreeMonIconPalettes(); //Free space for new pallete
             LoadMonIconPalettePersonality(species, personality); //Loads pallete for current mon
             PrintPreEvolutions(taskId, species);
-            gTasks[taskId].data[4] = CreateMonIcon(species, SpriteCB_MonIcon, 18 + 32*sPokedexView->numPreEvolutions, 31, 4, personality); //Create Pokémon sprite
+            gTasks[taskId].data[4] = CreateMonIcon(species, SpriteCB_MonIcon, 18 + 32*sPokedexView->numPreEvolutions, 31, 4, personality); //Create Pokemon sprite
             EvoFormsPage_PrintNavigationButtons(); // Navigation buttons
             gSprites[gTasks[taskId].data[4]].oam.priority = 0;
         }
@@ -6238,7 +6238,7 @@ static void HandlePreEvolutionSpeciesPrint(u8 taskId, enum Species preSpecies, e
     {
         u32 personality = GetPokedexMonPersonality(preSpecies);
         LoadMonIconPalettePersonality(preSpecies, personality); //Loads pallete for current mon
-        gTasks[taskId].data[4+base_i] = CreateMonIcon(preSpecies, SpriteCB_MonIcon, 18 + 32*base_i, 31, 4, personality); //Create Pokémon sprite
+        gTasks[taskId].data[4+base_i] = CreateMonIcon(preSpecies, SpriteCB_MonIcon, 18 + 32*base_i, 31, 4, personality); //Create Pokemon sprite
         gSprites[gTasks[taskId].data[4+base_i]].oam.priority = 0;
     }
 }
@@ -6826,11 +6826,11 @@ static void Task_SwitchScreensFromEvolutionScreen(u8 taskId)
     u8 i;
     if (!gPaletteFade.active)
     {
-        FreeMonIconPalettes();                                          //Destroy Pokémon icon sprite
-        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokémon icon sprite
+        FreeMonIconPalettes();                                          //Destroy Pokemon icon sprite
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokemon icon sprite
         for (i = 1; i <= gTasks[taskId].data[3]; i++)
         {
-            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]); //Destroy Pokémon icon sprite
+            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]); //Destroy Pokemon icon sprite
         }
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
 
@@ -6857,11 +6857,11 @@ static void Task_ExitEvolutionScreen(u8 taskId)
     u8 i;
     if (!gPaletteFade.active)
     {
-        FreeMonIconPalettes();                                          //Destroy Pokémon icon sprite
-        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokémon icon sprite
+        FreeMonIconPalettes();                                          //Destroy Pokemon icon sprite
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokemon icon sprite
         for (i = 1; i <= gTasks[taskId].data[3]; i++)
         {
-            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]); //Destroy Pokémon icon sprite
+            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]); //Destroy Pokemon icon sprite
         }
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
 
@@ -6925,7 +6925,7 @@ static void Task_LoadFormsScreen(u8 taskId)
             u32 personality = GetPokedexMonPersonality(species);
             FreeMonIconPalettes(); //Free space for new pallete
             LoadMonIconPalettePersonality(species, personality); //Loads pallete for current mon
-            gTasks[taskId].data[4] = CreateMonIcon(species, SpriteCB_MonIcon, 18, 31, 4, personality); //Create Pokémon sprite
+            gTasks[taskId].data[4] = CreateMonIcon(species, SpriteCB_MonIcon, 18, 31, 4, personality); //Create Pokemon sprite
             gSprites[gTasks[taskId].data[4]].oam.priority = 0;
         }
         EvoFormsPage_PrintNavigationButtons(); // Navigation buttons
@@ -7113,9 +7113,9 @@ static void PrintForms(u8 taskId, enum Species species)
             times += 1;
             LoadMonIconPalettePersonality(speciesForm, personality); //Loads pallete for current mon
             if (times < 7)
-                gTasks[taskId].data[4+times] = CreateMonIcon(speciesForm, SpriteCB_MonIcon, 52 + 34*(times-1), 31, 4, personality); //Create Pokémon sprite
+                gTasks[taskId].data[4+times] = CreateMonIcon(speciesForm, SpriteCB_MonIcon, 52 + 34*(times-1), 31, 4, personality); //Create Pokemon sprite
             else if (times < 14)
-                gTasks[taskId].data[4+times] = CreateMonIcon(speciesForm, SpriteCB_MonIcon, 18 + 34*(times-7), 70 - y_offset_icons, 4, personality); //Create Pokémon sprite
+                gTasks[taskId].data[4+times] = CreateMonIcon(speciesForm, SpriteCB_MonIcon, 18 + 34*(times-7), 70 - y_offset_icons, 4, personality); //Create Pokemon sprite
             gSprites[gTasks[taskId].data[4+times]].oam.priority = 0;
         }
     }
@@ -7135,11 +7135,11 @@ static void Task_SwitchScreensFromFormsScreen(u8 taskId)
     u8 i;
     if (!gPaletteFade.active)
     {
-        FreeMonIconPalettes();                                          //Destroy Pokémon icon sprite
-        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokémon icon sprite
+        FreeMonIconPalettes();                                          //Destroy Pokemon icon sprite
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokemon icon sprite
         for (i = 1; i <= gTasks[taskId].data[3]; i++)
         {
-            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]); //Destroy Pokémon icon sprite
+            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]); //Destroy Pokemon icon sprite
         }
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
 
@@ -7160,11 +7160,11 @@ static void Task_ExitFormsScreen(u8 taskId)
     u8 i;
     if (!gPaletteFade.active)
     {
-        FreeMonIconPalettes();                                          //Destroy Pokémon icon sprite
-        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokémon icon sprite
+        FreeMonIconPalettes();                                          //Destroy Pokemon icon sprite
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]); //Destroy Pokemon icon sprite
         for (i = 1; i <= gTasks[taskId].data[3]; i++)
         {
-            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]); //Destroy Pokémon icon sprite
+            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]); //Destroy Pokemon icon sprite
         }
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
 

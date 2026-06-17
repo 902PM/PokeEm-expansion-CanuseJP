@@ -141,7 +141,7 @@ static const enum NationalDexOrder sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     FOREACH_SPECIES_IN_HOENN_DEX_ORDER(HOENN_TO_NATIONAL)
 };
 
-// In Battle Palace, moves are chosen based on the Pokémon's nature rather than by the player
+// In Battle Palace, moves are chosen based on the Pokemon's nature rather than by the player
 // Moves are grouped into "Attack", "Defense", or "Support" (see PALACE_MOVE_GROUP_*)
 // Each nature has a certain percent chance of selecting a move from a particular group
 // and a separate percent chance for each group when at or below 50% HP
@@ -491,7 +491,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
 #define PP_UP_SHIFTS(val)           val,        (val) << 2,        (val) << 4,        (val) << 6
 #define PP_UP_SHIFTS_INV(val) (u8)~(val), (u8)~((val) << 2), (u8)~((val) << 4), (u8)~((val) << 6)
 
-// PP Up bonuses are stored for a Pokémon as a single byte.
+// PP Up bonuses are stored for a Pokemon as a single byte.
 // There are 2 bits (a value 0-3) for each move slot that
 // represent how many PP Ups have been applied.
 // The following arrays take a move slot id and return:
@@ -1431,8 +1431,8 @@ void CalculateMonStats(struct Pokemon *mon)
         gBattleScripting.levelUpHP = 1;
     SetMonData(mon, MON_DATA_MAX_HP, &newMaxHP);
 
-    // Since a Pokémon's maxHP data could either not have
-    // been initialized at this point or this Pokémon is
+    // Since a Pokemon's maxHP data could either not have
+    // been initialized at this point or this Pokemon is
     // just fainted, the check for oldMaxHP is important.
     if (currentHP == 0 && oldMaxHP != 0)
         return;
@@ -1673,7 +1673,7 @@ enum Move MonTryLearningNewMoveAtLevel(struct Pokemon *mon, bool32 firstMove, u3
         }
     }
 
-    //  Handler for Pokémon whose moves change upon form change.
+    //  Handler for Pokemon whose moves change upon form change.
     //  For example, if Zacian or Zamazenta should learn Iron Head,
     //  they're prevented from doing if they have Behemoth Blade/Bash,
     //  since it transforms into them while in their Crowned forms.
@@ -2122,9 +2122,9 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
                     retVal++;
                 }
 
-                // Vanilla Pokémon have 0s in nickname11 and nickname12
+                // Vanilla Pokemon have 0s in nickname11 and nickname12
                 // so if both are 0 we assume that this is a vanilla
-                // Pokémon and replace them with EOS. This means that
+                // Pokemon and replace them with EOS. This means that
                 // two CHAR_SPACE at the end of a nickname are trimmed.
                 struct PokemonSubstruct0 *substruct0 = GetSubstruct0(boxMon);
                 if (field != MON_DATA_NICKNAME10 && POKEMON_NAME_LENGTH >= 12)
@@ -3483,7 +3483,7 @@ const u32 sExpCandyExperienceTable[] = {
     [EXP_30000 - 1] = 30000,
 };
 
-// Returns TRUE if the item has no effect on the Pokémon, FALSE otherwise
+// Returns TRUE if the item has no effect on the Pokemon, FALSE otherwise
 bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, u8 moveIndex, bool8 usedByAI)
 {
     u32 dataUnsigned;
@@ -3915,9 +3915,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, 
                     }
                     case 5: // ITEM5_FRIENDSHIP_LOW
                         // Changes to friendship are given differently depending on
-                        // how much friendship the Pokémon already has.
-                        // In general, Pokémon with lower friendship receive more,
-                        // and Pokémon with higher friendship receive less.
+                        // how much friendship the Pokemon already has.
+                        // In general, Pokemon with lower friendship receive more,
+                        // and Pokemon with higher friendship receive less.
                         if (GetMonData(mon, MON_DATA_FRIENDSHIP) < 100)
                             UPDATE_FRIENDSHIP_FROM_ITEM();
                         itemEffectParam++;
@@ -5872,7 +5872,7 @@ bool8 ShouldSkipFriendshipChange(void)
 }
 
 // The below functions are for the 'MonSpritesGfxManager', a method of allocating
-// space for Pokémon sprites. These are only used for the summary screen Pokémon
+// space for Pokemon sprites. These are only used for the summary screen Pokemon
 // sprites (unless gMonSpritesGfxPtr is in use), but were set up for more general use.
 // Only the 'default' mode (MON_SPR_GFX_MODE_NORMAL) is used, which is set
 // up to allocate 4 sprites using the battler sprite templates (gBattlerSpriteTemplates).

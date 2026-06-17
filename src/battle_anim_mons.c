@@ -52,7 +52,7 @@ const struct UCoords8 sBattlerCoords[BATTLE_COORDS_COUNT][MAX_BATTLERS_COUNT] =
     },
 };
 
-// Placeholders for Pokémon sprites to be created for a move animation effect (e.g. Role Play / Snatch)
+// Placeholders for Pokemon sprites to be created for a move animation effect (e.g. Role Play / Snatch)
 #define TAG_MOVE_EFFECT_MON_1 55125
 #define TAG_MOVE_EFFECT_MON_2 55126
 
@@ -1209,7 +1209,7 @@ void SetSpriteRotScale(u8 spriteId, s16 xScale, s16 yScale, u16 rotation)
     gOamMatrices[i].d = matrix.d;
 }
 
-// Pokémon in Contests (except Unown) should be flipped.
+// Pokemon in Contests (except Unown) should be flipped.
 static bool8 ShouldRotScaleSpeciesBeFlipped(void)
 {
     if (IsContest())
@@ -2039,7 +2039,7 @@ u8 GetBattlerSpriteBGPriorityRank(enum BattlerId battler)
     return 1;
 }
 
-// Create Pokémon sprite to be used for a move animation effect (e.g. Role Play / Snatch)
+// Create Pokemon sprite to be used for a move animation effect (e.g. Role Play / Snatch)
 u8 CreateAdditionalMonSpriteForMoveAnim(enum Species species, bool32 isBackpic, u8 id, s16 x, s16 y, u8 subpriority, u32 personality, bool32 isShiny, enum BattlerId battler)
 {
     u8 spriteId;

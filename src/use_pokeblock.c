@@ -73,10 +73,10 @@ struct UsePokeblockSession
     u8 natureText[34];
 };
 
-// This struct is identical to PokenavMonListItem, the struct used for managing lists of Pokémon in the PokéNav
+// This struct is identical to PokenavMonListItem, the struct used for managing lists of Pokemon in the PokeNav
 // Given that this screen is essentially duplicated in the poknav, this struct was probably the same one with
 // a more general name/purpose
-// TODO: Once the PokéNav conditions screens are documented, resolve the above
+// TODO: Once the PokeNav conditions screens are documented, resolve the above
 struct UsePokeblockMenuPokemon
 {
     u8 boxId; // Because this screen is never used for the PC this is always set to TOTAL_BOXES_COUNT to refer to party
@@ -156,7 +156,7 @@ static void SpriteCB_SelectionIconCancel(struct Sprite *);
 static void SpriteCB_MonPic(struct Sprite *);
 static void SpriteCB_Condition(struct Sprite *);
 
-static const u8 sText_GetsAPokeBlockQuestion[] = _(" gets a {POKEBLOCK}?");
+static const u8 sText_GetsAPokeBlockQuestion[] = _(" gets a ポロック?");
 static const u8 sText_WasEnhanced[] = _("was enhanced!");
 static const u8 sText_NothingChanged[] = _("Nothing changed!");
 static const u8 sText_WontEatAnymore[] = _("It won't eat anymore…");
@@ -1260,7 +1260,7 @@ static void LoadAndCreateSelectionIcons(void)
     LoadSpriteSheets(spriteSheets);
     LoadSpritePalettes(spritePals);
 
-    // Fill Poké Ball selection icons up to number in party
+    // Fill Poke Ball selection icons up to number in party
     for (i = 0; i < sMenu->info.numSelections - 1; i++)
     {
         spriteId = CreateSprite(&spriteTemplate, 226, (i * 20) + 8, 0);
@@ -1490,7 +1490,7 @@ static bool8 LoadNewSelection_CancelToMon(void)
     case 2:
         if (!ConditionMenu_UpdateMonEnter(&sMenu->graph, &sMenu->curMonXOffset))
         {
-            // Load the new adjacent Pokémon (not the one being shown)
+            // Load the new adjacent Pokemon (not the one being shown)
             LoadMonInfo(sMenu->toLoadSelection, sMenu->toLoadId);
             sMenu->info.helperState++;
         }
@@ -1553,7 +1553,7 @@ static bool8 LoadNewSelection_MonToMon(void)
     case 2:
         if (!ConditionMenu_UpdateMonEnter(&sMenu->graph, &sMenu->curMonXOffset))
         {
-            // Load the new adjacent Pokémon (not the one being shown)
+            // Load the new adjacent Pokemon (not the one being shown)
             LoadMonInfo(sMenu->toLoadSelection, sMenu->toLoadId);
             sMenu->info.helperState++;
         }
@@ -1594,8 +1594,8 @@ static void SpriteCB_SelectionIconCancel(struct Sprite *sprite)
         sprite->oam.paletteNum = IndexOfSpritePaletteTag(TAG_CONDITION_CANCEL);
 }
 
-// Calculate the max id for sparkles/stars that appear around the Pokémon on the condition screen
-// All Pokémon start with 1 sparkle (added by CreateConditionSparkleSprites), so the number here +1
+// Calculate the max id for sparkles/stars that appear around the Pokemon on the condition screen
+// All Pokemon start with 1 sparkle (added by CreateConditionSparkleSprites), so the number here +1
 // is the total number of sparkles that appear
 static void CalculateNumAdditionalSparkles(u8 monIndex)
 {

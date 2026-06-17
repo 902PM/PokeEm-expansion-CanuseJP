@@ -719,7 +719,7 @@ const u8 gHealthboxElementsGfxTable[][32] = INCBIN_U8("graphics/battle_interface
                                                   "graphics/battle_interface/misc_frameend.4bpp",
                                                   "graphics/battle_interface/ball_display.4bpp",
                                                   "graphics/battle_interface/ball_caught_indicator.4bpp",
-                                                  "graphics/battle_interface/status2.4bpp", // these three duplicate sets of graphics are for the opponent/partner Pokémon
+                                                  "graphics/battle_interface/status2.4bpp", // these three duplicate sets of graphics are for the opponent/partner Pokemon
                                                   "graphics/battle_interface/status3.4bpp",
                                                   "graphics/battle_interface/status4.4bpp",
                                                   "graphics/battle_interface/healthbox_doubles_frameend.4bpp",
@@ -1338,7 +1338,7 @@ const u32 gDomeTourneyLineUp_Tilemap[] = INCGFX_U32("graphics/battle_frontier/to
 const u32 gDomeTourneyInfoCard_Gfx[] = INCGFX_U32("graphics/battle_frontier/tourney_info_card.png", ".4bpp.smol");
 const u32 gDomeTourneyInfoCard_Tilemap[] = INCGFX_U32("graphics/battle_frontier/tourney_info_card_tilemap.bin", ".smolTM");
 const u32 gDomeTourneyInfoCardBg_Tilemap[] = INCGFX_U32("graphics/battle_frontier/tourney_info_card_bg.bin", ".smolTM");
-const u32 gDomeTourneyTreeButtons_Gfx[] = INCGFX_U32("graphics/battle_frontier/tourney_buttons.png", ".4bpp.smol"); // exit/cancel and Poké Ball buttons
+const u32 gDomeTourneyTreeButtons_Gfx[] = INCGFX_U32("graphics/battle_frontier/tourney_buttons.png", ".4bpp.smol"); // exit/cancel and Poke Ball buttons
 const u16 gDomeTourneyTree_Pal[] = INCGFX_U16("graphics/battle_frontier/tourney_tree.png", ".gbapal");
 const u16 gDomeTourneyTreeButtons_Pal[] = INCGFX_U16("graphics/battle_frontier/tourney_buttons.pal", ".gbapal");
 const u16 gDomeTourneyMatchCardBg_Pal[] = INCGFX_U16("graphics/battle_frontier/tourney_match_card_bg.pal", ".gbapal");
@@ -1823,7 +1823,7 @@ const u16 gFrontierPassMapCursor_Pal[] = INCGFX_U16("graphics/frontier_pass/map_
 const u16 gFrontierPassMedalsSilver_Pal[] = INCGFX_U16("graphics/frontier_pass/silver.pal", ".gbapal");
 const u16 gFrontierPassMedalsGold_Pal[] = INCGFX_U16("graphics/frontier_pass/gold.pal", ".gbapal");
 
-// Pokédex
+// Pokedex
 const u16 gPokedexBgHoenn_Pal[] = INCGFX_U16("graphics/pokedex/bg_hoenn.pal", ".gbapal");
 const u16 gPokedexSearchResults_Pal[] = INCGFX_U16("graphics/pokedex/search_results_bg.pal", ".gbapal");
 const u16 gPokedexBgNational_Pal[] = INCGFX_U16("graphics/pokedex/bg_national.pal", ".gbapal");
@@ -1876,7 +1876,7 @@ const u16 gContestResultsTitle_Smart_Tilemap[]  = INCBIN_U16("graphics/contest/r
 const u16 gContestResultsTitle_Tough_Tilemap[]  = INCBIN_U16("graphics/contest/results_screen/title_tough.bin");
 const u16 gContestResultsTitle_Tilemap[]        = INCBIN_U16("graphics/contest/results_screen/title.bin");
 
-// PokéNav
+// PokeNav
 
 const u16 gPokenavCondition_Pal[] = INCGFX_U16("graphics/pokenav/condition/graph.png", ".gbapal");
 const u32 gPokenavCondition_Gfx[] = INCGFX_U32("graphics/pokenav/condition/graph.png", ".4bpp.smol");
@@ -1977,7 +1977,7 @@ const u32 gKantoTrainerCardFront_Tilemap[] = INCGFX_U32("graphics/trainer_card/f
 const u32 gKantoTrainerCardBack_Tilemap[] = INCGFX_U32("graphics/trainer_card/frlg/back.bin", ".smolTM");
 const u32 gKantoTrainerCardFrontLink_Tilemap[] = INCGFX_U32("graphics/trainer_card/frlg/front_link.bin", ".smolTM");
 
-// Pokémon storage system
+// Pokemon storage system
 
 const u32 gStorageSystemMenu_Gfx[] = INCGFX_U32("graphics/pokemon_storage/menu.png", ".4bpp.smol");
 const u16 gStorageSystemPartyMenu_Pal[] = INCGFX_U16("graphics/pokemon_storage/party_menu.pal", ".gbapal");

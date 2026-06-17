@@ -64,7 +64,7 @@ static const struct PartyMenuBoxInfoRects sPartyBoxInfoRects[] =
 
 // Each layout array has an array for each of the 6 party slots
 // The array for each slot has the sprite coords of its various sprites in the following order
-// Pokémon icon (x, y), held item (x, y), status condition (x, y), menu Poké Ball (x, y)
+// Pokemon icon (x, y), held item (x, y), status condition (x, y), menu Poke Ball (x, y)
 static const u8 sPartyMenuSpriteCoords[PARTY_LAYOUT_COUNT][PARTY_SIZE][4 * 2] =
 {
     [PARTY_LAYOUT_SINGLE] =
@@ -755,7 +755,7 @@ static const u8 *const sActionStringTable[] =
     [PARTY_MSG_ALREADY_HOLDING_ONE]    = gText_AlreadyHoldingOne,
     [PARTY_MSG_WHICH_APPLIANCE]        = gText_WhichAppliance,
     [PARTY_MSG_CHOOSE_SECOND_FUSION]   = gText_NextFusionMon,
-    [PARTY_MSG_NO_POKEMON]             = COMPOUND_STRING("You have no POKéMON."),
+    [PARTY_MSG_NO_POKEMON]             = COMPOUND_STRING("You have no POKeMON."),
     [PARTY_MSG_CHOOSE_MON_FOR_BOX]     = gText_SendWhichMonToPC,
     [PARTY_MSG_MOVE_ITEM_WHERE]        = gText_MoveItemWhere,
 };
@@ -995,7 +995,7 @@ static const struct SpritePalette sSpritePalette_MenuPokeball =
     gPartyMenuPokeball_Pal, TAG_POKEBALL
 };
 
-// Used for the Poké Ball sprite on each party slot / Cancel button
+// Used for the Poke Ball sprite on each party slot / Cancel button
 static const struct SpriteTemplate sSpriteTemplate_MenuPokeball =
 {
     .tileTag = TAG_POKEBALL,

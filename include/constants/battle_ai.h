@@ -27,7 +27,7 @@
 #define AI_FLAG_SMART_MON_CHOICES           AI_FLAG(17)  // AI will make smarter decisions when choosing which mon to send out mid-battle and after a KO, which are separate decisions. Automatically included by AI_FLAG_SMART_SWITCHING.
 #define AI_FLAG_CONSERVATIVE                AI_FLAG(18)  // AI assumes all moves will low roll damage.
 #define AI_FLAG_SEQUENCE_SWITCHING          AI_FLAG(19)  // AI switches in mons in exactly party order, and never switches mid-battle.
-#define AI_FLAG_DOUBLE_ACE_POKEMON          AI_FLAG(20)  // AI has *two* Ace Pokémon. The last two Pokémons in the party won't be used unless they're the last ones remaining. Goes well in battles where the trainer ID equals to twins, couples, etc.
+#define AI_FLAG_DOUBLE_ACE_POKEMON          AI_FLAG(20)  // AI has *two* Ace Pokemon. The last two Pokemons in the party won't be used unless they're the last ones remaining. Goes well in battles where the trainer ID equals to twins, couples, etc.
 #define AI_FLAG_WEIGH_ABILITY_PREDICTION    AI_FLAG(21)  // AI will predict player's ability based on aiRating
 #define AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE  AI_FLAG(22)  // AI adds score to highest damage move regardless of accuracy or secondary effect
 #define AI_FLAG_PREDICT_SWITCH              AI_FLAG(23)  // AI will predict the player's switches and switchins based on how it would handle the situation. Recommend using AI_FLAG_OMNISCIENT

@@ -16,7 +16,7 @@
 #define PALACE_DATA_WIN_STREAK          1
 #define PALACE_DATA_WIN_STREAK_ACTIVE   2
 
-// Pokémon in Battle Palace have a move "group" type preference depending on nature
+// Pokemon in Battle Palace have a move "group" type preference depending on nature
 #define PALACE_MOVE_GROUP_ATTACK  0
 #define PALACE_MOVE_GROUP_DEFENSE 1
 #define PALACE_MOVE_GROUP_SUPPORT 2

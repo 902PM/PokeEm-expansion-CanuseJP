@@ -162,7 +162,7 @@ void SwitchPartyOrderInGameMulti(enum BattlerId battler, u8 arg1)
     }
 }
 
-// Called when a Pokémon is unable to attack during a Battle Palace battle.
+// Called when a Pokemon is unable to attack during a Battle Palace battle.
 // Check if it was because they are frozen/asleep, and if so try to cure the status.
 u32 BattlePalace_TryEscapeStatus(enum BattlerId battler)
 {
@@ -241,7 +241,7 @@ u32 BattlePalace_TryEscapeStatus(enum BattlerId battler)
         case 2:
             break;
         }
-        // Loop until reaching the final state, or stop early if Pokémon was Asleep/Frozen
+        // Loop until reaching the final state, or stop early if Pokemon was Asleep/Frozen
     } while (gBattleCommunication[MULTIUSE_STATE] != 2 && effect == 0);
 
     if (effect == 2)

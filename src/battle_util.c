@@ -1792,7 +1792,7 @@ bool32 HandleFaintedMonActions(void)
                 gBattleStruct->eventState.faintedAction = FAINTED_ACTIONS_WAIT_STATE;
             else
                 gBattleStruct->eventState.faintedAction = FAINTED_ACTIONS_GIVE_EXP;
-            // Don't switch mons until all Pokémon performed their actions or the battle's over.
+            // Don't switch mons until all Pokemon performed their actions or the battle's over.
             if (B_FAINT_SWITCH_IN >= GEN_4
                 && gBattleOutcome == 0
                 && !NoAliveMonsForEitherParty()
@@ -1804,7 +1804,7 @@ bool32 HandleFaintedMonActions(void)
             }
             break;
         case FAINTED_ACTIONS_WAIT_STATE:
-            // Don't switch mons until all Pokémon performed their actions or the battle's over.
+            // Don't switch mons until all Pokemon performed their actions or the battle's over.
             if (B_FAINT_SWITCH_IN >= GEN_4
                 && gBattleOutcome == 0
                 && !NoAliveMonsForEitherParty()
@@ -4850,7 +4850,7 @@ enum Ability GetBattlerAbilityInternal(enum BattlerId battler, bool32 ignoreMold
 
     if (abilityCantBeSuppressed)
     {
-        // Edge case: Pokémon under the effect of gastro acid transforms into a Pokémon with Comatose (Todo: verify how other unsuppressable abilities behave)
+        // Edge case: Pokemon under the effect of gastro acid transforms into a Pokemon with Comatose (Todo: verify how other unsuppressable abilities behave)
         if (gBattleMons[battler].volatiles.transformed
             && gBattleMons[battler].volatiles.gastroAcid
             && gBattleMons[battler].ability == ABILITY_COMATOSE)
@@ -6780,7 +6780,7 @@ static inline u32 CalcAttackStat(struct DamageContext *ctx)
     // critical hits ignore attack stat's stage drops
     if (ctx->isCrit && atkStage < DEFAULT_STAT_STAGE)
         atkStage = DEFAULT_STAT_STAGE;
-    // Pokémon with unaware ignore attack stat changes while taking damage
+    // Pokemon with unaware ignore attack stat changes while taking damage
     if (ctx->abilities[ctx->battlerDef] == ABILITY_UNAWARE)
         atkStage = DEFAULT_STAT_STAGE;
 
@@ -7067,7 +7067,7 @@ static inline u32 CalcDefenseStat(struct DamageContext *ctx)
     // critical hits ignore positive stat changes
     if (ctx->isCrit && defStage > DEFAULT_STAT_STAGE)
         defStage = DEFAULT_STAT_STAGE;
-    // Pokémon with unaware ignore defense stat changes while dealing damage
+    // Pokemon with unaware ignore defense stat changes while dealing damage
     if (ctx->abilities[ctx->battlerAtk] == ABILITY_UNAWARE)
         defStage = DEFAULT_STAT_STAGE;
     // certain moves also ignore stat changes
@@ -8065,7 +8065,7 @@ static inline void MulByTypeEffectiveness(struct DamageContext *ctx, uq4_12_t *m
     if (ctx->moveType == TYPE_STELLAR && GetActiveGimmick(ctx->battlerDef) == GIMMICK_TERA)
         mod = UQ_4_12(2.0);
 
-    // B_WEATHER_STRONG_WINDS weakens Super Effective moves against Flying-type Pokémon
+    // B_WEATHER_STRONG_WINDS weakens Super Effective moves against Flying-type Pokemon
     if (ctx->weather & B_WEATHER_STRONG_WINDS && !ctx->isAnticipation)
     {
         if (defType == TYPE_FLYING && mod >= UQ_4_12(2.0))
@@ -8084,7 +8084,7 @@ static inline void MulByTypeEffectiveness(struct DamageContext *ctx, uq4_12_t *m
 
 static inline void TryNoticeIllusionInTypeEffectiveness(enum Move move, enum Type moveType, enum BattlerId battlerAtk, enum BattlerId battlerDef, uq4_12_t resultingModifier, enum Species illusionSpecies)
 {
-    // Check if the type effectiveness would've been different if the Pokémon really had the types as the disguise.
+    // Check if the type effectiveness would've been different if the Pokemon really had the types as the disguise.
     uq4_12_t presumedModifier = UQ_4_12(1.0);
 
     struct DamageContext ctx = {0};
@@ -8770,7 +8770,7 @@ u32 GetIllusionMonPartyId(struct Pokemon *party, struct Pokemon *mon, struct Pok
             }
         }
 
-    // Find last alive non-egg Pokémon.
+    // Find last alive non-egg Pokemon.
     for (s32 id = partyEnd - 1; id >= partyStart; id--)
     {
         if (GetMonData(&party[id], MON_DATA_SANITY_HAS_SPECIES)
@@ -8782,7 +8782,7 @@ u32 GetIllusionMonPartyId(struct Pokemon *party, struct Pokemon *mon, struct Pok
                 continue;
             if (&party[id] != mon && &party[id] != partnerMon)
                 return id;
-            else // If this Pokémon or its partner is last in the party, ignore Illusion.
+            else // If this Pokemon or its partner is last in the party, ignore Illusion.
                 return PARTY_SIZE;
         }
     }
@@ -9325,7 +9325,7 @@ bool32 CanTargetBattler(enum BattlerId battlerAtk, enum BattlerId battlerDef, en
     if (GetMoveEffect(move) == EFFECT_HIT_ENEMY_HEAL_ALLY
     &&  IsBattlerAlly(battlerAtk, battlerDef)
     &&  gBattleMons[battlerAtk].volatiles.healBlock)
-        return FALSE;   // Pokémon affected by Heal Block cannot target allies with Pollen Puff
+        return FALSE;   // Pokemon affected by Heal Block cannot target allies with Pollen Puff
     if (IsBattlerAlly(battlerAtk, battlerDef) && (GetActiveGimmick(battlerAtk) == GIMMICK_DYNAMAX
                                                || IsGimmickSelected(battlerAtk, GIMMICK_DYNAMAX)))
         return FALSE;
@@ -9711,7 +9711,7 @@ void TryActivateSleepClause(enum BattlerId battler, u32 indexInParty)
 
 void TryDeactivateSleepClause(enum BattleSide battlerSide, u32 indexInParty)
 {
-    // If the Pokémon on the given side at the given index in the party is the one causing Sleep Clause to be active,
+    // If the Pokemon on the given side at the given index in the party is the one causing Sleep Clause to be active,
     // set monCausingSleepClause[battlerSide] = PARTY_SIZE, which means Sleep Clause is not active for the given side
     if (IsSleepClauseEnabled() && gBattleStruct->monCausingSleepClause[battlerSide] == indexInParty)
         gBattleStruct->monCausingSleepClause[battlerSide] = PARTY_SIZE;

@@ -12,7 +12,7 @@
 
 #define PICS_COUNT 8
 
-// Needs to be large enough to store either a decompressed Pokémon pic or trainer pic
+// Needs to be large enough to store either a decompressed Pokemon pic or trainer pic
 #define PIC_SPRITE_SIZE max(MON_PIC_SIZE, TRAINER_PIC_SIZE)
 #define MAX_PIC_FRAMES  max(MAX_MON_PIC_FRAMES, MAX_TRAINER_PIC_FRAMES)
 

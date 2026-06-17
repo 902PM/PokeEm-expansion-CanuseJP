@@ -487,7 +487,7 @@ static void OpponentHandleChooseMove(enum BattlerId battler)
         }
         BtlController_Complete(battler);
     }
-    else // Wild Pokémon - use random move
+    else // Wild Pokemon - use random move
     {
         enum Move move;
         do

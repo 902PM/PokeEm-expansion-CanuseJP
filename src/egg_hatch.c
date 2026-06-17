@@ -677,7 +677,7 @@ static void CB2_EggHatch(void)
         }
         break;
     case 4:
-        // Wait for Pokémon's front sprite animation
+        // Wait for Pokemon's front sprite animation
         if (gSprites[sEggHatchData->monSpriteId].callback == SpriteCallbackDummy)
             sEggHatchData->state++;
         break;
@@ -858,7 +858,7 @@ static void SpriteCB_Egg_Hatch(struct Sprite *sprite)
 {
     s16 i;
 
-    // Fade to white to hide transition from egg to Pokémon
+    // Fade to white to hide transition from egg to Pokemon
     if (sprite->sTimer == 0)
         BeginNormalPaletteFade(PALETTES_ALL, -1, 0, 16, RGB_WHITEALPHA);
 
@@ -885,7 +885,7 @@ static void SpriteCB_Egg_Reveal(struct Sprite *sprite)
 {
     if (sprite->sTimer == 0)
     {
-        // Reveal hatched Pokémon
+        // Reveal hatched Pokemon
         gSprites[sEggHatchData->monSpriteId].invisible = FALSE;
         StartSpriteAffineAnim(&gSprites[sEggHatchData->monSpriteId], BATTLER_AFFINE_EMERGE);
     }

@@ -688,7 +688,7 @@ static void CreateMonMarkingsOrPokeballIndicators(void)
     }
     else
     {
-        // Party Mode, load Pokéball selection icons
+        // Party Mode, load Pokeball selection icons
         LoadSpriteSheets(sprSheets);
         Pokenav_AllocAndLoadPalettes(sprPals);
 

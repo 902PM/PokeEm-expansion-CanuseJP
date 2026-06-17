@@ -12,20 +12,20 @@ python script.
 
 
 /* DEFAULT_LEARNING
-Vanilla uses: most Pokémon
-Allow a Pokémon to learn all universal moves
+Vanilla uses: most Pokemon
+Allow a Pokemon to learn all universal moves
 */
 #define DEFAULT_LEARNING    0
 
 /* TM_ILLITERATE
-Vanilla uses: Pokémon with "gimmick" moveset (Ditto, Smeargle, Magikarp, ...)
+Vanilla uses: Pokemon with "gimmick" moveset (Ditto, Smeargle, Magikarp, ...)
 Pokemon can't learn any universal moves (unless it was added to their teachable learnset)
 */
 #define TM_ILLITERATE       1
 
 /* ALL_TEACHABLES
 Vanilla uses: Mew
-Allows a Pokémon to learn almost every teachable move (whether from TM or tutors)
+Allows a Pokemon to learn almost every teachable move (whether from TM or tutors)
 Some moves are excluded, they are listed in SignatureTeachables
 */
 #define ALL_TEACHABLES      1

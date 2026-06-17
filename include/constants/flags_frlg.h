@@ -1540,7 +1540,7 @@
 #define FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE 0 // Unused Flag. Used in R/S to indicate whether player defeated or caught Groudon/Kyogre in Cave of Origin.
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
 #define FLAG_RECEIVED_METEORITE              0
-#define FLAG_ADVENTURE_STARTED               0 // RECEIVED Pokédex.
+#define FLAG_ADVENTURE_STARTED               0 // RECEIVED Pokedex.
 #define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0 // Set when Team Magma is defeated at Mossdeep's Space Center.
 #define FLAG_MET_HIDDEN_POWER_GIVER          0
 

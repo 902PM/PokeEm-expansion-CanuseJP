@@ -6,7 +6,7 @@
 #include "data.h"
 #include "constants/hold_effects.h"
 
-// For displaying a multi battle partner's Pokémon in the party menu
+// For displaying a multi battle partner's Pokemon in the party menu
 struct MultiPartnerMenuPokemon
 {
     /*0x00*/ enum Species species;

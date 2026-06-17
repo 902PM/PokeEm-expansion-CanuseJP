@@ -795,7 +795,7 @@ static bool32 HandleEndTurnEncore(enum BattlerId battler)
 
     if (gBattleMons[battler].volatiles.encoreTimer != 0)
     {
-        if (gBattleMons[battler].moves[gBattleMons[battler].volatiles.encoredMovePos] != gBattleMons[battler].volatiles.encoredMove)  // Pokémon does not have the encored move anymore
+        if (gBattleMons[battler].moves[gBattleMons[battler].volatiles.encoredMovePos] != gBattleMons[battler].volatiles.encoredMove)  // Pokemon does not have the encored move anymore
         {
             gBattleMons[battler].volatiles.encoredMove = 0;
             gBattleMons[battler].volatiles.encoreTimer = 0;
@@ -828,7 +828,7 @@ static bool32 HandleEndTurnDisable(enum BattlerId battler)
             if (gBattleMons[battler].volatiles.disabledMove == gBattleMons[battler].moves[moveIndex])
                 break;
         }
-        if (moveIndex == MAX_MON_MOVES)  // Pokémon does not have the disabled move anymore
+        if (moveIndex == MAX_MON_MOVES)  // Pokemon does not have the disabled move anymore
         {
             gBattleMons[battler].volatiles.disabledMove = 0;
             gBattleMons[battler].volatiles.disableTimer = 0;

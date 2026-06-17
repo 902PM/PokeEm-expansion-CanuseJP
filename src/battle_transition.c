@@ -1824,11 +1824,11 @@ static void SpriteCB_FldEffPokeballTrail(struct Sprite *sprite)
     {
         if (sprite->x >= 0 && sprite->x <= DISPLAY_WIDTH)
         {
-            // Set Pokéball position
+            // Set Pokeball position
             s16 posX = sprite->x >> 3;
             s16 posY = sprite->y >> 3;
 
-            // If Pokéball moved forward clear trail behind it
+            // If Pokeball moved forward clear trail behind it
             if (posX != sprite->sPrevX)
             {
                 u32 var;

@@ -296,10 +296,10 @@ void StoreSelectedPokemonInDaycare(void)
         Free(mon);
 }
 
-// Shifts the second daycare Pokémon slot into the first slot.
+// Shifts the second daycare Pokemon slot into the first slot.
 static void ShiftDaycareSlots(struct DayCare *daycare)
 {
-    // This condition is only satisfied when the player takes out the first Pokémon from the daycare.
+    // This condition is only satisfied when the player takes out the first Pokemon from the daycare.
     if (GetBoxMonData(&daycare->mons[1].mon, MON_DATA_SPECIES) != SPECIES_NONE
         && GetBoxMonData(&daycare->mons[0].mon, MON_DATA_SPECIES) == SPECIES_NONE)
     {
@@ -765,7 +765,7 @@ static void InheritAbility(struct Pokemon *egg, struct BoxPokemon *father, struc
     }
 }
 
-// Counts the number of egg moves a Pokémon learns and stores the moves in
+// Counts the number of egg moves a Pokemon learns and stores the moves in
 // the given array.
 u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves)
 {
@@ -1056,7 +1056,7 @@ static enum Species DetermineEggSpeciesAndParentSlots(struct DayCare *daycare, u
         eggSpecies = SPECIES_SINISTEA_PHONY;
     else if (eggSpecies == SPECIES_POLTCHAGEIST_ARTISAN)
         eggSpecies = SPECIES_POLTCHAGEIST_COUNTERFEIT;
-    // To avoid single-stage Totem Pokémon to breed more of themselves.
+    // To avoid single-stage Totem Pokemon to breed more of themselves.
     else if (eggSpecies == SPECIES_MIMIKYU_TOTEM_DISGUISED)
         eggSpecies = SPECIES_MIMIKYU_DISGUISED;
     else if (eggSpecies == SPECIES_TOGEDEMARU_TOTEM)

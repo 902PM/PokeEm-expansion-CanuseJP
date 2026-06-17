@@ -430,7 +430,7 @@ static enum CancelerResult CancelerConfused(struct BattleCalcValues *cv)
     return CANCELER_RESULT_SUCCESS;
 }
 
-static enum CancelerResult CancelerGhost(struct BattleCalcValues *cv) // GHOST in Pokémon Tower
+static enum CancelerResult CancelerGhost(struct BattleCalcValues *cv) // GHOST in Pokemon Tower
 {
     if (IsGhostBattleWithoutScope())
     {
@@ -4242,7 +4242,7 @@ static enum MoveEndResult MoveEndClearBits(struct BattleCalcValues *cv)
     if (gSpecialStatuses[cv->battlerAtk].backUpTarget)
         gBattleStruct->moveTarget[cv->battlerAtk] = gSpecialStatuses[cv->battlerAtk].backUpTarget - 1;
 
-    // If the Pokémon needs to keep track of move usage for its evolutions, do it
+    // If the Pokemon needs to keep track of move usage for its evolutions, do it
     if (originallyUsedMove != MOVE_NONE)
         TryUpdateEvolutionTracker(IF_USED_MOVE_X_TIMES, 1, originallyUsedMove);
 

@@ -1,7 +1,7 @@
 #ifndef GUARD_POKEMON_ANIMATION_H
 #define GUARD_POKEMON_ANIMATION_H
 
-// Pokémon back animation sets
+// Pokemon back animation sets
 enum BackAnim
 {
     BACK_ANIM_NONE,
@@ -32,7 +32,7 @@ enum BackAnim
     BACK_ANIM_SHAKE_GLOW_BLUE,
 };
 
-// Pokémon animation function ids (for front and back)
+// Pokemon animation function ids (for front and back)
 // Each front anim uses 1, and each back anim uses a set of 3
 enum AnimFunctionIDs
 {

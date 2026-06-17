@@ -29,7 +29,7 @@
 #include "constants/songs.h"
 #include "config/pokedex_plus_hgss.h"
 
-// There are two types of indicators for the area screen to show where a Pokémon can occur:
+// There are two types of indicators for the area screen to show where a Pokemon can occur:
 // - Area glows, which highlight any of the maps in MAP_GROUP_TOWNS_AND_ROUTES that have the species.
 //   These are a tilemap with colored rectangular areas that blends in and out. The positions of the
 //   rectangles is determined by the positions of the matching MAPSEC values on the region map layout.
@@ -307,7 +307,7 @@ static void FindMapsWithMon(enum Species species)
             return;
     }
 
-    // Add Pokémon with special encounter circumstances (i.e. not listed
+    // Add Pokemon with special encounter circumstances (i.e. not listed
     // in the regular wild encounter table) to the area map.
     // This only applies to Feebas on Route 119, but it was clearly set
     // up to allow handling others.
@@ -937,7 +937,7 @@ static void ResetPokedexAreaMapBg(void)
     SetBgAttribute(3, BG_ATTR_PALETTEMODE, 0);
 }
 
-// Creates the circular sprites to highlight special areas (like caves) where a Pokémon can be found
+// Creates the circular sprites to highlight special areas (like caves) where a Pokemon can be found
 static void CreateAreaMarkerSprites(void)
 {
     u8 spriteId;

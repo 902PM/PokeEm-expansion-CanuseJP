@@ -32,15 +32,15 @@
 #include "constants/songs.h"
 #include "constants/rgb.h"
 
-// Select_ refers to the first Pokémon selection screen where you choose your initial 3 rental Pokémon.
-// Swap_   refers to the subsequent selection screens where you can swap a Pokémon with one from the beaten trainer
+// Select_ refers to the first Pokemon selection screen where you choose your initial 3 rental Pokemon.
+// Swap_   refers to the subsequent selection screens where you can swap a Pokemon with one from the beaten trainer
 
 // Note that, generally, "Action" will refer to the immediate actions that can be taken on each screen,
-// i.e. selecting a Pokémon or selecting the Cancel button
+// i.e. selecting a Pokemon or selecting the Cancel button
 // The "Options menu" will refer to the popup menu that shows when some actions have been selected
 
-#define SWAP_PLAYER_SCREEN 0  // The screen where the player selects which of their Pokémon to swap away
-#define SWAP_ENEMY_SCREEN  1  // The screen where the player selects which new Pokémon from the defeated party to swap for
+#define SWAP_PLAYER_SCREEN 0  // The screen where the player selects which of their Pokemon to swap away
+#define SWAP_ENEMY_SCREEN  1  // The screen where the player selects which new Pokemon from the defeated party to swap for
 
 #define SELECTABLE_MONS_COUNT 6
 
@@ -89,7 +89,7 @@ struct FactorySelectableMon
 {
     u16 monId;
     u16 ballSpriteId;
-    u8 selectedId; // 0 - not selected, 1 - first Pokémon, 2 - second Pokémon, 3 - third Pokémon
+    u8 selectedId; // 0 - not selected, 1 - first Pokemon, 2 - second Pokemon, 3 - third Pokemon
     struct Pokemon monData;
 };
 
@@ -1034,7 +1034,7 @@ static void SpriteCB_Pokeball(struct Sprite *sprite)
 {
     if (sprite->oam.paletteNum == IndexOfSpritePaletteTag(PALTAG_BALL_SELECTED))
     {
-        // Poké Ball selected, do rocking animation
+        // Poke Ball selected, do rocking animation
         if (sprite->animEnded)
         {
             if (sprite->data[0] != 0)
@@ -1058,7 +1058,7 @@ static void SpriteCB_Pokeball(struct Sprite *sprite)
     }
     else
     {
-        // Poké Ball not selected, remain still
+        // Poke Ball not selected, remain still
         StartSpriteAnimIfDifferent(sprite, 0);
     }
 }
@@ -1495,7 +1495,7 @@ static void Select_Task_Exit(u8 taskId)
     }
 }
 
-// Handles the Yes/No prompt when confirming the 3 selected rental Pokémon
+// Handles the Yes/No prompt when confirming the 3 selected rental Pokemon
 static void Select_Task_HandleYesNo(u8 taskId)
 {
     if (sFactorySelectScreen->monPicAnimating == TRUE)
@@ -1517,14 +1517,14 @@ static void Select_Task_HandleYesNo(u8 taskId)
             PlaySE(SE_SELECT);
             if (sFactorySelectScreen->yesNoCursorPos == 0)
             {
-                // Selected Yes, confirmed selected Pokémon
+                // Selected Yes, confirmed selected Pokemon
                 Select_HideChosenMons();
                 gTasks[taskId].tState = 0;
                 gTasks[taskId].func = Select_Task_Exit;
             }
             else
             {
-                // Selected No, continue choosing Pokémon
+                // Selected No, continue choosing Pokemon
                 Select_ErasePopupMenu(SELECT_WIN_YES_NO);
                 Select_DeclineChosenMons();
                 sFactorySelectScreen->fadeSpeciesNameActive = TRUE;
@@ -1534,7 +1534,7 @@ static void Select_Task_HandleYesNo(u8 taskId)
         }
         else if (JOY_NEW(B_BUTTON))
         {
-            // Pressed B, Continue choosing Pokémon
+            // Pressed B, Continue choosing Pokemon
             PlaySE(SE_SELECT);
             Select_ErasePopupMenu(SELECT_WIN_YES_NO);
             Select_DeclineChosenMons();
@@ -1556,7 +1556,7 @@ static void Select_Task_HandleYesNo(u8 taskId)
     }
 }
 
-// Handles the popup menu that shows when a Pokémon is selected
+// Handles the popup menu that shows when a Pokemon is selected
 static void Select_Task_HandleMenu(u8 taskId)
 {
     switch (gTasks[taskId].tState)
@@ -2369,7 +2369,7 @@ static void Swap_Task_Exit(u8 taskId)
     {
     case 0:
         // Set return value for script
-        // TRUE if player kept their current Pokémon
+        // TRUE if player kept their current Pokemon
         if (sFactorySwapScreen->monSwapped == TRUE)
         {
             gTasks[taskId].tState++;
@@ -2584,7 +2584,7 @@ static void Swap_Task_HandleMenu(u8 taskId)
     }
 }
 
-// Handles input on the two main swap screens (choosing a current pokeon to get rid of, and choosing a new Pokémon to receive)
+// Handles input on the two main swap screens (choosing a current pokeon to get rid of, and choosing a new Pokemon to receive)
 static void Swap_Task_HandleChooseMons(u8 taskId)
 {
     switch (gTasks[taskId].tState)
@@ -2599,7 +2599,7 @@ static void Swap_Task_HandleChooseMons(u8 taskId)
     case STATE_CHOOSE_MONS_HANDLE_INPUT:
         if (JOY_NEW(A_BUTTON))
         {
-            // Run whatever action is currently selected (a Poké Ball, the Cancel button, etc.)
+            // Run whatever action is currently selected (a Poke Ball, the Cancel button, etc.)
             PlaySE(SE_SELECT);
             sFactorySwapScreen->fadeSpeciesNameActive = FALSE;
             Swap_PrintMonSpeciesAtFade();
@@ -3507,7 +3507,7 @@ static void Swap_HandleActionCursorChange(u8 cursorId)
 {
     if (cursorId < FRONTIER_PARTY_SIZE)
     {
-        // Cursor is on one of the Pokémon
+        // Cursor is on one of the Pokemon
         gSprites[sFactorySwapScreen->cursorSpriteId].invisible = FALSE;
         Swap_HideActionButtonHighlights();
         gSprites[sFactorySwapScreen->cursorSpriteId].x = gSprites[sFactorySwapScreen->ballSpriteIds[cursorId]].x;

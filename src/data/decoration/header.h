@@ -33,14 +33,14 @@ const struct Decoration gDecorations[] =
     [DECOR_POKEMON_DESK] =
     {
         .id = DECOR_POKEMON_DESK,
-        .name = _("POKéMON DESK"),
+        .name = _("POKeMON DESK"),
         .permission = DECORPERM_SOLID_FLOOR,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DESK,
         .price = 3000,
         .description = COMPOUND_STRING(
             "A small desk built in\n"
-            "the shape of a POKé\n"
+            "the shape of a POKe\n"
             "BALL."),
         .tiles = DecorGfx_POKEMON_DESK,
         .icon = {NULL, NULL},
@@ -176,7 +176,7 @@ const struct Decoration gDecorations[] =
     [DECOR_POKEMON_CHAIR] =
     {
         .id = DECOR_POKEMON_CHAIR,
-        .name = _("POKéMON CHAIR"),
+        .name = _("POKeMON CHAIR"),
         .permission = DECORPERM_PASS_FLOOR,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_CHAIR,
@@ -184,7 +184,7 @@ const struct Decoration gDecorations[] =
         .description = COMPOUND_STRING(
             "A small chair built\n"
             "in the shape of a\n"
-            "POKé BALL."),
+            "POKe BALL."),
         .tiles = DecorGfx_POKEMON_CHAIR,
         .icon = {NULL, NULL},
     },
@@ -1047,7 +1047,7 @@ const struct Decoration gDecorations[] =
         .price = 1000,
         .description = COMPOUND_STRING(
             "A small poster\n"
-            "printed with POKé\n"
+            "printed with POKe\n"
             "BALLS."),
         .tiles = DecorGfx_BALL_POSTER,
         .icon = {NULL, NULL},

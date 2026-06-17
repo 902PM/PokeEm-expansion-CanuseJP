@@ -914,7 +914,7 @@ static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
     [DOME_BATTLE_STYLE_UNUSED4]         = COMPOUND_STRING("This is sample message 4."),
 };
 
-// The third line of text on a trainers info card. It that gives information about their party's stat spread (based on their Pokémon's effort values and Nature).
+// The third line of text on a trainers info card. It that gives information about their party's stat spread (based on their Pokemon's effort values and Nature).
 static const u8 *const sBattleDomeOpponentStatsTexts[] =
 {
     COMPOUND_STRING("Emphasizes HP and ATTACK."),              // DOME_TEXT_TWO_GOOD_STATS and DOME_TEXT_HP start here
@@ -959,7 +959,7 @@ static const u8 *const sBattleDomeOpponentStatsTexts[] =
     COMPOUND_STRING("Neglects SPEED."),
     COMPOUND_STRING("Neglects SP. ATTACK."),
     COMPOUND_STRING("Neglects SP. DEFENSE."),
-    [DOME_TEXT_WELL_BALANCED] = COMPOUND_STRING("Raises POKéMON in a well-balanced way."),
+    [DOME_TEXT_WELL_BALANCED] = COMPOUND_STRING("Raises POKeMON in a well-balanced way."),
 };
 
 static const u8 sInfoTrainerMonX[FRONTIER_PARTY_SIZE] = {104, 136, 104};
@@ -2184,7 +2184,7 @@ static void CreateDomeOpponentMon(u8 monPartyId, u16 tournamentTrainerId, u8 tou
     #ifdef BUGFIX
     u8 fixedIv = GetDomeTrainerMonIvs(DOME_TRAINERS[tournamentTrainerId].trainerId);
     #else
-    u8 fixedIv = GetDomeTrainerMonIvs(tournamentTrainerId); // BUG: Using the wrong ID. As a result, all Pokémon have ivs of 3.
+    u8 fixedIv = GetDomeTrainerMonIvs(tournamentTrainerId); // BUG: Using the wrong ID. As a result, all Pokemon have ivs of 3.
     #endif
     u8 level = SetFacilityPtrsGetLevel();
 
@@ -2230,13 +2230,13 @@ static void CreateDomeOpponentMons(u16 tournamentTrainerId)
     }
 }
 
-// Returns a bitmask representing which 2 of the trainer's 3 Pokémon to select.
+// Returns a bitmask representing which 2 of the trainer's 3 Pokemon to select.
 // The choice is calculated solely depending on the type effectiveness of their
-// movesets against the player's Pokémon.
+// movesets against the player's Pokemon.
 // There is a 50% chance of either a "good" or "bad" selection mode being used.
 // In the good mode movesets are preferred which are more effective against the
-// player, and in the bad mode the opposite is true. If all 3 Pokémon tie, the
-// other mode will be tried. If they tie again, the Pokémon selection is random.
+// player, and in the bad mode the opposite is true. If all 3 Pokemon tie, the
+// other mode will be tried. If they tie again, the Pokemon selection is random.
 int GetDomeTrainerSelectedMons(u16 tournamentTrainerId)
 {
     int selectedMonBits;
@@ -4689,7 +4689,7 @@ static void DisplayMatchInfoOnCard(u8 flags, u8 matchNo)
     if (lost[1])
         gSprites[sInfoCard->spriteIds[1 + arrId]].oam.paletteNum = 3;
 
-    // Draw left trainer's Pokémon icons.
+    // Draw left trainer's Pokemon icons.
     for (i = 0; i < FRONTIER_PARTY_SIZE; i++)
     {
         if (trainerIds[0] == TRAINER_PLAYER)
@@ -4729,7 +4729,7 @@ static void DisplayMatchInfoOnCard(u8 flags, u8 matchNo)
         }
     }
 
-    // Draw right trainer's Pokémon icons.
+    // Draw right trainer's Pokemon icons.
     for (i = 0; i < FRONTIER_PARTY_SIZE; i++)
     {
         if (trainerIds[1] == TRAINER_PLAYER)
@@ -5081,7 +5081,7 @@ static u16 GetWinningMove(int winnerTournamentId, int loserTournamentId, u8 roun
     int movePower = 0;
     SetFacilityPtrsGetLevel();
 
-    // Calc move points of all 4 moves for all 3 Pokémon hitting all 3 target mons.
+    // Calc move points of all 4 moves for all 3 Pokemon hitting all 3 target mons.
     for (i = 0; i < FRONTIER_PARTY_SIZE; i++)
     {
         for (j = 0; j < MAX_MON_MOVES; j++)

@@ -1380,7 +1380,7 @@ static void Cmd_attackanimation(void)
         && effect != EFFECT_TRANSFORM
         && effect != EFFECT_SUBSTITUTE
         && effect != EFFECT_ALLY_SWITCH
-        // In a wild double battle gotta use the teleport animation if two wild Pokémon are alive.
+        // In a wild double battle gotta use the teleport animation if two wild Pokemon are alive.
         && !(GetMoveEffect(gCurrentMove) == EFFECT_TELEPORT && WILD_DOUBLE_BATTLE && !IsOnPlayerSide(gBattlerAttacker) && IsBattlerAlive(BATTLE_PARTNER(gBattlerAttacker))))
     {
         BattleScriptPush(cmd->nextInstr);
@@ -2694,7 +2694,7 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
         break;
     }
     case MOVE_EFFECT_ROUND:
-        TryUpdateRoundTurnOrder(); // If another Pokémon uses Round before the user this turn, the user will use Round directly after it
+        TryUpdateRoundTurnOrder(); // If another Pokemon uses Round before the user this turn, the user will use Round directly after it
         gBattlescriptCurrInstr = battleScript;
         break;
     case MOVE_EFFECT_DIRE_CLAW:
@@ -3972,7 +3972,7 @@ static void Cmd_getexp(void)
             }
             else
             {
-                // Music change in a wild battle after fainting opposing Pokémon.
+                // Music change in a wild battle after fainting opposing Pokemon.
                 if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)
                     && (gBattleMons[0].hp || (IsDoubleBattle() && gBattleMons[2].hp))
                     && !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
@@ -4013,7 +4013,7 @@ static void Cmd_getexp(void)
 
                     if (IsTradedMon(&gParties[B_TRAINER_PLAYER][*expMonId]))
                     {
-                        // check if the Pokémon doesn't belong to the player
+                        // check if the Pokemon doesn't belong to the player
                         if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && *expMonId >= 3)
                             i = STRINGID_EMPTYSTRING4;
                         else
@@ -4315,7 +4315,7 @@ static void Cmd_checkteamslost(void)
     if (NoAliveMonsForOpponent())
         gBattleOutcome |= B_OUTCOME_WON;
 
-    // Fair switching - everyone has to switch in most at the same time, without knowing which Pokémon the other trainer selected.
+    // Fair switching - everyone has to switch in most at the same time, without knowing which Pokemon the other trainer selected.
     // In vanilla Emerald this was only used for link battles, in expansion it's also used for regular trainer battles.
     // For battles that haven't ended, count number of empty battler spots
     // In multi battles, jump to pointer if more than 1 spot empty
@@ -5140,9 +5140,9 @@ static void Cmd_jumpifcantswitch(void)
     }
 }
 
-// Opens the party screen to choose a new Pokémon to send out.
-// slotId is the Pokémon to replace.
-// Note that this is not used by the Switch action, only replacing fainted Pokémon or Baton Pass
+// Opens the party screen to choose a new Pokemon to send out.
+// slotId is the Pokemon to replace.
+// Note that this is not used by the Switch action, only replacing fainted Pokemon or Baton Pass
 static void ChooseMonToSendOut(enum BattlerId battler, u8 slotId)
 {
     gBattleStruct->battlerPartyIndexes[battler] = gBattlerPartyIndexes[battler];
@@ -6240,7 +6240,7 @@ static void Cmd_drawlvlupbox(void)
 
     if (gBattleScripting.drawlvlupboxState == 0)
     {
-        // If the Pokémon getting exp is not in-battle then
+        // If the Pokemon getting exp is not in-battle then
         // slide out a banner with their name and icon on it.
         // Otherwise skip ahead.
         if (IsMonGettingExpSentOut())
@@ -7275,7 +7275,7 @@ static void Cmd_forcerandomswitch(void)
 
     bool32 redCardForcedSwitch = FALSE;
 
-    // Red card checks against wild Pokémon. If we have reached here, the player has a mon to switch into
+    // Red card checks against wild Pokemon. If we have reached here, the player has a mon to switch into
     // Red card swaps attacker with target to get the animation correct, so here we check attacker which is really the target. Thanks GF...
     if (gBattleScripting.switchCase == B_SWITCH_RED_CARD
       && !(gBattleTypeFlags & BATTLE_TYPE_TRAINER)
@@ -7303,10 +7303,10 @@ static void Cmd_forcerandomswitch(void)
         }
     }
 
-    // Swapping Pokémon happens in:
+    // Swapping Pokemon happens in:
     // trainer battles
-    // wild double battles when an opposing Pokémon uses it against one of the two alive player mons
-    // wild double battle when a player Pokémon uses it against its partner
+    // wild double battles when an opposing Pokemon uses it against one of the two alive player mons
+    // wild double battle when a player Pokemon uses it against its partner
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         || (WILD_DOUBLE_BATTLE
             && !IsOnPlayerSide(gBattlerAttacker)
@@ -7386,7 +7386,7 @@ static void Cmd_forcerandomswitch(void)
         {
             firstMonId = 0;
             lastMonId = PARTY_SIZE;
-            battler2PartyId = gBattlerPartyIndexes[gBattlerTarget]; // there is only one Pokémon out in single battles
+            battler2PartyId = gBattlerPartyIndexes[gBattlerTarget]; // there is only one Pokemon out in single battles
             battler1PartyId = gBattlerPartyIndexes[gBattlerTarget];
         }
 
@@ -7811,7 +7811,7 @@ static void Cmd_setsubstitute(void)
     if (factor == 2)
         hp = (GetNonDynamaxMaxHP(gBattlerAttacker)+1) / factor; // shed tail rounds up
     else
-        hp = GetNonDynamaxMaxHP(gBattlerAttacker) / factor; // one bit value will only work for Pokémon which max hp can go to 1020(which is more than possible in games)
+        hp = GetNonDynamaxMaxHP(gBattlerAttacker) / factor; // one bit value will only work for Pokemon which max hp can go to 1020(which is more than possible in games)
 
     if (hp == 0)
         hp = 1;
@@ -8891,7 +8891,7 @@ static void Cmd_tryswapitems(void)
         {
             gBattlescriptCurrInstr = cmd->failInstr;
         }
-        // can't swap if two Pokémon don't have an item
+        // can't swap if two Pokemon don't have an item
         // or if either of them is an enigma berry or a mail
         else if ((gBattleMons[gBattlerAttacker].item == ITEM_NONE && gBattleMons[gBattlerTarget].item == ITEM_NONE)
                  || !CanBattlerGetOrLoseItem(gBattlerAttacker, gBattlerTarget, gBattleMons[gBattlerAttacker].item)
@@ -11176,7 +11176,7 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
 
     if (B_SCALED_EXP >= GEN_5 && B_SCALED_EXP != GEN_6)
     {
-        // Note: There is an edge case where if a Pokémon receives a large amount of exp, it wouldn't be properly calculated
+        // Note: There is an edge case where if a Pokemon receives a large amount of exp, it wouldn't be properly calculated
         //       because of multiplying by scaling factor(the value would simply be larger than an u32 can hold). Hence u64 is needed.
         u64 value = *expAmount;
         u8 faintedLevel = gBattleMons[faintedBattler].level;

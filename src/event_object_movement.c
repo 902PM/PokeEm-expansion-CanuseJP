@@ -2142,7 +2142,7 @@ struct ObjectEvent *GetFollowerObject(void)
     return NULL;
 }
 
-// Return graphicsInfo for a Pokémon species & form
+// Return graphicsInfo for a Pokemon species & form
 const struct ObjectEventGraphicsInfo *SpeciesToGraphicsInfo(enum Species species, bool32 shiny, bool32 female)
 {
     const struct ObjectEventGraphicsInfo *graphicsInfo = NULL;
@@ -2177,7 +2177,7 @@ const struct ObjectEventGraphicsInfo *SpeciesToGraphicsInfo(enum Species species
     return graphicsInfo;
 }
 
-// Find, or load, the palette for the specified Pokémon info
+// Find, or load, the palette for the specified Pokemon info
 static u32 LoadDynamicFollowerPalette(enum Species species, bool32 shiny, bool32 female)
 {
     u32 paletteNum;
@@ -2218,7 +2218,7 @@ static u32 LoadDynamicFollowerPalette(enum Species species, bool32 shiny, bool32
     else
 #endif //OW_POKEMON_OBJECT_EVENTS == TRUE && OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     {
-        // Note that the shiny palette tag is `species + SPECIES_SHINY_TAG`, which must be increased with more Pokémon
+        // Note that the shiny palette tag is `species + SPECIES_SHINY_TAG`, which must be increased with more Pokemon
         // so that palette tags do not overlap
         const u16 *palette = GetMonSpritePalFromSpecies(species, shiny, female); //ETODO
         // palette already loaded
@@ -2342,13 +2342,13 @@ static bool8 GetMonInfo(struct Pokemon *mon, u32 *species, bool32 *shiny, bool32
     return TRUE;
 }
 
-// Retrieve graphic information about the following Pokémon, if any
+// Retrieve graphic information about the following Pokemon, if any
 bool8 GetFollowerInfo(u32 *species, bool32 *shiny, bool32 *female)
 {
     return GetMonInfo(GetFirstLiveMon(), species, shiny, female);
 }
 
-// Update following Pokémon if any
+// Update following Pokemon if any
 void UpdateFollowingPokemon(void)
 {
     struct ObjectEvent *objEvent = GetFollowerObject();
@@ -6368,7 +6368,7 @@ void GetDirectionToFaceScript(struct ScriptContext *ctx)
                                   gObjectEvents[targetId].currentCoords.y);
 }
 
-// Whether following Pokémon is also the user of the field move
+// Whether following Pokemon is also the user of the field move
 // Intended to be called before the field effect itself
 void IsFollowerFieldMoveUser(struct ScriptContext *ctx)
 {
@@ -7797,7 +7797,7 @@ bool8 MovementAction_ExitPokeball_Step0(struct ObjectEvent *objectEvent, struct 
     objectEvent->invisible = FALSE;
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH))
     {
-        // If player is dashing, the Pokémon must come out faster
+        // If player is dashing, the Pokemon must come out faster
         StartSpriteAnimInDirection(objectEvent, sprite, direction, GetJumpSpecialDirectionAnimNum(direction));
         sprite->sDuration = 8;
         sprite->sSpeedFlip = 0; // fast speed
@@ -11484,7 +11484,7 @@ bool8 PlayerIsUnderWaterfall(struct ObjectEvent *objectEvent)
     return FALSE;
 }
 
-// Get gfx data from daycare Pokémon and store it in vars
+// Get gfx data from daycare Pokemon and store it in vars
 void GetDaycareGraphics(struct ScriptContext *ctx)
 {
     u16 varGfx[] = {ScriptReadHalfword(ctx), ScriptReadHalfword(ctx)};

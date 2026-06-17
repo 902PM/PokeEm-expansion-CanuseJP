@@ -159,7 +159,7 @@ struct SideTimer
     // Timers below this point are not swapped by Court Change
     u8 followmeTimer:4;
     u8 followmeTarget:3;
-    u8 followmePowder:1; // Rage powder, does not affect grass type Pokémon.
+    u8 followmePowder:1; // Rage powder, does not affect grass type Pokemon.
     u8 retaliateTimer;
     u16 damageNonTypesTimer;
     enum Type damageNonTypesType;
@@ -501,7 +501,7 @@ struct BattlerState
     u32 commandingDondozo:1;
     u32 focusPunchBattlers:1;
     u32 multipleSwitchInBattlers:1;
-    u32 alreadyStatusedMoveAttempt:1; // For example when using Thunder Wave on an already paralyzed Pokémon.
+    u32 alreadyStatusedMoveAttempt:1; // For example when using Thunder Wave on an already paralyzed Pokemon.
     u32 activeAbilityPopUps:1;
     u32 forcedSwitch:1;
     u32 storedHealingWish:1;
@@ -536,7 +536,7 @@ struct PartyState
     u32 transformZeroToHero:1;
     u32 supersweetSyrup:1;
     u32 timesGotHit:5;
-    u32 changedSpecies:11; // For forms when multiple mons can change into the same Pokémon.
+    u32 changedSpecies:11; // For forms when multiple mons can change into the same Pokemon.
     u32 sentOut:1;
     u32 isKnockedOff:1;
     u32 padding:8;
@@ -581,7 +581,7 @@ struct BattleStruct
     u8 expOrderId:3;
     u8 expGetterBattlerId:2;
     u8 teamGotExpMsgPrinted:1; // The 'Rest of your team got msg' has been printed.
-    u8 givenExpMons; // Bits for enemy party's Pokémon that gave exp to player's party.
+    u8 givenExpMons; // Bits for enemy party's Pokemon that gave exp to player's party.
     u8 expSentInMons; // As bits for player party mons - not including exp share mons.
     u8 wildVictorySong;
     enum Type dynamicMoveType;
@@ -607,7 +607,7 @@ struct BattleStruct
     u8 prevSelectedPartySlot;
     u8 stringMoveType;
     u8 palaceFlags; // First 4 bits are "is <= 50% HP and not asleep" for each battler, last 4 bits are selected moves to pass to AI
-    u8 recordedActionSet; // related to choosing Pokémon?
+    u8 recordedActionSet; // related to choosing Pokemon?
     u8 wallyBattleState;
     u8 wallyMovesState;
     u8 wallyWaitFrames;
@@ -689,7 +689,7 @@ struct BattleStruct
     u8 speedTieBreaks; // MAX_BATTLERS_COUNT! values.
     enum DamageCategory categoryOverride:8; // for Z-Moves and Max Moves
     u32 stellarBoostFlags[MAX_BATTLE_TRAINERS]; // bitfield
-    u8 monCausingSleepClause[NUM_BATTLE_SIDES]; // Stores which Pokémon on a given side is causing Sleep Clause to be active as the mon's index in the party
+    u8 monCausingSleepClause[NUM_BATTLE_SIDES]; // Stores which Pokemon on a given side is causing Sleep Clause to be active as the mon's index in the party
     u16 opponentMonCanTera:6;
     u16 opponentMonCanDynamax:6;
     u16 additionalEffectsCounter:4; // A counter for the additionalEffects applied by the current move in Cmd_setadditionaleffects
@@ -938,7 +938,7 @@ struct BattleSpriteData
 
 struct MonSpritesGfx
 {
-    void *firstDecompressed; // ptr to the decompressed sprite of the first Pokémon
+    void *firstDecompressed; // ptr to the decompressed sprite of the first Pokemon
     u8 *spritesGfx[MAX_BATTLERS_COUNT];
     struct SpriteTemplate templates[MAX_BATTLERS_COUNT];
     struct SpriteFrameImage frameImages[MAX_BATTLERS_COUNT][MAX_MON_PIC_FRAMES];

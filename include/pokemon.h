@@ -205,15 +205,15 @@ struct PokemonSubstruct3
     u32 championRibbon:1; // Given when defeating the Champion. Because both RSE and FRLG use it, later generations don't specify from which region it comes from.
     u32 winningRibbon:1;  // Given at the Battle Tower's Level 50 challenge by winning a set of seven battles that extends the current streak to 56 or more.
     u32 victoryRibbon:1;  // Given at the Battle Tower's Level 100 challenge by winning a set of seven battles that extends the current streak to 56 or more.
-    u32 artistRibbon:1;   // Given at the Contest Hall by winning a Master Rank contest with at least 800 points, and agreeing to have the Pokémon's portrait placed in the museum after being offered.
-    u32 effortRibbon:1;   // Given at Slateport's market to Pokémon with maximum EVs.
+    u32 artistRibbon:1;   // Given at the Contest Hall by winning a Master Rank contest with at least 800 points, and agreeing to have the Pokemon's portrait placed in the museum after being offered.
+    u32 effortRibbon:1;   // Given at Slateport's market to Pokemon with maximum EVs.
     u32 marineRibbon:1;   // Never distributed.
     u32 landRibbon:1;     // Never distributed.
     u32 skyRibbon:1;      // Never distributed.
-    u32 countryRibbon:1;  // Distributed during Pokémon Festa '04 and '05 to tournament winners.
-    u32 nationalRibbon:1; // Given to purified Shadow Pokémon in Colosseum/XD.
+    u32 countryRibbon:1;  // Distributed during Pokemon Festa '04 and '05 to tournament winners.
+    u32 nationalRibbon:1; // Given to purified Shadow Pokemon in Colosseum/XD.
     u32 earthRibbon:1;    // Given to teams that have beaten Mt. Battle's 100-battle challenge in Colosseum/XD.
-    u32 worldRibbon:1;    // Distributed during Pokémon Festa '04 and '05 to tournament winners.
+    u32 worldRibbon:1;    // Distributed during Pokemon Festa '04 and '05 to tournament winners.
     u32 isShadow:1;
     u32 unused_0B:1;
     u32 abilityNum:2;
@@ -221,13 +221,13 @@ struct PokemonSubstruct3
     // The functionality of this bit changed in FRLG:
     // In RS, this bit does nothing, is never set, & is accidentally unset when hatching Eggs.
     // In FRLG & Emerald, this controls Mew & Deoxys obedience and whether they can be traded.
-    // If set, a Pokémon is a fateful encounter in FRLG's summary screen if hatched & for all Pokémon in Gen 4+ summary screens.
-    // Set for in-game event island legendaries, events distributed after a certain date, & Pokémon from XD: Gale of Darkness.
+    // If set, a Pokemon is a fateful encounter in FRLG's summary screen if hatched & for all Pokemon in Gen 4+ summary screens.
+    // Set for in-game event island legendaries, events distributed after a certain date, & Pokemon from XD: Gale of Darkness.
     // Not to be confused with METLOC_FATEFUL_ENCOUNTER.
     u32 modernFatefulEncounter:1;
 };
 
-// Number of bytes in the largest Pokémon substruct.
+// Number of bytes in the largest Pokemon substruct.
 // They are assumed to be the same size, and will be padded to
 // the largest size by the union.
 // By default they are all 12 bytes.
@@ -263,7 +263,7 @@ struct BoxPokemon
     u8 isBadEgg:1;
     u8 hasSpecies:1;
     u8 isEgg:1;
-    u8 blockBoxRS:1; // Unused, but Pokémon Box Ruby & Sapphire will refuse to deposit a Pokémon with this flag set.
+    u8 blockBoxRS:1; // Unused, but Pokemon Box Ruby & Sapphire will refuse to deposit a Pokemon with this flag set.
     u8 daysSinceFormChange:3; // 7 days.
     u8 unused_13:1;
     u8 otName[PLAYER_NAME_LENGTH];
@@ -418,7 +418,7 @@ struct SpeciesInfo /*0xC4*/
     enum Ability abilities[NUM_ABILITY_SLOTS]; // 3 abilities, no longer u8 because we have over 255 abilities now.
     u8 safariZoneFleeRate;
 
-    // Pokédex data
+    // Pokedex data
     u8 categoryName[13];
     u8 speciesName[POKEMON_NAME_LENGTH + 1];
     enum PokemonCry cryId:16;
@@ -452,7 +452,7 @@ struct SpeciesInfo /*0xC4*/
 #if P_FOOTPRINTS
     const u8 *footprint;
 #endif
-    // All Pokémon pics are 64x64, but this data table defines where in this 64x64 frame the sprite's non-transparent pixels actually are.
+    // All Pokemon pics are 64x64, but this data table defines where in this 64x64 frame the sprite's non-transparent pixels actually are.
     u8 frontPicSize; // The dimensions of this drawn pixel area.
     u8 frontPicYOffset; // The number of pixels between the drawn pixel area and the bottom edge.
     u8 backPicSize; // The dimensions of this drawn pixel area.
@@ -467,8 +467,8 @@ struct SpeciesInfo /*0xC4*/
 #else
     u8 paddingF:3;
 #endif //P_GENDER_DIFFERENCES
-    u8 pokemonJumpType:2; // According to the clerk, the Pokémon allowed in Pokémon Jump are all <= 28 inches/71 cm, and do not only swim, burrow, or fly.
-    u8 enemyMonElevation; // This determines how much higher above the usual position the enemy Pokémon is during battle. Species that float or fly have nonzero values.
+    u8 pokemonJumpType:2; // According to the clerk, the Pokemon allowed in Pokemon Jump are all <= 28 inches/71 cm, and do not only swim, burrow, or fly.
+    u8 enemyMonElevation; // This determines how much higher above the usual position the enemy Pokemon is during battle. Species that float or fly have nonzero values.
     // Flags
     u32 isRestrictedLegendary:1;
     u32 isSubLegendary:1;
@@ -487,17 +487,17 @@ struct SpeciesInfo /*0xC4*/
     u32 isPaldeanForm:1;
     u32 cannotBeTraded:1;
     u32 perfectIVCount:3;   // This species will always generate with the specified amount of perfect IVs.
-    u32 dexForceRequired:1; // This species will be taken into account for Pokédex ratings even if they have the "isMythical" flag set.
+    u32 dexForceRequired:1; // This species will be taken into account for Pokedex ratings even if they have the "isMythical" flag set.
     u32 teachingType:1; // Not used in the ROM but used in compilation (check constants/teaching_types.h for explanations)
     u32 isFrontierBanned:1; // This species is not allowed to participate in Battle Frontier facilities.
     u32 isSkyBattleBanned:1;
     u32 isTelekinesisBanned:1;
     u32 padding4:8;
     // Shadow settings
-    s8 enemyShadowXOffset; // This determines the X-offset for an enemy Pokémon's shadow during battle; negative values point left, positive values point right.
-    s8 enemyShadowYOffset; // This determines the Y-offset for an enemy Pokémon's shadow during battle; negative values point up, positive values point down.
-    u16 enemyShadowSize:3; // This determines the size of the shadow sprite used for an enemy Pokémon's front sprite during battle.
-    u16 suppressEnemyShadow:1; // If set to true, then a shadow will not be drawn beneath an enemy Pokémon's front sprite during battle.
+    s8 enemyShadowXOffset; // This determines the X-offset for an enemy Pokemon's shadow during battle; negative values point left, positive values point right.
+    s8 enemyShadowYOffset; // This determines the Y-offset for an enemy Pokemon's shadow during battle; negative values point up, positive values point down.
+    u16 enemyShadowSize:3; // This determines the size of the shadow sprite used for an enemy Pokemon's front sprite during battle.
+    u16 suppressEnemyShadow:1; // If set to true, then a shadow will not be drawn beneath an enemy Pokemon's front sprite during battle.
     enum EggIds eggId:12;
     // Move Data
     const struct LevelUpMove *levelUpLearnset;
@@ -562,7 +562,7 @@ enum {
     NUM_MON_AFFINES,
 };
 
-// The animation the Pokémon does during the feeding scene depends on their nature.
+// The animation the Pokemon does during the feeding scene depends on their nature.
 // The below values are offsets into sMonPokeblockAnims of the animation data for that nature.
 #define ANIM_HARDY   0
 #define ANIM_LONELY  (ANIM_HARDY + 3)
@@ -590,7 +590,7 @@ enum {
 #define ANIM_CAREFUL (ANIM_SASSY + 1)
 #define ANIM_QUIRKY  (ANIM_CAREFUL + 5)
 
-// In palace double battles, Pokémon have a target preference depending on nature
+// In palace double battles, Pokemon have a target preference depending on nature
 #define PALACE_TARGET_STRONGER 0
 #define PALACE_TARGET_WEAKER   1
 #define PALACE_TARGET_RANDOM   2

@@ -65,7 +65,7 @@ extern const u32 gBallGfx_Cherish[];
 extern const u16 gBallPal_Cherish[];
 extern const u32 gOpenPokeballGfx[];
 
-// Pokémon gfx
+// Pokemon gfx
 extern const u16 gMonIconPalettes[][16];
 
 // pokeblock
@@ -281,7 +281,7 @@ extern const u16 gBattleEnvironmentPalette_StadiumGlacia[];
 extern const u16 gBattleEnvironmentPalette_StadiumDrake[];
 extern const u16 gBattleEnvironmentPalette_StadiumWallace[];
 
-// Pokédex
+// Pokedex
 extern const u32 gPokedexInterface_Gfx[];
 extern const u16 gPokedexBgHoenn_Pal[];
 extern const u32 gPokedexMenu_Gfx[];
@@ -361,7 +361,7 @@ extern const u16 gRaySceneChasesAway_Bg_Pal[];
 extern const u32 gRaySceneChasesAway_Light_Gfx[];
 extern const u32 gRaySceneChasesAway_Ring_Gfx[];
 
-// Poké Balls
+// Poke Balls
 extern const u32 gItemIcon_StrangeBall[];
 extern const u16 gItemIconPalette_StrangeBall[];
 extern const u32 gItemIcon_PokeBall[];
@@ -1974,7 +1974,7 @@ extern const u16 gBerryPalette_Rowap[];
 extern const u16 gBerryPalette_Kee[];
 extern const u16 gBerryPalette_Maranga[];
 
-//PokéNav
+//PokeNav
 extern const u16 gPokenavCondition_Pal[];
 extern const u32 gPokenavCondition_Gfx[];
 extern const u32 gPokenavCondition_Tilemap[];
@@ -3239,11 +3239,11 @@ extern const u32 gBattleAnimBgImage_Swamp[];
 extern const u16 gBattleAnimBGPalette_Swamp[];
 extern const u32 gBattleAnimBgTilemap_Swamp[];
 
-// Pokédex Area Screen
+// Pokedex Area Screen
 extern const u32 gPokedexAreaScreenAreaUnknown_Gfx[];
 extern const u16 gPokedexAreaScreenAreaUnknown_Pal[];
 
-// Pokémon Storage System
+// Pokemon Storage System
 extern const u32 gStorageSystemMenu_Gfx[];
 extern const u16 gStorageSystemPartyMenu_Pal[];
 extern const u32 gStorageSystemPartyMenu_Tilemap[];
@@ -3371,7 +3371,7 @@ extern const u32 gBerryCrush_Crusher_Gfx[];
 extern const u16 gBerryCrush_Crusher_Pal[];
 extern const u32 gBerryCrush_TextWindows_Tilemap[];
 
-// PokéNav
+// PokeNav
 extern const u32 gPokenavMessageBox_Gfx[];
 extern const u32 gPokenavMessageBox_Tilemap[];
 extern const u16 gPokenavMessageBox_Pal[];

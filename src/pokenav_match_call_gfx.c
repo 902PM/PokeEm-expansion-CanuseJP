@@ -686,7 +686,7 @@ static u32 CloseMatchCallMessage(s32 state)
             if (gfx->newRematchRequest)
             {
                 // This call was a new rematch request,
-                // add the Pokéball icon to their entry
+                // add the Pokeball icon to their entry
                 PokenavList_DrawCurrentItemIcon();
                 result = LT_INC_AND_CONTINUE;
             }

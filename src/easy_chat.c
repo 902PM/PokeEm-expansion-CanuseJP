@@ -5781,7 +5781,7 @@ static bool32 IsEasyChatIndexAndGroupUnlocked(u16 wordIndex, u8 groupId)
     }
 }
 
-// Pokémon words in EC_GROUP_POKEMON_NATIONAL are always allowed (assuming the group is unlocked)
+// Pokemon words in EC_GROUP_POKEMON_NATIONAL are always allowed (assuming the group is unlocked)
 // unless they are in this group. If they are in this group (just Deoxys), they must also have been seen.
 static bool32 IsRestrictedWordSpecies(enum Species species)
 {

@@ -310,7 +310,7 @@ static void VBlankCB_MoveRelearner(void)
     TransferPlttBuffer();
 }
 
-// Script arguments: The Pokémon to teach is in VAR_0x8004
+// Script arguments: The Pokemon to teach is in VAR_0x8004
 void TeachMoveRelearnerMove(void)
 {
     LockPlayerFieldControls();

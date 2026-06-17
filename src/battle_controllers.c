@@ -486,7 +486,7 @@ static void SetBattlePartyIds(void)
                 {
                     if (gBattlerPartyIndexes[i - 2] == j && BattlersShareParty(i - 2, i))
                     {
-                        // Exclude already assigned Pokémon;
+                        // Exclude already assigned Pokemon;
                     }
                     else if (IsValidForBattle(&GetBattlerParty(i)[j]))
                     {
@@ -1976,7 +1976,7 @@ static void SetBattlerMonData(enum BattlerId battler, struct Pokemon *party, u32
         HandleLowHpMusicChange(&party[gBattlerPartyIndexes[battler]], battler);
 }
 
-// In normal singles, if follower Pokémon exists, and the Pokémon following is being sent out, have it slide in instead of being thrown
+// In normal singles, if follower Pokemon exists, and the Pokemon following is being sent out, have it slide in instead of being thrown
 static bool8 ShouldDoSlideInAnim(enum BattlerId battler)
 {
     struct ObjectEvent *followerObj = GetFollowerObject();
@@ -2267,7 +2267,7 @@ void BattleControllerDummy(enum BattlerId battler)
 // Handlers of the controller commands
 void BtlController_HandleGetMonData(enum BattlerId battler)
 {
-    u8 monData[sizeof(struct Pokemon) * 2 + 56]; // this allows to get full data of two Pokémon, trying to get more will result in overwriting data
+    u8 monData[sizeof(struct Pokemon) * 2 + 56]; // this allows to get full data of two Pokemon, trying to get more will result in overwriting data
     struct Pokemon *party = GetBattlerParty(battler);
     u32 size = 0;
     u8 monToCheck;
@@ -2830,12 +2830,12 @@ void BtlController_HandleSpriteInvisibility(enum BattlerId battler)
     BtlController_Complete(battler);
 }
 
-bool32 TwoPlayerIntroMons(enum BattlerId battler) // Double battle with both player Pokémon active.
+bool32 TwoPlayerIntroMons(enum BattlerId battler) // Double battle with both player Pokemon active.
 {
     return (IsDoubleBattle() && IsValidForBattle(GetBattlerMon(battler ^ BIT_FLANK)));
 }
 
-bool32 TwoOpponentIntroMons(enum BattlerId battler) // Double battle with both opponent Pokémon active.
+bool32 TwoOpponentIntroMons(enum BattlerId battler) // Double battle with both opponent Pokemon active.
 {
     return (IsDoubleBattle()
             && IsValidForBattle(GetBattlerMon(battler))

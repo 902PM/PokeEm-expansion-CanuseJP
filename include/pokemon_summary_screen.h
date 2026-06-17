@@ -21,7 +21,7 @@ enum IncrDecrUpdateValues
     TRY_DECREMENT,
 };
 
-// The Pokémon Summary Screen can operate in different modes. Certain features,
+// The Pokemon Summary Screen can operate in different modes. Certain features,
 // such as move re-ordering, are available in the different modes.
 enum PokemonSummaryScreenMode
 {

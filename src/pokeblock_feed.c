@@ -103,7 +103,7 @@ static const u8 sText_Var1DisdainfullyAteVar2[] = _("{STR_VAR_1} disdainfully at
 EWRAM_DATA static struct PokeblockFeed *sPokeblockFeed = NULL;
 EWRAM_DATA static struct SpritePalette sPokeblockSpritePal = {0};
 
-// Data for the animation the Pokémon does while readying to jump for the Pokéblock
+// Data for the animation the Pokemon does while readying to jump for the Pokeblock
 // Each nature can have up to 8 anim 'stages' it progresses through, and each stage has its own array of data.
 // The elements in each array correspond in order to the following:
 // - ANIMDATA_ROT_IDX      : Index into sin/cos table for circular movement
@@ -732,7 +732,7 @@ static void SetPokeblockSpritePal(u8 pokeblockCaseId)
 #define tState            data[0]
 #define tHorizontalThrow  data[1]
 
-#define STATE_START_THROW  255 // If the length of the Pokémon's animation exceeds 255 the throw may happen twice
+#define STATE_START_THROW  255 // If the length of the Pokemon's animation exceeds 255 the throw may happen twice
 #define STATE_SPAWN_PBLOCK (STATE_START_THROW + 14)
 #define STATE_START_JUMP   (STATE_SPAWN_PBLOCK + 12)
 #define STATE_PRINT_MSG    (STATE_START_JUMP + 16)
@@ -830,7 +830,7 @@ static void Task_FadeOutPokeblockFeed(u8 taskId)
 #undef tState
 #undef tHorizontalThrow
 
-// Sprite data for Pokéblock and Pokémon
+// Sprite data for Pokeblock and Pokemon
 #define sSpeed   data[0]
 #define sAccel   data[1]
 #define sSpecies data[2]

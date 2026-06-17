@@ -355,7 +355,7 @@ static void WallyHandleChooseItem(enum BattlerId battler)
 }
 
 // All of the other controllers use CRY_MODE_FAINT.
-// Wally's Pokémon during the tutorial is never intended to faint, so that's probably why it's different here.
+// Wally's Pokemon during the tutorial is never intended to faint, so that's probably why it's different here.
 static void WallyHandleFaintingCry(enum BattlerId battler)
 {
     enum Species species = GetMonData(GetBattlerMon(battler), MON_DATA_SPECIES);

@@ -284,7 +284,7 @@ static const u16 sHofMonitor_Pal[16] = INCGFX_U16("graphics/field_effects/palett
 static const u16 sHofMonitor_Gfx_Frlg[] = INCGFX_U16("graphics/field_effects/pics/hof_monitor_frlg.png", ".4bpp");
 static const u16 sHofMonitor_Pal_Frlg[] = INCGFX_U16("graphics/field_effects/pics/hof_monitor_frlg.png", ".gbapal");
 
-// Graphics for the lights streaking past your Pokémon when it uses a field move.
+// Graphics for the lights streaking past your Pokemon when it uses a field move.
 static const u32 sFieldMoveStreaksOutdoors_Gfx[] = INCGFX_U32("graphics/field_effects/pics/field_move_streaks.png", ".4bpp");
 static const u16 sFieldMoveStreaksOutdoors_Pal[16] = INCGFX_U16("graphics/field_effects/pics/field_move_streaks.png", ".gbapal");
 static const u16 sFieldMoveStreaksOutdoors_Tilemap[320] = INCBIN_U16("graphics/field_effects/pics/field_move_streaks.bin");
@@ -558,7 +558,7 @@ static const union AnimCmd sAnim_Flicker[] =
     ANIMCMD_END
 };
 
-// Flicker on and off, for the Pokéballs / monitors during the PokéCenter heal effect
+// Flicker on and off, for the Pokeballs / monitors during the PokeCenter heal effect
 static const union AnimCmd *const sAnims_Flicker[] =
 {
     sAnim_Static,

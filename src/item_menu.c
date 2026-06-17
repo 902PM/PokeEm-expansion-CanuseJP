@@ -2131,7 +2131,7 @@ static void Task_ItemContext_GiveToParty(u8 taskId)
     }
 }
 
-// Selected item to give to a Pokémon in PC storage
+// Selected item to give to a Pokemon in PC storage
 static void Task_ItemContext_GiveToPC(u8 taskId)
 {
     if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
@@ -2489,7 +2489,7 @@ static void Task_WallyTutorialBagMenu(u8 taskId)
 #undef tTimer
 
 // This action is used to show the Apprentice an item when
-// they ask what item they should make their Pokémon hold
+// they ask what item they should make their Pokemon hold
 static void ItemMenu_Show(u8 taskId)
 {
     gSpecialVar_0x8005 = gSpecialVar_ItemId;

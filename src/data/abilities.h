@@ -325,7 +325,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_MAGNET_PULL] =
     {
         .name = _("Magnet Pull"),
-        .description = COMPOUND_STRING("Traps Steel-type Pokémon."),
+        .description = COMPOUND_STRING("Traps Steel-type Pokemon."),
         .aiRating = 9,
     },
 
@@ -844,7 +844,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SCRAPPY] =
     {
         .name = _("Scrappy"),
-        .description = COMPOUND_STRING("Hits Ghost-type Pokémon."),
+        .description = COMPOUND_STRING("Hits Ghost-type Pokemon."),
         .aiRating = 6,
     },
 
@@ -929,7 +929,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_BAD_DREAMS] =
     {
         .name = _("Bad Dreams"),
-        .description = COMPOUND_STRING("Damages sleeping Pokémon."),
+        .description = COMPOUND_STRING("Damages sleeping Pokemon."),
         .aiRating = 4,
     },
 
@@ -986,7 +986,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_HEALER] =
     {
         .name = _("Healer"),
-        .description = COMPOUND_STRING("Heals partner Pokémon."),
+        .description = COMPOUND_STRING("Heals partner Pokemon."),
         .aiRating = 0,
     },
 
@@ -1813,7 +1813,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_BALL_FETCH] =
     {
         .name = _("Ball Fetch"),
-        .description = COMPOUND_STRING("Fetches failed Poké Ball."),
+        .description = COMPOUND_STRING("Fetches failed Poke Ball."),
         .aiRating = 0,
     },
 

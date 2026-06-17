@@ -67,7 +67,7 @@
 
 #define PARTY_MSG_NONE                      127
 
-// IDs for DisplayPartyPokemonDescriptionText, to display a message in the party Pokémon's box
+// IDs for DisplayPartyPokemonDescriptionText, to display a message in the party Pokemon's box
 #define PARTYBOX_DESC_NO_USE      0
 #define PARTYBOX_DESC_ABLE_3      1
 #define PARTYBOX_DESC_FIRST       2

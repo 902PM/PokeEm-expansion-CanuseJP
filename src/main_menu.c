@@ -258,7 +258,7 @@ static const u16 sBirchSpeechBgGradientPal[] = INCGFX_U16("graphics/birch_speech
 
 static const u8 gText_SaveFileCorrupted[] = _("The save file is corrupted. The\nprevious save file will be loaded.");
 static const u8 gText_SaveFileErased[] = _("The save file has been erased\ndue to corruption or damage.");
-static const u8 gJPText_No1MSubCircuit[] = _("1Mサブきばんが ささっていません！");
+static const u8 gJPText_No1MSubCircuit[] = _("1Mサブきばんが ささっていません!");
 static const u8 gText_BatteryRunDry[] = _("The internal battery has run dry.\nThe game can be played.\pHowever, clock-based events will\nno longer occur.");
 
 static const u8 gText_MainMenuNewGame[] = _("NEW GAME");
@@ -273,7 +273,7 @@ static const u8 gText_MysteryEventsCantUse[] = _("MYSTERY EVENTS can't be used w
 
 static const u8 gText_ContinueMenuPlayer[] = _("PLAYER");
 static const u8 gText_ContinueMenuTime[] = _("TIME");
-static const u8 gText_ContinueMenuPokedex[] = _("POKéDEX");
+static const u8 gText_ContinueMenuPokedex[] = _("POKeDEX");
 static const u8 gText_ContinueMenuBadges[] = _("BADGES");
 
 #define MENU_LEFT 2
@@ -2286,8 +2286,8 @@ static void NewGameBirchSpeech_ClearWindow(u8 windowId)
 
 static void NewGameBirchSpeech_WaitForThisIsPokemonText(struct TextPrinterTemplate *printer, u16 renderCmd)
 {
-    // Wait for Birch's "This is a Pokémon" text to reach the pause
-    // Then start the PokéBall release (if it hasn't been started already)
+    // Wait for Birch's "This is a Pokemon" text to reach the pause
+    // Then start the PokeBall release (if it hasn't been started already)
     if (*(printer->currentChar - 2) == EXT_CTRL_CODE_PAUSE && !sStartedPokeBallTask)
     {
         sStartedPokeBallTask = TRUE;

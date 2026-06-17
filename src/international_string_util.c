@@ -211,7 +211,7 @@ enum Language GetNicknameLanguage(u8 *str)
         return LANGUAGE_ENGLISH;
 }
 
-// Used by Pokénav's Match Call to erase the previous trainer's flavor text when switching between their info pages.
+// Used by Pokenav's Match Call to erase the previous trainer's flavor text when switching between their info pages.
 void FillWindowTilesByRow(int windowId, int columnStart, int rowStart, int numFillTiles, int numRows)
 {
     u8 *windowTileData;

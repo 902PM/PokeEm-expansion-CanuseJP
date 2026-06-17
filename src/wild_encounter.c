@@ -970,16 +970,16 @@ u16 GetLocalWildMon(bool8 *isWaterMon)
     // Neither
     if (landMonsInfo == NULL && waterMonsInfo == NULL)
         return SPECIES_NONE;
-    // Land Pokémon
+    // Land Pokemon
     else if (landMonsInfo != NULL && waterMonsInfo == NULL)
         return landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()].species;
-    // Water Pokémon
+    // Water Pokemon
     else if (landMonsInfo == NULL && waterMonsInfo != NULL)
     {
         *isWaterMon = TRUE;
         return waterMonsInfo->wildPokemon[ChooseWildMonIndex_Water()].species;
     }
-    // Either land or water Pokémon
+    // Either land or water Pokemon
     if ((Random() % 100) < 80)
     {
         return landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()].species;

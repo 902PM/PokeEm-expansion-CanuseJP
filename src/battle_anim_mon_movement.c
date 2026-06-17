@@ -88,7 +88,7 @@ const struct SpriteTemplate gSlideMonToOffsetAndBackSpriteTemplate =
     .callback = SlideMonToOffsetAndBack,
 };
 
-// Task to facilitate simple shaking of a Pokémon's picture in battle.
+// Task to facilitate simple shaking of a Pokemon's picture in battle.
 // The shaking alternates between the original position and the target position.
 // arg 0: anim battler
 // arg 1: x pixel offset
@@ -151,7 +151,7 @@ static void AnimTask_ShakeMon_Step(u8 taskId)
     }
 }
 
-// Task to facilitate simple shaking of a Pokémon's picture in battle.
+// Task to facilitate simple shaking of a Pokemon's picture in battle.
 // The shaking alternates between the positive and negative versions of the specified pixel offsets.
 // arg 0: anim battler
 // arg 1: x pixel offset
@@ -247,7 +247,7 @@ static void AnimTask_ShakeMon2_Step(u8 taskId)
     }
 }
 
-// Task to facilitate simple shaking of a Pokémon's picture in battle.
+// Task to facilitate simple shaking of a Pokemon's picture in battle.
 // The shaking alternates between the positive and negative versions of the specified pixel offsets
 // with respect to the current location of the mon's picture.
 // arg 0: battler
@@ -583,7 +583,7 @@ static void SlideMonToOriginalPos_Step(struct Sprite *sprite)
 }
 
 // Linearly translates a mon to a target offset. The horizontal offset
-// is mirrored for the opponent's Pokémon, and the vertical offset
+// is mirrored for the opponent's Pokemon, and the vertical offset
 // is only mirrored if arg 3 is set to 1.
 // arg 0: 0 = attacker, 1 = target
 // arg 1: target x pixel offset

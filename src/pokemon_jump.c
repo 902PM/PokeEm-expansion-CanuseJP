@@ -105,9 +105,9 @@ enum {
 #define VINE_STATE_TIMER(vineState) (((vineState) << 8) | 0xFF)
 
 enum {
-    MONSTATE_NORMAL, // Pokémon is either on the ground or in the middle of a jump
-    MONSTATE_JUMP,   // Pokémon has begun a jump
-    MONSTATE_HIT,    // Pokémon got hit by the vine
+    MONSTATE_NORMAL, // Pokemon is either on the ground or in the middle of a jump
+    MONSTATE_JUMP,   // Pokemon has begun a jump
+    MONSTATE_HIT,    // Pokemon got hit by the vine
 };
 
 enum {
@@ -2831,12 +2831,12 @@ static void UpdateVineAnim(struct PokemonJumpGfx *jumpGfx, int vineState)
         // animNums for vine on upswing are same as
         // on downswing but in reverse
         vineState = NUM_VINESTATES - vineState;
-        priority = 3; // Set vine behind Pokémon
+        priority = 3; // Set vine behind Pokemon
         palNum = jumpGfx->vinePalNumUpswing;
     }
     else
     {
-        priority = 2; // Set vine in front of Pokémon
+        priority = 2; // Set vine in front of Pokemon
         palNum = jumpGfx->vinePalNumDownswing;
     }
 

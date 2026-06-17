@@ -1308,12 +1308,12 @@ static void Intro_TryShinyAnimShowHealthbox(enum BattlerId battler)
     bool32 bgmRestored = FALSE;
     bool32 battlerAnimsDone = FALSE;
 
-    // Start shiny animation if applicable for 1st Pokémon
+    // Start shiny animation if applicable for 1st Pokemon
     if (!gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim
      && !gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive)
         TryShinyAnimation(battler, GetBattlerMon(battler));
 
-    // Start shiny animation if applicable for 2nd Pokémon
+    // Start shiny animation if applicable for 2nd Pokemon
     if (!gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].triedShinyMonAnim
      && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].ballAnimActive)
         TryShinyAnimation(BATTLE_PARTNER(battler), GetBattlerMon(BATTLE_PARTNER(battler)));
