@@ -18,6 +18,7 @@
 #include "constants/songs.h"
 #include "constants/speaker_names.h"
 
+static bool32 IsJapaneseGlyph(u16 glyphId);
 static u16 RenderText(struct TextPrinter *);
 static u32 RenderFont(struct TextPrinter *);
 static u16 FontFunc_Small(struct TextPrinter *);
@@ -71,6 +72,13 @@ static const u8 sDarkDownArrowTiles[] = INCGFX_U8("graphics/fonts/down_arrow_alt
 static const u8 sUnusedFRLGBlankedDownArrow[] = INCGFX_U8("graphics/fonts/unused_frlg_blanked_down_arrow.png", ".4bpp");
 static const u8 sUnusedFRLGDownArrow[] = INCGFX_U8("graphics/fonts/unused_frlg_down_arrow.png", ".4bpp");
 static const u8 sDownArrowYCoords[] = { 0, 1, 2, 1 };
+
+
+static bool32 IsJapaneseGlyph(u16 glyphId)
+{
+    return glyphId != CHAR_SPACE
+        && glyphId <= JAPANESE_CHAR_END;
+}
 
 static const struct GlyphWidthFunc sGlyphWidthFuncs[] =
 {
@@ -988,7 +996,6 @@ static void PrintGlyph(struct TextPrinter *textPrinter)
 
         //  Set the print offset for the next glyph
         textPrinter->printerTemplate.currentX = newWidth;
-
     }
     else
     {
@@ -1577,41 +1584,43 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             return RENDER_FINISH;
         }
 
-        switch (textPrinter->fontId)
-        {
-        case FONT_SMALL:
-            DecompressGlyph_Small(currChar, textPrinter->japanese);
-            break;
-        case FONT_NORMAL:
-            DecompressGlyph_Normal(currChar, textPrinter->japanese);
-            break;
-        case FONT_SHORT:
-        case FONT_SHORT_COPY_1:
-        case FONT_SHORT_COPY_2:
-        case FONT_SHORT_COPY_3:
-            DecompressGlyph_Short(currChar, textPrinter->japanese);
-            break;
-        case FONT_NARROW:
-            DecompressGlyph_Narrow(currChar, textPrinter->japanese);
-            break;
-        case FONT_SMALL_NARROW:
-            DecompressGlyph_SmallNarrow(currChar, textPrinter->japanese);
-            break;
-        case FONT_NARROWER:
-            DecompressGlyph_Narrower(currChar, textPrinter->japanese);
-            break;
-        case FONT_SMALL_NARROWER:
-            DecompressGlyph_SmallNarrower(currChar, textPrinter->japanese);
-            break;
-        case FONT_SHORT_NARROW:
-            DecompressGlyph_ShortNarrow(currChar, textPrinter->japanese);
-            break;
-        case FONT_SHORT_NARROWER:
-            DecompressGlyph_ShortNarrower(currChar, textPrinter->japanese);
-            break;
-        case FONT_BRAILLE:
-            break;
-        }
+bool32 useJapanese = textPrinter->japanese || IsJapaneseGlyph(currChar);
+
+switch (textPrinter->fontId)
+{
+case FONT_SMALL:
+    DecompressGlyph_Small(currChar, useJapanese);
+    break;
+case FONT_NORMAL:
+    DecompressGlyph_Normal(currChar, useJapanese);
+    break;
+case FONT_SHORT:
+case FONT_SHORT_COPY_1:
+case FONT_SHORT_COPY_2:
+case FONT_SHORT_COPY_3:
+    DecompressGlyph_Short(currChar, useJapanese);
+    break;
+case FONT_NARROW:
+    DecompressGlyph_Narrow(currChar, useJapanese);
+    break;
+case FONT_SMALL_NARROW:
+    DecompressGlyph_SmallNarrow(currChar, useJapanese);
+    break;
+case FONT_NARROWER:
+    DecompressGlyph_Narrower(currChar, useJapanese);
+    break;
+case FONT_SMALL_NARROWER:
+    DecompressGlyph_SmallNarrower(currChar, useJapanese);
+    break;
+case FONT_SHORT_NARROW:
+    DecompressGlyph_ShortNarrow(currChar, useJapanese);
+    break;
+case FONT_SHORT_NARROWER:
+    DecompressGlyph_ShortNarrower(currChar, useJapanese);
+    break;
+case FONT_BRAILLE:
+    break;
+}
 
         PrintGlyph(textPrinter);
 
@@ -1962,7 +1971,7 @@ s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing)
         case CHAR_PROMPT_CLEAR:
             break;
         default:
-            glyphWidth = func(*str, isJapanese);
+            glyphWidth = func(*str, isJapanese || IsJapaneseGlyph(*str));
             if (minGlyphWidth > 0)
             {
                 if (glyphWidth < minGlyphWidth)
