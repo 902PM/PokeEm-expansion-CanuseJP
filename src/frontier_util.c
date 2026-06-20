@@ -132,14 +132,12 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
                 "Grr...\n"
                 "What the..."),        //Silver
             COMPOUND_STRING(
-                "Ahahaha!\n"
-                "You're inspiring!") //Gold
+                "アッハッハッ！！　ステキっ！！") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Ahahaha! Aren't you embarrassed?\n"
-                "Everyone's watching!"),                              //Silver
-            COMPOUND_STRING("My DOME ACE title isn't just for show!") //Gold
+                "アッハッハッ！！　はずかしく　ないのっ！？\nみんなが　みてるよっ！！"),                              //Silver
+            COMPOUND_STRING("ドームスーパースターの\nなまえは　かざりじゃ　ないっ！！") //Gold
         },
         .battledBit = {1 << 2, 1 << 3},
         .streakAppearances = {4, 9, 5, 0},
@@ -154,16 +152,14 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
                 "Ah...\n"
                 "Now this is something else..."), //Silver
             COMPOUND_STRING(
-                "Gwah!\n"
-                "Hahahaha!")                    //Gold
+                "ぐわーーーはっはっは！！")                    //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
                 "Your POKEMON are wimpy because\n"
                 "you're wimpy as a TRAINER!"),           //Silver
             COMPOUND_STRING(
-                "Gwahahaha!\n"
-                "My brethren, we have nothing to fear!") //Gold
+                "ぐわはっはっは！！\nわが　きょうだいの　まえに　てき　なし！！") //Gold
         },
         .battledBit = {1 << 4, 1 << 5},
         .streakAppearances = {21, 42, 21, 1},
@@ -175,19 +171,15 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = TRUE,
         .lostTexts = {
             COMPOUND_STRING(
-                "No way!\n"
-                "Good job!"),        //Silver
+                "うっそ！　やるじゃんー！！"),        //Silver
             COMPOUND_STRING(
-                "Huh?\n"
-                "Are you serious?!") //Gold
+                "いーっ！？　マジっ！？") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Oh, come on!\n"
-                "You have to try harder than that!"), //Silver
+                "ちょっと　ちょっとぉー！\nもっと　がんばってよねー！！"), //Silver
             COMPOUND_STRING(
-                "Heheh!\n"
-                "What did you expect?")               //Gold
+                "ウィーッス！　とうぜん！！")               //Gold
         },
         .battledBit = {1 << 6, 1 << 7},
         .streakAppearances = {28, 56, 28, 1},
@@ -199,17 +191,14 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
-                "Good job!\n"
-                "You know what you're doing!"),    //Silver
-            COMPOUND_STRING("What happened here?") //Gold
+                "イイねぇー！\nおめえ　わかってる　ねぇー！"),    //Silver
+            COMPOUND_STRING("なんだとぉ‥‥") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Way to work!\n"
-                "That was a good lesson, eh?"), //Silver
+                "おつかれさん！\nイイ　べんきょうに　なったろ？"), //Silver
             COMPOUND_STRING(
-                "Hey, hey, hey!\n"
-                "You're finished already?")     //Gold
+                "おいおいおいーー！！\nもう　おしまいかー？")     //Gold
         },
         .battledBit = {1 << 8, 1 << 9},
         .streakAppearances = {21, 42, 21, 1},
@@ -221,11 +210,11 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = TRUE,
         .lostTexts = {
             COMPOUND_STRING("Urk..."), //Silver
-            COMPOUND_STRING("Darn!") //Gold
+            COMPOUND_STRING("ちくしょおぉぉぉっーーー！！") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING("Humph..."), //Silver
-            COMPOUND_STRING("Hah!")    //Gold
+            COMPOUND_STRING("ハッ！！")    //Gold
         },
         .battledBit = {1 << 10, 1 << 11},
         .streakAppearances = {28, 140, 56, 1},
@@ -237,19 +226,15 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
-                "That's it! You've done great!\n"
-                "You've worked hard for this!"), //Silver
+                "よおしっ！　がんばった！\nよく　がんばったぞ！！"), //Silver
             COMPOUND_STRING(
-                "That's it! You've done it!\n"
-                "You kept working for this!")    //Gold
+                "よおしっ！　よく　やったぞ！\nがんばった！　がんばった　じゃないか！！")    //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
-                "Hey! What's wrong with you!\n"
-                "Let's see some effort! Get up!"),       //Silver
+                "おい！　なにを　やってるんだ！\nほら　がんばれ！　たちあがるんだ！！"),       //Silver
             COMPOUND_STRING(
-                "Hey! Don't you give up now!\n"
-                "Get up! Don't lose faith in yourself!") //Gold
+                "おい！　あきらめるんじゃ　ない！\nさあ　たつんだ！　がんばるんだ！！") //Gold
         },
         .battledBit = {1 << 12, 1 << 13},
         .streakAppearances = {21, 70, 35, 0},

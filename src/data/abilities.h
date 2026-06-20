@@ -2,8 +2,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 {
     [ABILITY_NONE] =
     {
-        .name = _("-------"),
-        .description = COMPOUND_STRING("No special ability."),
+        .name = _("ーーーーー"),
+        .description = COMPOUND_STRING("とくせいなし"),
         .aiRating = 0,
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
@@ -19,7 +19,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_DRIZZLE] =
     {
         .name = _("あめふらし"),
-        .description = COMPOUND_STRING("Summons rain in battle."),
+        .description = COMPOUND_STRING("せんとうに　でると　あめを　ふらす"),
         .aiRating = 9,
     },
 
@@ -33,7 +33,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_BATTLE_ARMOR] =
     {
         .name = _("カブトアーマー"),
-        .description = COMPOUND_STRING("Blocks critical hits."),
+        .description = COMPOUND_STRING("わざを　きゅうしょに　うけない"),
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -41,7 +41,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_STURDY] =
     {
         .name = _("がんじょう"),
-        .description = COMPOUND_STRING("Negates 1-hit KO attacks."),
+        .description = COMPOUND_STRING("いちげきひっさつが　きかない"),
         .aiRating = 6,
         .breakable = TRUE,
     },
@@ -49,7 +49,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_DAMP] =
     {
         .name = _("しめりけ"),
-        .description = COMPOUND_STRING("Prevents self-destruction."),
+        .description = COMPOUND_STRING("だれも　じばくが　できなくなる"),
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -57,7 +57,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_LIMBER] =
     {
         .name = _("じゅうなん"),
-        .description = COMPOUND_STRING("Prevents paralysis."),
+        .description = COMPOUND_STRING("まひ　じょうたいに　ならない"),
         .aiRating = 3,
         .breakable = TRUE,
     },
@@ -65,7 +65,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SAND_VEIL] =
     {
         .name = _("すながくれ"),
-        .description = COMPOUND_STRING("Ups evasion in a sandstorm."),
+        .description = COMPOUND_STRING("すなあらしで　かいひりつが　あがる"),
         .aiRating = 3,
         .breakable = TRUE,
     },
@@ -73,14 +73,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_STATIC] =
     {
         .name = _("せいでんき"),
-        .description = COMPOUND_STRING("Paralyzes on contact."),
+        .description = COMPOUND_STRING("さわった　あいてを　まひさせる"),
         .aiRating = 4,
     },
 
     [ABILITY_VOLT_ABSORB] =
     {
         .name = _("ちくでん"),
-        .description = COMPOUND_STRING("Turns electricity into HP."),
+        .description = COMPOUND_STRING("でんきを　うけると　かいふくする"),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -88,7 +88,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_WATER_ABSORB] =
     {
         .name = _("ちょすい"),
-        .description = COMPOUND_STRING("Changes water into HP."),
+        .description = COMPOUND_STRING("みずを　うけると　かいふくする"),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -96,7 +96,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_OBLIVIOUS] =
     {
         .name = _("どんかん"),
-        .description = COMPOUND_STRING("Prevents attraction."),
+        .description = COMPOUND_STRING("メロメロ　じょうたいに　ならない"),
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -104,21 +104,21 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_CLOUD_NINE] =
     {
         .name = _("ノーてんき"),
-        .description = COMPOUND_STRING("Negates weather effects."),
+        .description = COMPOUND_STRING("てんきの　えいきょうが　なくなる"),
         .aiRating = 5,
     },
 
     [ABILITY_COMPOUND_EYES] =
     {
         .name = _("ふくがん"),
-        .description = COMPOUND_STRING("Raises accuracy."),
+        .description = COMPOUND_STRING("わざの　めいちゅうりつが　あがる"),
         .aiRating = 7,
     },
 
     [ABILITY_INSOMNIA] =
     {
         .name = _("ふみん"),
-        .description = COMPOUND_STRING("Prevents sleep."),
+        .description = COMPOUND_STRING("ねむらない"),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -126,14 +126,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_COLOR_CHANGE] =
     {
         .name = _("へんしょく"),
-        .description = COMPOUND_STRING("Changes type to foe's move."),
+        .description = COMPOUND_STRING("うけた　わざの　タイプに　へんかする"),
         .aiRating = 2,
     },
 
     [ABILITY_IMMUNITY] =
     {
         .name = _("めんえき"),
-        .description = COMPOUND_STRING("Prevents poisoning."),
+        .description = COMPOUND_STRING("どく　じょうたいに　ならない"),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -141,7 +141,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FLASH_FIRE] =
     {
         .name = _("もらいび"),
-        .description = COMPOUND_STRING("Powers up if hit by fire."),
+        .description = COMPOUND_STRING("ほのおを　うけると　つよくなる"),
         .aiRating = 6,
         .breakable = TRUE,
     },
@@ -149,7 +149,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SHIELD_DUST] =
     {
         .name = _("りんぷん"),
-        .description = COMPOUND_STRING("Prevents added effects."),
+        .description = COMPOUND_STRING("わざの　ついかこうかを　うけない"),
         .aiRating = 5,
         .breakable = TRUE,
     },
@@ -157,7 +157,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_OWN_TEMPO] =
     {
         .name = _("マイペース"),
-        .description = COMPOUND_STRING("Prevents confusion."),
+        .description = COMPOUND_STRING("こんらん　じょうたいに　ならない"),
         .aiRating = 3,
         .breakable = TRUE,
     },
@@ -165,7 +165,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SUCTION_CUPS] =
     {
         .name = _("きゅうばん"),
-        .description = COMPOUND_STRING("Firmly anchors the body."),
+        .description = COMPOUND_STRING("きゅうばんで　じめんに　はりつく"),
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -180,14 +180,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SHADOW_TAG] =
     {
         .name = _("かげふみ"),
-        .description = COMPOUND_STRING("Prevents the foe's escape."),
+        .description = COMPOUND_STRING("あいてを　にげられなくする"),
         .aiRating = 10,
     },
 
     [ABILITY_ROUGH_SKIN] =
     {
         .name = _("さめはだ"),
-        .description = COMPOUND_STRING("Hurts to touch."),
+        .description = COMPOUND_STRING("さわった　あいてを　キズつける"),
         .aiRating = 6,
     },
 
@@ -212,21 +212,21 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_EFFECT_SPORE] =
     {
         .name = _("ほうし"),
-        .description = COMPOUND_STRING("Leaves spores on contact."),
+        .description = COMPOUND_STRING("さわった　あいてに　ほうしがつく"),
         .aiRating = 4,
     },
 
     [ABILITY_SYNCHRONIZE] =
     {
         .name = _("シンクロ"),
-        .description = COMPOUND_STRING("Passes on status problems."),
+        .description = COMPOUND_STRING("どく　まひ　やけどを　あいてにうつす"),
         .aiRating = 4,
     },
 
     [ABILITY_CLEAR_BODY] =
     {
         .name = _("クリアボディ"),
-        .description = COMPOUND_STRING("Prevents ability reduction."),
+        .description = COMPOUND_STRING("あいてに　のうりょくを　さげられない"),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -234,14 +234,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_NATURAL_CURE] =
     {
         .name = _("しぜんかいふく"),
-        .description = COMPOUND_STRING("Heals upon switching out."),
+        .description = COMPOUND_STRING("ひっこむと　いじょうが　なおる"),
         .aiRating = 7,
     },
 
     [ABILITY_LIGHTNING_ROD] =
     {
         .name = _("ひらいしん"),
-        .description = COMPOUND_STRING("Draws electrical moves."),
+        .description = COMPOUND_STRING("でんきタイプの　わざが　じぶんにくる"),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -249,7 +249,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SERENE_GRACE] =
     {
         .name = _("てんのめぐみ"),
-        .description = COMPOUND_STRING("Promotes added effects."),
+        .description = COMPOUND_STRING("わざの　ついかこうかが　でやすい"),
         .aiRating = 8,
     },
 
@@ -270,7 +270,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ILLUMINATE] =
     {
         .name = _("はっこう"),
-        .description = COMPOUND_STRING("Encounter rate increases."),
+        .description = COMPOUND_STRING("ポケモンに　そうぐう　しやすくなる"),
         .aiRating = 0,
         .breakable = TRUE,
     },
@@ -278,7 +278,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_TRACE] =
     {
         .name = _("トレース"),
-        .description = COMPOUND_STRING("Copies special ability."),
+        .description = COMPOUND_STRING("あいてと　おなじ　とくせいになる"),
         .aiRating = 6,
         .cantBeCopied = TRUE,
         .cantBeTraced = TRUE, //B_UPDATED_ABILITY_DATA >= GEN_4
@@ -294,14 +294,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_POISON_POINT] =
     {
         .name = _("どくのトゲ"),
-        .description = COMPOUND_STRING("Poisons foe on contact."),
+        .description = COMPOUND_STRING("さわったあいてに　どくをあたえる"),
         .aiRating = 4,
     },
 
     [ABILITY_INNER_FOCUS] =
     {
         .name = _("せいしんりょく"),
-        .description = COMPOUND_STRING("Prevents flinching."),
+        .description = COMPOUND_STRING("ひるまない"),
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -309,7 +309,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_MAGMA_ARMOR] =
     {
         .name = _("マグマのよろい"),
-        .description = COMPOUND_STRING("Prevents freezing."),
+        .description = COMPOUND_STRING("こおり　じょうたいに　ならない"),
         .aiRating = 1,
         .breakable = TRUE,
     },
@@ -317,7 +317,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_WATER_VEIL] =
     {
         .name = _("みずのベール"),
-        .description = COMPOUND_STRING("Prevents burns."),
+        .description = COMPOUND_STRING("やけど　じょうたいに　ならない"),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -332,7 +332,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SOUNDPROOF] =
     {
         .name = _("ぼうおん"),
-        .description = COMPOUND_STRING("Avoids sound-based moves."),
+        .description = COMPOUND_STRING("おとの　わざを　うけない"),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -340,28 +340,28 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_RAIN_DISH] =
     {
         .name = _("あめうけざら"),
-        .description = COMPOUND_STRING("Slight HP recovery in rain."),
+        .description = COMPOUND_STRING("あめのとき　すこしずつ　かいふく"),
         .aiRating = 3,
     },
 
     [ABILITY_SAND_STREAM] =
     {
         .name = _("すなおこし"),
-        .description = COMPOUND_STRING("Summons a sandstorm."),
+        .description = COMPOUND_STRING("せんとうで　すなあらしを　おこす"),
         .aiRating = 9,
     },
 
     [ABILITY_PRESSURE] =
     {
         .name = _("プレッシャー"),
-        .description = COMPOUND_STRING("Raises foe's PP usage."),
+        .description = COMPOUND_STRING("あいての　ＰＰが　へりやすくなる"),
         .aiRating = 5,
     },
 
     [ABILITY_THICK_FAT] =
     {
         .name = _("あついしぼう"),
-        .description = COMPOUND_STRING("Heat-and-cold protection."),
+        .description = COMPOUND_STRING("ほのお　こおりに　つよい"),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -369,28 +369,28 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_EARLY_BIRD] =
     {
         .name = _("はやおき"),
-        .description = COMPOUND_STRING("Awakens quickly from sleep."),
+        .description = COMPOUND_STRING("おきるのが　はやくなる"),
         .aiRating = 4,
     },
 
     [ABILITY_FLAME_BODY] =
     {
         .name = _("ほのおのからだ"),
-        .description = COMPOUND_STRING("Burns the foe on contact."),
+        .description = COMPOUND_STRING("さわった　あいてを　やけど　させる"),
         .aiRating = 4,
     },
 
     [ABILITY_RUN_AWAY] =
     {
         .name = _("にげあし"),
-        .description = COMPOUND_STRING("Makes escaping easier."),
+        .description = COMPOUND_STRING("せんとうから　にげやすい"),
         .aiRating = 0,
     },
 
     [ABILITY_KEEN_EYE] =
     {
         .name = _("するどいめ"),
-        .description = COMPOUND_STRING("Prevents loss of accuracy."),
+        .description = COMPOUND_STRING("あいてに　めいちゅうを　さげられない"),
         .aiRating = 1,
         .breakable = TRUE,
     },
@@ -406,14 +406,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PICKUP] =
     {
         .name = _("ものひろい"),
-        .description = COMPOUND_STRING("May pick up items."),
+        .description = COMPOUND_STRING("どうぐを　ひろってくる　ことがある"),
         .aiRating = 1,
     },
 
     [ABILITY_TRUANT] =
     {
         .name = _("なまけ"),
-        .description = COMPOUND_STRING("Moves only every two turns."),
+        .description = COMPOUND_STRING("こうげきが　れんぞくで　だせない"),
         .aiRating = -2,
         .cantBeOverwritten = TRUE,
     },
@@ -421,14 +421,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_HUSTLE] =
     {
         .name = _("はりきり"),
-        .description = COMPOUND_STRING("Trades accuracy for power."),
+        .description = COMPOUND_STRING("こうげきは　たかいが　はずれやすい"),
         .aiRating = 7,
     },
 
     [ABILITY_CUTE_CHARM] =
     {
         .name = _("メロメロボディ"),
-        .description = COMPOUND_STRING("Infatuates on contact."),
+        .description = COMPOUND_STRING("さわった　あいてを　メロメロにする"),
         .aiRating = 2,
     },
 
@@ -449,7 +449,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FORECAST] =
     {
         .name = _("てんきや"),
-        .description = COMPOUND_STRING("Changes with the weather."),
+        .description = COMPOUND_STRING("てんきで　ポワルンが　へんかする"),
         .aiRating = 6,
         .cantBeCopied = TRUE,
         .cantBeTraced = B_UPDATED_ABILITY_DATA >= GEN_4,
@@ -459,7 +459,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_STICKY_HOLD] =
     {
         .name = _("ねんちゃく"),
-        .description = COMPOUND_STRING("Prevents item theft."),
+        .description = COMPOUND_STRING("どうぐを　とられない"),
         .aiRating = 3,
         .breakable = TRUE,
     },
@@ -467,7 +467,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SHED_SKIN] =
     {
         .name = _("だっぴ"),
-        .description = COMPOUND_STRING("Heals the body by shedding."),
+        .description = COMPOUND_STRING("だっぴして　からだを　なおす"),
         .aiRating = 7,
     },
 
@@ -489,7 +489,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_LIQUID_OOZE] =
     {
         .name = _("ヘドロえき"),
-        .description = COMPOUND_STRING("Draining causes injury."),
+        .description = COMPOUND_STRING("すいとると　たいりょくが　へる"),
         .aiRating = 3,
     },
 
@@ -524,28 +524,28 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ROCK_HEAD] =
     {
         .name = _("いしあたま"),
-        .description = COMPOUND_STRING("Prevents recoil damage."),
+        .description = COMPOUND_STRING("ぶつかっても　はんどうを　うけない"),
         .aiRating = 5,
     },
 
     [ABILITY_DROUGHT] =
     {
         .name = _("ひでり"),
-        .description = COMPOUND_STRING("Summons sunlight in battle."),
+        .description = COMPOUND_STRING("せんとうで　ひざしを　つよくする"),
         .aiRating = 9,
     },
 
     [ABILITY_ARENA_TRAP] =
     {
         .name = _("ありじごく"),
-        .description = COMPOUND_STRING("Prevents fleeing."),
+        .description = COMPOUND_STRING("あいてを　にげられなくする"),
         .aiRating = 9,
     },
 
     [ABILITY_VITAL_SPIRIT] =
     {
         .name = _("やるき"),
-        .description = COMPOUND_STRING("Prevents sleep."),
+        .description = COMPOUND_STRING("ねむらない"),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -553,7 +553,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_WHITE_SMOKE] =
     {
         .name = _("しろいけむり"),
-        .description = COMPOUND_STRING("Prevents ability reduction."),
+        .description = COMPOUND_STRING("あいてに　のうりょくを　さげられない"),
         .aiRating = 4,
         .breakable = TRUE,
     },
@@ -568,7 +568,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SHELL_ARMOR] =
     {
         .name = _("シェルアーマー"),
-        .description = COMPOUND_STRING("Blocks critical hits."),
+        .description = COMPOUND_STRING("わざを　きゅうしょに　うけない"),
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -576,7 +576,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_AIR_LOCK] =
     {
         .name = _("エアロック"),
-        .description = COMPOUND_STRING("Negates weather effects."),
+        .description = COMPOUND_STRING("てんきの　えいきょうが　なくなる"),
         .aiRating = 5,
     },
 
@@ -1076,14 +1076,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_POISON_TOUCH] =
     {
         .name = _("どくしゅ"),
-        .description = COMPOUND_STRING("Poisons foe on contact."),
+        .description = COMPOUND_STRING("さわったあいてに　どくをあたえる"),
         .aiRating = 4,
     },
 
     [ABILITY_REGENERATOR] =
     {
         .name = _("さいせいりょく"),
-        .description = COMPOUND_STRING("Heals upon switching out."),
+        .description = COMPOUND_STRING("ひっこむと　いじょうが　なおる"),
         .aiRating = 8,
     },
 
@@ -1204,7 +1204,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_IRON_BARBS] =
     {
         .name = _("てつのトゲ"),
-        .description = COMPOUND_STRING("Hurts to touch."),
+        .description = COMPOUND_STRING("さわった　あいてを　キズつける"),
         .aiRating = 6,
     },
 
@@ -2234,7 +2234,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ORICHALCUM_PULSE] =
     {
         .name = _("ひひいろのこどう"),
-        .description = COMPOUND_STRING("Summons sunlight in battle."),
+        .description = COMPOUND_STRING("せんとうで　ひざしを　つよくする"),
         .aiRating = 8,
         .cantBeSwapped = TRUE,
         .cantBeCopied = TRUE,
@@ -2447,14 +2447,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_313] =
     {
-        .name = _("-------"),
-        .description = COMPOUND_STRING("No special ability."),
+        .name = _("ーーーーー"),
+        .description = COMPOUND_STRING("とくせいなし"),
     },
 
     [ABILITY_314] =
     {
-        .name = _("-------"),
-        .description = COMPOUND_STRING("No special ability."),
+        .name = _("ーーーーー"),
+        .description = COMPOUND_STRING("とくせいなし"),
     },
 
     [ABILITY_MEGA_SOL] =
@@ -2465,14 +2465,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_316] =
     {
-        .name = _("-------"),
-        .description = COMPOUND_STRING("No special ability."),
+        .name = _("ーーーーー"),
+        .description = COMPOUND_STRING("とくせいなし"),
     },
 
     [ABILITY_317] =
     {
-        .name = _("-------"),
-        .description = COMPOUND_STRING("No special ability."),
+        .name = _("ーーーーー"),
+        .description = COMPOUND_STRING("とくせいなし"),
     },
 
     [ABILITY_SPICY_SPRAY] =
