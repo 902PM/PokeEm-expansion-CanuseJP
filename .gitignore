@@ -42,7 +42,7 @@ prefabs.json
 *.diff
 *.sym
 *.js
-*.bak
+.bak
 /pokeemerald-*.png
 /pokefirered-*.png
 /pokeleafgreen-*.png
@@ -68,3 +68,6 @@ Workspace/
 *.smolTM
 __pycache__
 .map_version
+# TranslationEditor backups
+*.bak
+*.bak.*

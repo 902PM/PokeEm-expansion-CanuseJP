@@ -339,6 +339,11 @@ STRING = FD
 'ポ' = 9F
 'ッ' = A0
 'ヴ' = F1
+'『' = B1
+'』' = B2
+'「' = B3
+'」' = B4
+
 
 @ Full-width variants of existing ASCII punctuation.
 '＋' = 2E
