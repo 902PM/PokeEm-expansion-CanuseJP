@@ -1,7 +1,7 @@
 〜書いてあるとおりにしても動かねぇよというあなたへ〜
 
 expansionの基盤であるpokeemeraldの方のインストール手順読んだ方が早いです。
-日本語で手順を書く方法は余裕があったら書きます。
+日本語で手順を書くのは余裕があったら書きます。
 
 # Instructions
 Install instructions for each supported operating system can be found in their respective directories under `docs/install/`.
