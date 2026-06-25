@@ -1581,7 +1581,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_DISGUISE] =
     {
         .name = _("{JPN}ばけのかわ"),
-        .description = COMPOUND_STRING("{JPN}こうげきを １どだけ ふせぐ"),
+        .description = COMPOUND_STRING("{JPN}こうげきを 1どだけ ふせぐ"),
         .aiRating = 8,
         .breakable = TRUE,
         .cantBeCopied = TRUE,
