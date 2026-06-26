@@ -866,7 +866,7 @@ struct {
     const u8 *desc;
 } static const sMainMenuTexts[OPTIONS_COUNT] =
 {
-    [OPTION_WITHDRAW]   = {COMPOUND_STRING("{JPN}ポケモンを つれていく"), COMPOUND_STRING("{JPN}ボックスに あずけている ポケモンを \nてもちに くわえる ことが できます　")},
+    [OPTION_WITHDRAW]   = {COMPOUND_STRING("{JPN}ポケモンを つれていく"), COMPOUND_STRING("{JPN}ボックスに あずけている ポケモンを \nてもちに くわえる ことが できます ")},
     [OPTION_DEPOSIT]    = {COMPOUND_STRING("{JPN}ポケモンを あずける"),  COMPOUND_STRING("{JPN}てもちの ポケモンを         \nボックスに あずける ことが できます   ")},
     [OPTION_MOVE_MONS]  = {COMPOUND_STRING("{JPN}ポケモンを せいりする"),     COMPOUND_STRING("{JPN}ボックスに あずけている ポケモンや \nてもちの ポケモンを せいり できます")},
     [OPTION_MOVE_ITEMS] = {COMPOUND_STRING("{JPN}どうぐせいり"),       COMPOUND_STRING("{JPN}ポケモンが もっている どうぐを\nせいり できます")},

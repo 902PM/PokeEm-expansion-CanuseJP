@@ -674,9 +674,9 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "{JPN}ポケモンの たいりょくを\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "｛JPN}120 かいふくする"),
+            "{JPN}120 かいふくする"),
         #else
-            "｛JPN}200 かいふくする"),
+            "{JPN}200 かいふくする"),
         #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
