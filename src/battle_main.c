@@ -3009,6 +3009,14 @@ static void BattleStartClearSetData(void)
     memset(&gBattleResults, 0, sizeof(gBattleResults));
     ClearSetBScriptingStruct();
 
+    // Battle text buffers must be initialized with EOS, not 0.
+    // 0 is a valid character code in Pokémon text encoding, so zero-filled
+    // unused buffers can be read past their end until EOS is found.
+    memset(gBattleTextBuff1, EOS, BATTLE_TEXT_BUFF_ARRAY_COUNT);
+    memset(gBattleTextBuff2, EOS, BATTLE_TEXT_BUFF_ARRAY_COUNT);
+    memset(gBattleTextBuff3, EOS, BATTLE_TEXT_BUFF_ARRAY_COUNT);
+    memset(gDisplayedStringBattle, EOS, sizeof(gDisplayedStringBattle));
+
     for (i = 0; i < MAX_BATTLERS_COUNT; i++)
     {
         gBattleStruct->battlerState[i].isFirstTurn = 2;
