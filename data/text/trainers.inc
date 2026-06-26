@@ -667,7 +667,7 @@ Route107_Text_LisaDefeated:
 
 Route107_Text_LisaPostBattle:
 	.string "{JPN}ユミ『あなたは いっしょに\n"
-	.string "{JPN}うみに あそびに いくような\l
+	.string "{JPN}うみに あそびに いくような\l"
 	.string "{JPN}おともだち いるのかしら?$"
 
 Route107_Text_LisaNotEnoughPokemon:
@@ -1130,7 +1130,7 @@ Route110_Text_EdwinRegister:
 Route110_Text_EdwinRematchIntro:
 	.string "{JPN}ねえ キミ\n"
 	.string "{JPN}あたらしい ポケモン つかまえた?\p"
-	.string "{JPN}よかったら ポケモン みせてくれない?\n
+	.string "{JPN}よかったら ポケモン みせてくれない?\n"
 	.string "{JPN}ひとめで いいから おねがい!$"
 
 Route110_Text_EdwinRematchDefeated:

@@ -675,7 +675,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork:
 LittlerootTown_ProfessorBirchsLab_Text_BirchEnjoysRivalsHelpToo:
 	.string "{JPN}オダマキはかせは\n"
 	.string "{JPN}ポケモンが どこに すんでいるのか\l"
-	.string "{JPN}ぶんぷの ちょうさを なさっています\p
+	.string "{JPN}ぶんぷの ちょうさを なさっています\p"
 	.string "{JPN}{RIVAL}さんは すきな おとうさんの\n"
 	.string "{JPN}ポケモンが どこに すんでいるのか\l"
 	.string "{JPN}おてつだいを なさって いるのですよ$"

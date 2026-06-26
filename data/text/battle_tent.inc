@@ -335,22 +335,22 @@ SlateportCity_BattleTentLobby_Text_ExplainBasicRules:
 	.string "{JPN}ポケモンは 3ひき まで です\p"
 	.string "{JPN}レンタルするとき トレードするとき\n"
 	.string "{JPN}どちらの ときも\l"
-	.string "{JPN}おなじ しゅるいの ポケモンを\m"
+	.string "{JPN}おなじ しゅるいの ポケモンを\n"
 	.string "{JPN}2ひき いじょう もつことは できません$"
 
 SlateportCity_BattleTentLobby_Text_ExplainSwapPartnerRules:
 	.string "{JPN}トレードが できる あいては\n"
-	.string "{JPN}あなたが たたかいで\l
+	.string "{JPN}あなたが たたかいで\l"
 	.string "{JPN}たおした トレーナーです\p"
 	.string "{JPN}トレードで うけとる ことが できるのは\n"
 	.string "{JPN}トレーナーが つかっていた ポケモンです$"
 
 SlateportCity_BattleTentLobby_Text_ExplainSwapNumberRules:
 	.string "{JPN}いちど たたかいに かつ たびに\n"
-	.string "{JPN}1かい 1ひき だけ ポケモンを\l
+	.string "{JPN}1かい 1ひき だけ ポケモンを\l"
 	.string "{JPN}トレード することが できます\p"
 	.string "{JPN}1かいの ちょうせんで\n"
-	.string "{JPN}トレードが できるのは\l
+	.string "{JPN}トレードが できるのは\l"
 	.string "{JPN}2にんめの トレーナーまで です$"
 
 SlateportCity_BattleTentLobby_Text_ExplainSwapNotes:

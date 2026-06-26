@@ -170,7 +170,7 @@ MoveTutor_Text_DynamicPunchTeach:
 
 MoveTutor_Text_DynamicPunchDeclined:
 	.string "{JPN}ちきしょー おまえまで\n"
-	.string "{JPN}オレを ばかに するかっ!?\l
+	.string "{JPN}オレを ばかに するかっ!?\l"
 	.string "{JPN}ボカ ボカ!$"
 
 MoveTutor_Text_DynamicPunchWhichMon:

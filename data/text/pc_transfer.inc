@@ -35,7 +35,7 @@ gText_PkmnTransferredLanettesPCBoxFull::
 
 gText_PkmnSentToPCAfterCatch::
 	.string "{JPN}{STR_VAR_2}は {B_PC_CREATOR_NAME}のパソコンの\n"
-	.string "{JPN}ボックス『{STR_VAR_1}』に\l
+	.string "{JPN}ボックス『{STR_VAR_1}』に\l"
 	.string "{JPN}てんそう された!$"
 
 gText_PlayerObtainedTheMon::

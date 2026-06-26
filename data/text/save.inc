@@ -21,7 +21,7 @@ gText_DifferentSaveFile::
 	.string "{JPN}ぼうけん していた レポートが\l"
 	.string "{JPN}かかれています!\p"
 	.string "{JPN}そちらで プレイしていた ぼうけんや\n"
-	.string "{JPN}すべての ポケモン どうぐ などが\l
+	.string "{JPN}すべての ポケモン どうぐ などが\l"
 	.string "{JPN}きえてしまいます……\p"
 	.string "{JPN}ほんとうに\n"
 	.string "{JPN}うえから かいても いいですか?$"
