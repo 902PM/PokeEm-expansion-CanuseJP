@@ -142,8 +142,65 @@
                 "max_level": 3,
                 "species": "SPECIES_ZIGZAGOON"
               }
+        ]
+      },
+      "weather_encounters": {
+        "WEATHER_RAIN": {
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              { "min_level": 2, 
+                "max_level": 2, 
+                "species": "SPECIES_LOTAD"
+              },
+              { "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_LOTAD"
+              },
+              { "min_level": 2, 
+                "max_level": 2, 
+                "species": "SPECIES_LOTAD" 
+              },
+              { "min_level": 2, 
+                "max_level": 2, 
+                "species": "SPECIES_LOTAD"
+              },
+              { "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_LOTAD"
+              },
+              { "min_level": 2, 
+                "max_level": 2, 
+                "species": "SPECIES_LOTAD" 
+              },
+              { "min_level": 2, 
+                "max_level": 2, 
+                "species": "SPECIES_LOTAD"
+              },
+              { "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_LOTAD"
+              },
+              { "min_level": 2, 
+                "max_level": 2, 
+                "species": "SPECIES_LOTAD" 
+              },
+              { "min_level": 2, 
+                "max_level": 2, 
+                "species": "SPECIES_LOTAD"
+              },
+              { "min_level": 2,
+                "max_level": 2,
+                "species": "SPECIES_LOTAD"
+              },
+              { "min_level": 2, 
+                "max_level": 2, 
+                "species": "SPECIES_LOTAD" 
+              }
             ]
           }
+        }
+      }
         },
         {
           "map": "MAP_ROUTE102",
