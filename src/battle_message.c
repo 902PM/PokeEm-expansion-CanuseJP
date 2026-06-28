@@ -1560,7 +1560,6 @@ static const u8 sText_Your2[] = _("{JPN}みかたの");
 static const u8 sText_Opposing2[] = _("{JPN}あいての");
 static const u8 sText_EmptyStatus[] = _("{JPN}$$$$$$$");
 
-
 static const struct BattleWindowText sTextOnWindowsInfo_Normal[] =
 {
     [B_WIN_MSG] = {
